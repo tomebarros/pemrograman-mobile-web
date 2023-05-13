@@ -67,13 +67,13 @@ include "../controller/other/restrict.php";
 
             <div class="input-group mb-2">
               <span class="input-group-text">Jadwal Pelayanan</span>
-              <select name="idpoli" class="form-select" required>
+              <select name="iddokterpoli" class="form-select" required>
                 <option value=""></option>
                 <?php
-                $data = query("SELECT jadwalkaryawan.idjadwalkaryawan,jadwalkaryawan.idkaryawan,karyawan.nama,poli.idpoli,poli.namapoli,jadwalkaryawan.hari,jadwalkaryawan.jammulai,jadwalkaryawan.jamselesai FROM jadwalkaryawan,karyawan,poli,dokterpoli WHERE jadwalkaryawan.statusketersediaan = 'Ada' and karyawan.pekerjaan = 'Dokter' and jadwalkaryawan.idkaryawan = karyawan.idkaryawan and poli.idpoli = dokterpoli.idpoli and dokterpoli.idkaryawan = karyawan.idkaryawan;");
+                $data = query("SELECT jadwalkaryawan.idjadwalkaryawan,jadwalkaryawan.idkaryawan,karyawan.nama,poli.idpoli,poli.namapoli,jadwalkaryawan.hari,jadwalkaryawan.jammulai,jadwalkaryawan.jamselesai, dokterpoli.iddokterpoli FROM jadwalkaryawan,karyawan,poli,dokterpoli WHERE jadwalkaryawan.statusketersediaan = 'Ada' and karyawan.pekerjaan = 'Dokter' and jadwalkaryawan.idkaryawan = karyawan.idkaryawan and poli.idpoli = dokterpoli.idpoli and dokterpoli.idkaryawan = karyawan.idkaryawan;");
                 foreach ($data as $d) {
                 ?>
-                  <option value="<?php echo $d['idpoli']; ?>"><?php echo $d['nama'] . ' | ' . $d['namapoli'] . ' | ' . $d['hari'] . ' | ' . $d['jammulai'] . '-' . $d['jamselesai']; ?></option>
+                  <option value="<?php echo $d['iddokterpoli']; ?>"><?php echo $d['nama'] . ' | ' . $d['namapoli'] . ' | ' . $d['hari'] . ' | ' . $d['jammulai'] . '-' . $d['jamselesai']; ?></option>
                 <?php } ?>
               </select>
             </div>
