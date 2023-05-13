@@ -225,10 +225,15 @@ nav .burger {
   gap: 2rem;
   text-align: center;
   flex-wrap: wrap;
+  width: 100%;
+}
+
+.services .cards .card {
+  width: 30%;
 }
 
 .services .cards .card img {
-  width: 24rem;
+  width: 100%;
   border-radius: 0.2rem;
   transition: all 0.7s;
 }
@@ -325,7 +330,7 @@ footer .login {
     top: 0;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 80%;
     background-color: var(--dark-2);
     transition: all 0.8s ease;
@@ -362,6 +367,10 @@ footer .login {
 
   .about .row .col.kanan h4 {
     letter-spacing: 1rem;
+  }
+
+  .services .cards .card {
+    width: 100% !important;
   }
 
   footer {
