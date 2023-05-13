@@ -21,7 +21,10 @@
           <div class="input-group mb-2">
             <input type="password" class="form-control" name="password" placeholder="Password" required>
           </div>
-          <input type="submit" class="btn btn-primary" value="Login">
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary">Login</button>
+            <a href="../../" class="btn btn-info text-light">Home</a>
+          </div>
         </form>
       </div>
     </div>
