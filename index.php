@@ -102,8 +102,8 @@
 
     <div class="login">
       <a href="admin/userinterface/">Admin</a>
-      <a href="dokter/userinterface/">Dokter</a>
       <a href="apoteker/userinterface/">Apoteker</a>
+      <a href="dokter/userinterface/">Dokter</a>
       <a href="kasir/userinterface/">Kasir</a>
       <a href="perawatjaga/userinterface/">Perawat Jaga</a>
       <a href="perawatpemeriksa/userinterface/">Perawat Pemeriksa</a>

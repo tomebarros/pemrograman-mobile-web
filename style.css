@@ -313,11 +313,7 @@ footer .login {
 
   .navbar .navbar-link li a:hover::after {
     content: '';
-    display: block;
-    border: none;
-    border-bottom: 2px solid var(--primary);
-    width: 50%;
-    margin-left: 0;
+    margin-bottom: -7px;
   }
 
   nav .burger {
@@ -329,9 +325,9 @@ footer .login {
     right: -100%;
     top: 0;
     display: inline-block !important;
-    padding: 2rem 1rem;
+    padding: 2rem 13rem 0 0;
     min-height: 100vh;
-    width: 80%;
+    width: 100%;
     background-color: var(--dark-2);
     transition: all 0.8s ease;
     opacity: 0;
@@ -342,8 +338,11 @@ footer .login {
     right: 0;
   }
 
+  .navbar .navbar-link li {
+    padding: 0 0 2rem 2rem;
+  }
+
   .navbar .navbar-link li a {
-    padding-bottom: 1rem;
     color: var(--light);
   }
 
@@ -375,9 +374,7 @@ footer .login {
 
   footer {
     flex-direction: column;
-    justify-content: start;
     gap: 3rem;
-    text-align: center;
   }
 
 }
