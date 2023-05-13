@@ -328,14 +328,13 @@ footer .login {
     position: absolute;
     right: -100%;
     top: 0;
-    flex-direction: column;
-    justify-content: center;
+    display: inline-block !important;
+    padding: 2rem 1rem;
     min-height: 100vh;
     width: 80%;
     background-color: var(--dark-2);
     transition: all 0.8s ease;
     opacity: 0;
-    padding: 2rem 1rem;
   }
 
   .show {
@@ -344,6 +343,7 @@ footer .login {
   }
 
   .navbar .navbar-link li a {
+    padding-bottom: 1rem;
     color: var(--light);
   }
 
