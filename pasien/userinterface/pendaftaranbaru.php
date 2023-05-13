@@ -66,8 +66,10 @@ include "../../template/functions.php";
             <input type="password" class="form-control" name="password" required>
           </div>
 
-          <input type="submit" class="btn btn-success" value="Simpan">
-
+          <div class="d-grid gap-2 col-4 mx-auto">
+            <button class="btn btn-success" type="submit">Simpan</button>
+            <a href="index.php" class="btn btn-info">Kembali</a>
+          </div>
         </form>
 
 
