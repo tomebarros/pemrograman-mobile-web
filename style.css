@@ -271,7 +271,7 @@ footer a {
   color: var(--light);
 }
 
-footer .links:hover,
+footer a:hover,
 footer .copyright:hover {
   color: var(--primary);
 }
