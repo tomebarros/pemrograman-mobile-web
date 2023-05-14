@@ -31,12 +31,15 @@
       <li><a href="pasien/userinterface/">login</a></li>
     </ul>
 
-    <label class="burger" for="burger">
-      <input type="checkbox" id="burger" />
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
+    <div class="navbar-contain">
+      <i data-feather="sun" class="theme" id="theme-toggle"></i>
+      <label class="burger" for="burger">
+        <input type="checkbox" id="burger" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
   </nav>
 
   <section id="home" class="hero">
