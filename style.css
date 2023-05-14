@@ -27,11 +27,11 @@ body {
   align-items: center;
   height: 6rem;
   padding: 0 7%;
-  color: var(--light);
   position: fixed;
   right: 0;
   left: 0;
   z-index: 999;
+  transition: .3s;
 }
 
 .navbar .logo {
@@ -39,6 +39,7 @@ body {
   cursor: cell;
   filter: drop-shadow(2px 2px 0px var(--dark-2));
 }
+
 
 .navbar .navbar-link {
   display: flex;
@@ -49,6 +50,7 @@ body {
 
 .navbar .navbar-link li a {
   color: var(--dark);
+  text-shadow: 1px 1px var(--light);
   text-transform: capitalize;
 }
 
@@ -115,9 +117,6 @@ nav .burger {
   transform: translateY(-100%);
 }
 
-.burger input:checked~span {
-  background: var(--light);
-}
 
 .burger input:checked~span:nth-of-type(1) {
   transform: rotate(45deg);
@@ -252,7 +251,7 @@ footer {
   align-items: center;
   padding: 3rem;
   margin-top: 5rem;
-  background-color: var(--dark);
+  background-color: var(--dark-2);
   color: var(--light);
 }
 
@@ -336,7 +335,8 @@ footer .login {
     padding: 2rem 13rem 0 0;
     min-height: 100vh;
     width: 100%;
-    background-color: var(--dark-2);
+    background-color: var(--light);
+    box-shadow: 0 -5px 5px var(--dark-2);
     transition: all 0.8s ease;
     opacity: 0;
   }
@@ -351,7 +351,7 @@ footer .login {
   }
 
   .navbar .navbar-link li a {
-    color: var(--light);
+    color: var(--dark);
   }
 
   .hero .judul h3 {

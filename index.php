@@ -52,7 +52,7 @@
     <h3>Tentang Kami</h3>
     <div class="row">
       <div class="col kiri">
-        <img src="img/about.jpg" alt="Tentang Kami" />
+        <img src="img/loby.jpg" alt="Tentang Kami" />
       </div>
       <div class="col kanan">
         <h4>Website Rumah Sakit</h4>
@@ -83,6 +83,18 @@
       <div class="card">
         <img src="img/service3.jpg" alt="Gambar Ruang Inap VIP" />
         <h4>~ Ruang Inap VIP ~</h4>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+
+      <div class="card">
+        <img src="img/service4.jpg" alt="Gambar Ruang Inap VIP" />
+        <h4>~ Rumah Sakit ~</h4>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+
+      <div class="card">
+        <img src="img/service5.jpg" alt="Gambar Ruang Inap VIP" />
+        <h4>~ Website ~</h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
     </div>
