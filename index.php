@@ -7,14 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tome Barros</title>
 
-  <!-- font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,200&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,200&amp;display=swap" rel="stylesheet">
 
   <!-- fether icon -->
   <script src="https://unpkg.com/feather-icons"></script>
 
+  <!-- icon web -->
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -49,13 +49,13 @@
   </section>
 
   <section id="about" class="about">
-    <h3>Tentang Kami</h3>
+    <h3>tentang kami</h3>
     <div class="row">
       <div class="col kiri">
         <img src="img/loby.jpg" alt="Tentang Kami" />
       </div>
       <div class="col kanan">
-        <h4>Website Rumah Sakit</h4>
+        <h4>website rumah sakit</h4>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quasi eligendi praesentium repellendus vitae error modi quisquam, esse quae molestias culpa similique ipsa? Quas beatae soluta accusamus eligendi fugit
           asperiores.
@@ -102,14 +102,10 @@
 
   <footer>
     <div class="links">
-      <p>Ikuti Kami Di:</p>
-      <a href="https://www.instagram.com/tome_barros/" target="_blank"><i data-feather="instagram"></i> </a>
+      <p>ikuti kami</p>
+      <a href="https://www.instagram.com/tome_barros/" target="_blank"><i data-feather="instagram"></i></a>
       <a href="https://www.youtube.com/@tomebarros2153" target="_blank"><i data-feather="youtube"></i></a>
       <a href="https://github.com/tomebarros" target="_blank"><i data-feather="github"></i></a>
-    </div>
-
-    <div class="copyright">
-      <p>&copy; TomeHealth 2023</p>
     </div>
 
     <div class="login">
@@ -117,12 +113,17 @@
       <a href="apoteker/userinterface/">Apoteker</a>
       <a href="dokter/userinterface/">Dokter</a>
       <a href="kasir/userinterface/">Kasir</a>
-      <a href="perawatjaga/userinterface/">Perawat Jaga</a>
-      <a href="perawatpemeriksa/userinterface/">Perawat Pemeriksa</a>
-      <a href="perawatpendaftaran/userinterface/">Perawat Pendaftaran</a>
+      <a href="perawatjaga/userinterface/">PerawatJaga</a>
+      <a href="perawatpemeriksa/userinterface/">PerawatPemeriksa</a>
+      <a href="perawatpendaftaran/userinterface/">PerawatPendaftaran</a>
     </div>
+
+    <h4><a href="http://21120055rekammedis.my.id/">&copy; TomeHealth</a></h4>
   </footer>
 
+  <script>
+    feather.replace()
+  </script>
   <script src="script.js"></script>
 </body>
 

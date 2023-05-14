@@ -1,9 +1,9 @@
 :root {
   --primary: #0c88ef;
-  --dark: #010101;
-  --dark-2: rgba(1, 1, 1, 0.6);
-  --light: #fff;
-  --light-2: #ffffffa2;
+  --dark: #24292e;
+  --dark-2: rgb(47, 54, 61);
+  --light: #f6f8fa;
+  --light-2: #ffffff;
 }
 
 * {
@@ -15,6 +15,13 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.dark-mode {
+  --dark: #f6f8fa;
+  --light: #24292e;
+  --dark-2: #fff;
+  --light-2: #2f363d;
 }
 
 body {
@@ -37,7 +44,7 @@ body {
 .navbar .logo {
   width: 5rem;
   cursor: cell;
-  filter: drop-shadow(2px 2px 0px var(--dark-2));
+  filter: drop-shadow(2px 2px 0px rgb(47, 54, 61));
 }
 
 
@@ -147,6 +154,16 @@ nav .burger {
   background-size: cover;
   background-position: center;
   padding: 0 7%;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 101%;
+  background: linear-gradient(0deg, var(--light) 1%, rgba(36, 41, 46, 0.1) 30%);
 }
 
 .hero .judul {
@@ -159,19 +176,22 @@ nav .burger {
   padding: 0 1rem;
   letter-spacing: 0.3rem;
   color: var(--dark);
+  z-index: 2;
 }
 
 .hero .judul span {
   width: 100%;
   height: 4px;
-  background-color: var(--dark);
+  background-color: var(--dark-2);
   margin: auto;
+  z-index: 2;
 }
 
 .hero p {
   font-size: 1.5rem;
   text-align: center;
   color: var(--dark);
+  z-index: 2;
 }
 
 /* about */
@@ -188,6 +208,8 @@ nav .burger {
   text-align: center;
   font-size: 2rem;
   padding-bottom: 2rem;
+  color: var(--dark);
+  text-transform: capitalize;
 }
 
 .about .row {
@@ -208,7 +230,7 @@ nav .burger {
 }
 
 .about .row .col.kiri img:hover {
-  filter: drop-shadow(5px 5px 15px var(--dark-2));
+  filter: drop-shadow(5px 5px 15px var(--dark));
 }
 
 .about .row .col.kanan h4 {
@@ -216,9 +238,19 @@ nav .burger {
   font-size: 1.9rem;
   letter-spacing: 2rem;
   margin: auto;
+  text-transform: capitalize;
+  color: var(--dark);
+}
+
+.about .row .col.kanan p {
+  color: var(--dark-2);
 }
 
 /* services */
+.services {
+  padding-bottom: 5rem;
+}
+
 .services .cards {
   display: flex;
   justify-content: space-evenly;
@@ -240,47 +272,61 @@ nav .burger {
 }
 
 .services .cards .card img:hover {
-  filter: drop-shadow(4px 4px 15px var(--dark-2));
+  filter: drop-shadow(4px 4px 15px var(--dark));
+}
+
+.services .cards .card h4 {
+  color: var(--dark);
+}
+
+.services .cards .card p {
+  color: var(--dark-2);
 }
 
 /* footer */
 footer {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem;
-  margin-top: 5rem;
-  background-color: var(--dark);
-  color: var(--light);
-}
-
-footer .links {
-  display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
+  padding: 3rem;
+  gap: 1rem;
+  background-color: var(--dark-2);
 }
 
-footer a {
+footer a,
+footer p,
+footer h4 {
   color: var(--light);
+  text-transform: capitalize;
+  text-align: center;
 }
 
-footer a:hover,
-footer .copyright:hover,
-footer .links p:hover {
+footer p:hover,
+footer .links a:hover,
+footer h4 a:hover {
   color: var(--primary);
 }
 
-footer .copyright p {
-  cursor: pointer;
-  font-size: 1.5rem;
+footer .links a {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+  padding-top: 0.5rem;
+
 }
 
-footer .login {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  cursor: pointer;
+footer .login a {
+  display: inline-block;
+  padding: 0.2rem 1rem;
+  margin: 0.1rem;
+  border: 1px solid var(--light);
+  border-radius: 0.1rem;
+  transition: .3s all ease;
+}
+
+footer .login a:hover {
+  background: var(--light);
+  color: var(--dark);
 }
 
 /* CSS Anda untuk tablet di sini */
@@ -376,17 +422,5 @@ footer .login {
     width: 100% !important;
   }
 
-  footer {
-    flex-direction: column;
-    gap: 3rem;
-  }
-
-  footer .copyright p {
-    font-size: 1.2rem;
-  }
-
-  footer .login {
-    align-items: start;
-  }
 
 }
