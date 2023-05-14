@@ -245,11 +245,10 @@ nav .burger {
 
 /* footer */
 footer {
-  min-height: 50vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 3rem;
+  padding: 1rem;
   margin-top: 5rem;
   background-color: var(--dark);
   color: var(--light);
@@ -267,7 +266,8 @@ footer a {
 }
 
 footer a:hover,
-footer .copyright:hover {
+footer .copyright:hover,
+footer .links p:hover {
   color: var(--primary);
 }
 
