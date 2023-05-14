@@ -251,7 +251,7 @@ footer {
   align-items: center;
   padding: 3rem;
   margin-top: 5rem;
-  background-color: var(--dark-2);
+  background-color: var(--dark);
   color: var(--light);
 }
 
