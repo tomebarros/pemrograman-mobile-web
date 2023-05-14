@@ -227,6 +227,7 @@ nav .burger {
   width: 100%;
   transition: .3s;
   cursor: all-scroll;
+  transition: .3s all ease;
 }
 
 .about .row .col.kiri img:hover {
@@ -269,6 +270,7 @@ nav .burger {
   border-radius: 0.2rem;
   transition: .3s;
   cursor: move;
+  transition: .3s all ease;
 }
 
 .services .cards .card img:hover {
