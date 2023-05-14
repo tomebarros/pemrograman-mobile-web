@@ -262,10 +262,6 @@ footer .links {
   gap: 2rem;
 }
 
-footer .links p {
-  cursor: no-drop;
-}
-
 footer a {
   color: var(--light);
 }
