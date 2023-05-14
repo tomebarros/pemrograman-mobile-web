@@ -81,7 +81,7 @@
       </div>
 
       <div class="card">
-        <img src="img/service3.jpg" alt="Gambar Ruang VIP" />
+        <img src="img/service3.jpg" alt="Gambar Ruang Inap VIP" />
         <h4>~ Ruang Inap VIP ~</h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
