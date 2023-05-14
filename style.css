@@ -276,14 +276,16 @@ footer .copyright:hover {
   color: var(--primary);
 }
 
-footer .copyright {
+footer .copyright p {
   cursor: pointer;
+  font-size: 1.5rem;
 }
 
 footer .login {
-  cursor: pointer;
   display: flex;
   flex-direction: column;
+  align-items: end;
+  cursor: pointer;
 }
 
 /* CSS Anda untuk tablet di sini */
@@ -381,6 +383,14 @@ footer .login {
   footer {
     flex-direction: column;
     gap: 3rem;
+  }
+
+  footer .copyright p {
+    font-size: 1.2rem;
+  }
+
+  footer .login {
+    align-items: start;
   }
 
 }
