@@ -38,13 +38,15 @@ body {
   right: 0;
   left: 0;
   z-index: 999;
-  transition: .3s;
+  transition: .3s ease;
+  /* background-color: #24292e; */
 }
 
 .navbar .logo {
   width: 5rem;
   cursor: cell;
   filter: drop-shadow(2px 2px 0px rgb(47, 54, 61));
+  transition: .3;
 }
 
 
@@ -57,13 +59,15 @@ body {
 
 
 .navbar .navbar-link li a {
-  color: var(--dark);
-  text-shadow: 1px 1px var(--light);
+  color: #fff;
+  text-shadow: 1px 1px 10px #24292e;
   text-transform: capitalize;
+  transition: .3s;
 }
 
 .navbar .navbar-link li a:hover {
   color: var(--primary);
+  text-shadow: 1px 1px 10px rgba(1, 1, 1, 0);
 }
 
 .navbar .navbar-link li a:hover::after {
@@ -77,8 +81,9 @@ body {
 }
 
 nav .navbar-contain .theme {
-  color: var(--dark);
-  cursor: pointer !important;
+  color: #dae5f1;
+  text-shadow: 1px 1px 10px #24292e;
+  cursor: pointer;
 }
 
 /* burger */
@@ -104,7 +109,7 @@ nav .burger {
   position: absolute;
   height: 4px;
   width: 100%;
-  background: var(--dark);
+  background: #fff;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -231,7 +236,6 @@ nav .burger {
 .about .row .col.kiri img {
   width: 100%;
   transition: .3s;
-  cursor: all-scroll;
   transition: .3s all ease;
 }
 
@@ -274,7 +278,6 @@ nav .burger {
   width: 100%;
   border-radius: 0.2rem;
   transition: .3s;
-  cursor: move;
   transition: .3s all ease;
 }
 
@@ -363,8 +366,12 @@ footer .login a:hover {
 
 /* CSS Anda untuk smartphone di sini */
 @media (max-width: 480px) {
+  .navbar {
+    height: 4rem;
+  }
+
   .navbar .logo {
-    width: 3.4rem;
+    width: 3.4rem !important;
   }
 
   .navbar .navbar-link li a:hover::after {
@@ -404,7 +411,8 @@ footer .login a:hover {
   }
 
   nav .navbar-contain .theme {
-    margin-right: 0.5rem;
+    font-size: 1.4rem;
+    padding-right: 0.1rem;
   }
 
   .hero .judul h3 {

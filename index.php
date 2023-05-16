@@ -12,7 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,200&amp;display=swap" rel="stylesheet">
 
   <!-- fether icon -->
-  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- <script src="https://unpkg.com/feather-icons"></script> -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <!-- icon web -->
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
@@ -32,7 +33,8 @@
     </ul>
 
     <div class="navbar-contain">
-      <i data-feather="sun" class="theme" id="theme-toggle"></i>
+      <!-- <i class="fa-solid fa-moon-stars theme" id="theme-toggle"></i> -->
+      <i class="fas fa-moon theme" id="theme-toggle"></i>
       <label class="burger" for="burger">
         <input type="checkbox" id="burger" />
         <span></span>
@@ -106,9 +108,9 @@
   <footer>
     <div class="links">
       <p>ikuti kami</p>
-      <a href="https://www.instagram.com/tome_barros/" target="_blank"><i data-feather="instagram"></i></a>
-      <a href="https://www.youtube.com/@tomebarros2153" target="_blank"><i data-feather="youtube"></i></a>
-      <a href="https://github.com/tomebarros" target="_blank"><i data-feather="github"></i></a>
+      <a href="https://www.instagram.com/tome_barros/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@tomebarros2153" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://github.com/tomebarros" target="_blank"><i class="fab fa-github"></i></a>
     </div>
 
     <div class="login">
@@ -124,9 +126,6 @@
     <h4><a href="http://21120055rekammedis.my.id/">&copy; TomeHealth</a></h4>
   </footer>
 
-  <script>
-    feather.replace()
-  </script>
   <script src="script.js"></script>
 </body>
 
