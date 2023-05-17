@@ -82,6 +82,7 @@ body {
 
 nav .navbar-contain .theme {
   color: #dae5f1;
+  font-size: 1.2rem;
   text-shadow: 1px 1px 10px #24292e;
   cursor: pointer;
 }
