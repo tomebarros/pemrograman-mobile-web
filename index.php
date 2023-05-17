@@ -91,13 +91,13 @@
       </div>
 
       <div class="card">
-        <img src="img/service4.jpg" alt="Gambar Ruang Inap VIP" />
+        <img src="img/service4.jpg" alt="Gambar Rumah Sakit TomeHealth" />
         <h4>~ Rumah Sakit ~</h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
 
       <div class="card">
-        <img src="img/service5.jpg" alt="Gambar Ruang Inap VIP" />
+        <img src="img/service5.jpg" alt="Gambar Website TomeHealth" />
         <h4>~ Website ~</h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
