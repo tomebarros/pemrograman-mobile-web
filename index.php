@@ -75,31 +75,31 @@
       <div class="card">
         <img src="img/service1.jpg" alt="Gambar Ruang Operasi" />
         <h4>~ Ruang Operasi ~</h4>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Ruang Operasi Pasien</p>
       </div>
 
       <div class="card">
         <img src="img/service2.jpg" alt="Gambar Ruang Inap" />
         <h4>~ Ruang Inap ~</h4>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Ruang Pasien Rawat Inap</p>
       </div>
 
       <div class="card">
         <img src="img/service3.jpg" alt="Gambar Ruang Inap VIP" />
         <h4>~ Ruang Inap VIP ~</h4>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Ruang Pasien Rawat Inap VIP</p>
       </div>
 
       <div class="card">
         <img src="img/service4.jpg" alt="Gambar Rumah Sakit TomeHealth" />
         <h4>~ Rumah Sakit ~</h4>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Rumah Sakit TomeHealth</p>
       </div>
 
       <div class="card">
         <img src="img/service5.jpg" alt="Gambar Website TomeHealth" />
         <h4>~ Website ~</h4>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Pelayanan Medis Berbasis Online</p>
       </div>
     </div>
   </section>

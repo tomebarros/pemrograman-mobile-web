@@ -210,7 +210,7 @@ nav .burger {
 .about,
 .services {
   min-height: 100vh;
-  padding: 8rem 7% 0;
+  padding: 5rem 7% 0;
   background: var(--light);
 }
 
