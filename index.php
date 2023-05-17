@@ -13,7 +13,7 @@
 
   <!-- fether icon -->
   <!-- <script src="https://unpkg.com/feather-icons"></script> -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <!-- icon web -->
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
@@ -34,7 +34,7 @@
 
     <div class="navbar-contain">
       <!-- <i class="fa-solid fa-moon-stars theme" id="theme-toggle"></i> -->
-      <i class="fas fa-moon theme" id="theme-toggle"></i>
+      <i class="material-icons theme" id="theme-toggle">cloud</i>
       <label class="burger" for="burger">
         <input type="checkbox" id="burger" />
         <span></span>
