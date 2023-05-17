@@ -12,8 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,200&amp;display=swap" rel="stylesheet">
 
   <!-- fether icon -->
-  <!-- <script src="https://unpkg.com/feather-icons"></script> -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
   <!-- icon web -->
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
@@ -34,7 +33,7 @@
 
     <div class="navbar-contain">
       <!-- <i class="fa-solid fa-moon-stars theme" id="theme-toggle"></i> -->
-      <i class="material-icons theme" id="theme-toggle">cloud</i>
+      <i class="bi bi-moon-fill theme" id="theme-toggle"></i>
       <label class="burger" for="burger">
         <input type="checkbox" id="burger" />
         <span></span>
@@ -108,9 +107,9 @@
   <footer>
     <div class="links">
       <p>ikuti kami</p>
-      <a href="https://www.instagram.com/tome_barros/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.youtube.com/@tomebarros2153" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://github.com/tomebarros" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/tome_barros/" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.youtube.com/@tomebarros2153" target="_blank"><i class="bi bi-youtube"></i></a>
+      <a href="https://github.com/tomebarros" target="_blank"><i class="bi bi-github"></i></a>
     </div>
 
     <div class="login">
