@@ -59,10 +59,9 @@
         <img src="img/loby.jpg" alt="Tentang Kami" />
       </div>
       <div class="col kanan">
-        <h4>website rumah sakit</h4>
+        <h4>website rumah sakit <span>tome Health</span></h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quasi eligendi praesentium repellendus vitae error modi quisquam, esse quae molestias culpa similique ipsa? Quas beatae soluta accusamus eligendi fugit
-          asperiores.
+          Menjadi penyedia layanan kesehatan terkemuka yang memberikan perawatan berkualitas, inovatif, dan holistik kepada masyarakat, dengan fokus pada kepuasan pasien, keunggulan klinis, dan penerapan teknologi medis terkini untuk meningkatkan keselamatan, kenyamanan, dan pemulihan pasien
         </p>
       </div>
     </div>

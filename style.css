@@ -245,12 +245,14 @@ nav .burger {
 }
 
 .about .row .col.kanan h4 {
-  width: 100%;
   font-size: 1.9rem;
-  letter-spacing: 2rem;
-  margin: auto;
+  letter-spacing: 1rem;
   text-transform: capitalize;
   color: var(--bg-dark);
+}
+
+.about .row .col.kanan h4 span {
+  color: var(--primary);
 }
 
 .about .row .col.kanan p {
