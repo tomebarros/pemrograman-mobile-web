@@ -11,6 +11,7 @@
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -24,9 +25,6 @@ html {
   --light: #2f363d;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-}
 
 .navbar {
   display: flex;
@@ -208,14 +206,16 @@ nav .burger {
 /* about */
 
 .about,
-.services {
+.services,
+.contact {
   min-height: 100vh;
   padding: 5rem 7% 0;
   background: var(--bg-light);
 }
 
 .about h3,
-.services h3 {
+.services h3,
+.contact h3 {
   text-align: center;
   font-size: 2rem;
   padding-bottom: 2rem;
@@ -296,6 +296,122 @@ nav .burger {
   color: var(--dark);
 }
 
+/* contact */
+.contact form {
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin: auto;
+}
+
+.contact form .input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.contact form .input-group input {
+  height: 100%;
+  border: none;
+  font-size: 1rem;
+  border-bottom: 2px solid var(--bg-dark);
+  padding: 1rem 0.3rem;
+  background: none;
+  outline: none;
+  color: var(--dark);
+}
+
+.contact form .input-group span {
+  position: absolute;
+  top: 30%;
+  left: 2px;
+  font-size: 1rem;
+  pointer-events: none;
+  color: var(--dark);
+  opacity: 0.5;
+  transition: .5s;
+}
+
+.contact form .input-group input:focus~span,
+.contact form .input-group input:valid~span {
+  top: -10%;
+  left: 0;
+  font-size: 0.8rem;
+  color: var(--primary);
+  opacity: 1;
+}
+
+.contact form .input-group input:focus,
+.contact form .input-group input:valid {
+  border-bottom: 2px solid var(--primary);
+}
+
+.contact form .input-textarea {
+  width: 100%;
+  position: relative;
+}
+
+.contact form .input-textarea textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 5rem;
+  max-height: 10rem;
+
+  color: var(--dark);
+  background: none;
+  border: 2px solid var(--dark);
+  border-top: none;
+  outline: none;
+  padding: 0.2rem 0.3rem;
+  font-size: 1rem;
+}
+
+.contact form .input-textarea span {
+  position: absolute;
+  top: 0;
+  left: 3px;
+
+  font-size: 1rem;
+  pointer-events: none;
+  color: var(--dark);
+  opacity: 0.5;
+  transition: .5s;
+}
+
+.contact form .input-textarea textarea:focus~span,
+.contact form .input-textarea textarea:valid~span {
+  top: -20%;
+  left: 0;
+  font-size: 0.8rem;
+  color: var(--primary);
+  opacity: 1;
+}
+
+.contact form .input-textarea textarea:focus,
+.contact form .input-textarea textarea:valid {
+  border: 2px solid var(--primary);
+  border-top: none;
+}
+
+.contact form button {
+  cursor: pointer;
+  padding: 0.1rem 2rem;
+  font-size: 1rem;
+  background-color: var(--bg-light);
+  color: var(--dark);
+  border: 1px solid var(--dark);
+  transition: .3s all ease;
+}
+
+.contact form button:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
 /* footer */
 footer {
   display: flex;
@@ -365,6 +481,9 @@ footer .login a:hover {
     font-size: 0.8rem;
   }
 
+  .contact form {
+    width: 80%;
+  }
 }
 
 /* CSS Anda untuk smartphone di sini */
@@ -452,5 +571,7 @@ footer .login a:hover {
     width: 100% !important;
   }
 
-
+  .contact form {
+    width: 100%;
+  }
 }

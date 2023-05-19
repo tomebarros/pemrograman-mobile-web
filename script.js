@@ -5,7 +5,6 @@ window.addEventListener("scroll", function () {
     document.querySelector(".navbar").style.height = "4rem";
     document.querySelector(".navbar .logo").style.width = "4rem";
     document.querySelector(".navbar .logo").style.transition = ".3s";
-    // document.querySelector(".navbar-brand").style.fontSize = "30px";
   } else {
     document.querySelector(".navbar").style.background = "none";
     document.querySelector(".navbar").style.height = "6rem";

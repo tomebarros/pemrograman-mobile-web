@@ -103,6 +103,31 @@
     </div>
   </section>
 
+
+  <section id="contact" class="contact">
+    <h3>Hubungi Kami</h3>
+    <form action="" method="post">
+
+      <div class="input-group">
+        <input type="text" required>
+        <span for="nama">Nama</span>
+      </div>
+
+      <div class="input-group">
+        <input type="email" required>
+        <span>Email</span>
+      </div>
+
+      <div class="input-textarea">
+        <textarea name="pesan" required></textarea>
+        <span for="pesan">Pesan</span>
+      </div>
+
+      <button type="submit">Kirim</button>
+
+    </form>
+  </section>
+
   <footer>
     <div class="links">
       <p>ikuti kami</p>
