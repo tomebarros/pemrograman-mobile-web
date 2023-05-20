@@ -28,7 +28,7 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="pasien/userinterface/">login</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
 
     <div class="navbar-contain">
@@ -50,6 +50,7 @@
       <span></span>
     </div>
     <p>Dedikasi untuk Kesehatan, Keunggulan dalam Perawatan</p>
+    <a href="pasien/userinterface/index.php">Login</a>
   </section>
 
   <section id="about" class="about">

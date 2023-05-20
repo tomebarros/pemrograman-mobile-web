@@ -203,6 +203,21 @@ nav .burger {
   z-index: 2;
 }
 
+.hero a {
+  z-index: 2;
+  cursor: pointer;
+  border: 1px solid var(--dark);
+  color: var(--dark);
+  padding: 0.3rem 2rem;
+  margin-top: 1rem;
+  transition: .3s ease;
+}
+
+.hero a:hover {
+  color: var(--light);
+  background-color: var(--dark);
+}
+
 /* about */
 
 .about,
