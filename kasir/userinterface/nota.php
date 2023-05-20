@@ -1,6 +1,6 @@
 <?php
-session_start();
 include '../../template/functions.php';
+include '../controller/other/restrict.php';
 
 $idrekammedis = input($_GET['q']);
 $dataResep = query("SELECT pasien.nama,pasien.idpasien,rekammedis.idrekammedis, resep.jumlah, obat.namaobat, resep.hargasatuan, resep.hargasatuan * resep.jumlah AS total FROM pasien,rekammedis,resep,obat WHERE rekammedis.idrekammedis = resep.idrekammedis AND resep.idobat = obat.idobat AND rekammedis.idpasien = pasien.idpasien AND rekammedis.idrekammedis = $idrekammedis");
