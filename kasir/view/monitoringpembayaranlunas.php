@@ -30,7 +30,7 @@
             <td><small><?= $d['metodepembayaran']; ?></small></td>
             <td>
               <small>
-                <a href="#">Cetak Struk</a>
+                <a href="../pdf/nota.php?q=<?= $d['idrekammedis'] ?>" target="_blank">Cetak Struk</a>
               </small>
             </td>
           </tr>
