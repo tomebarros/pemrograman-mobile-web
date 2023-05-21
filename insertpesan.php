@@ -18,7 +18,7 @@ error_reporting(E_ALL);
 $FROMEMAIL  = '"TomeHealth" <cs@21120055rekammedis.my.id>';
 $TOEMAIL    = $email;
 $SUBJECT    = "Balasan Pesan Dari CS TomeHealth";
-$PLAINTEXT  = "Salam Hangat, Tim 21120055rekammedis.my.id";
+$PLAINTEXT  = "Salam Hangat,\nTim 21120055rekammedis.my.id";
 $RANDOMHASH = "anyrandomhash";
 $FICTIONALSERVER = "@21120055lrekammedis.my.id";
 
