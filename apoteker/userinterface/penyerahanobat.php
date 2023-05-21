@@ -69,7 +69,7 @@ $idapoteker = query("SELECT idkaryawan FROM karyawan WHERE email = '{$_SESSION['
             <input type="submit" class="btn btn-success" value="Serahkan">
           </form>
         <?php } else { ?>
-          <a href="#">Cetak Bukti Resep</a>
+          <a href="buktiresep.php?q=<?= $idrekammedis; ?>" target="_blank">Cetak Bukti Resep</a>
         <?php } ?>
 
       </div>
