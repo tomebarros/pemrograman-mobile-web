@@ -21,7 +21,7 @@
 
 <body>
 
-  <a href="https://api.whatsapp.com/send?phone=6282146199762&text=Dear+Admin+*RSTome*%0A%0A" class="cs">
+  <a target="_blank" href="https://api.whatsapp.com/send?phone=6282146199762&text=Dear+Admin+*TomeHealth*%0A%0A" class="cs">
     <img src="template/img/cs.png" alt="customer service">
   </a>
 
@@ -112,26 +112,34 @@
 
   <section id="contact" class="contact">
     <h3>Hubungi Kami</h3>
-    <form action="" method="post">
-
-      <div class="input-group">
-        <input type="text" required>
-        <span for="nama">Nama</span>
+    <div class="row">
+      <div class="kiri">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.216705553303!2d123.62013377517093!3d-10.163032889950795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c56834e0db12415%3A0x4adc2c26430f6087!2sSTIKOM%20Uyelindo%20Kupang!5e0!3m2!1sid!2sid!4v1684666601821!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
+      <div class="kanan">
+        <form action="" method="post">
 
-      <div class="input-group">
-        <input type="email" required>
-        <span>Email</span>
+          <div class="input-group">
+            <input type="text" required>
+            <span for="nama">Nama</span>
+          </div>
+
+          <div class="input-group">
+            <input type="email" required>
+            <span>Email</span>
+          </div>
+
+          <div class="input-textarea">
+            <textarea name="pesan" required></textarea>
+            <span for="pesan">Pesan</span>
+          </div>
+
+          <button type="submit">Kirim</button>
+
+        </form>
       </div>
+    </div>
 
-      <div class="input-textarea">
-        <textarea name="pesan" required></textarea>
-        <span for="pesan">Pesan</span>
-      </div>
-
-      <button type="submit">Kirim</button>
-
-    </form>
   </section>
 
   <footer>
