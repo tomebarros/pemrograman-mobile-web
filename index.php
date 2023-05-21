@@ -117,15 +117,15 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.216705553303!2d123.62013377517093!3d-10.163032889950795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c56834e0db12415%3A0x4adc2c26430f6087!2sSTIKOM%20Uyelindo%20Kupang!5e0!3m2!1sid!2sid!4v1684666601821!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="kanan">
-        <form action="" method="post">
+        <form method="POST" action="insertpesan.php">
 
           <div class="input-group">
-            <input type="text" required>
+            <input type="text" name="nama" required autocomplete="off">
             <span for="nama">Nama</span>
           </div>
 
           <div class="input-group">
-            <input type="email" required>
+            <input type="email" name="email" required autocomplete="off">
             <span>Email</span>
           </div>
 
@@ -162,7 +162,6 @@
 
     <h4><a href="http://21120055rekammedis.my.id/">&copy; TomeHealth</a></h4>
   </footer>
-
   <script src="script.js"></script>
 </body>
 
