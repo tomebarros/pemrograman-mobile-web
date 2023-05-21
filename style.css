@@ -206,7 +206,8 @@ nav .burger {
 .hero a {
   z-index: 2;
   cursor: pointer;
-  border: 1px solid var(--dark);
+  border: 3px solid var(--dark);
+  border-radius: 2rem;
   color: var(--dark);
   padding: 0.3rem 2rem;
   margin-top: 1rem;
