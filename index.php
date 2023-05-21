@@ -129,6 +129,11 @@
             <span>Email</span>
           </div>
 
+          <div class="input-group">
+            <input type="text" name="judul" required autocomplete="off">
+            <span>Judul</span>
+          </div>
+
           <div class="input-textarea">
             <textarea name="pesan" required></textarea>
             <span for="pesan">Pesan</span>

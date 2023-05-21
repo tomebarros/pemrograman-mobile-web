@@ -5,10 +5,10 @@ include 'template/functions.php';
 
 $nama = input($_POST['nama']);
 $email = input($_POST['email']);
+$judul = input($_POST['judul']);
 $pesan = input($_POST['pesan']);
 
-mysqli_query($koneksi, "INSERT INTO pesan VALUES('', '$nama', '$email', '$pesan')");
-
+mysqli_query($koneksi, "INSERT INTO pesan VALUES('', '$nama','$email', '$judul', '$pesan')");
 
 
 ini_set('display_errors', 1);
@@ -44,7 +44,7 @@ $subject = "=?UTF-8?B?" . base64_encode($SUBJECT) . "?=";
 // Send email
 mail($TOEMAIL, $subject, $message, $headers, "-f" . $FROMEMAIL);
 
-
-
-
-header("location: index.php#contact");
+echo "<script>
+  alert('Pesan Anda berhasil terkirim, Terima Kasih');
+  document.location.href = 'index.php#contact';
+</script>";
