@@ -16,10 +16,21 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// var navbarToggler = document.querySelector(".navbar-toggler");
-// navbarToggler.addEventListener("click", function () {
-//   document.querySelector(".navbar").style.background = "rgba(0,0,0,0.6)";
-// });
+// cs scrolling
+const cs = document.querySelector(".cs");
+let isScrolling;
+window.addEventListener("scroll", () => {
+  // Hapus kelas "hidden" jika ada
+  cs.classList.remove("hidden");
+
+  // Hentikan timeout sebelumnya
+  clearTimeout(isScrolling);
+
+  // Setelah 200ms setelah scroll berhenti, tambahkan kelas "hidden"
+  isScrolling = setTimeout(() => {
+    cs.classList.add("hidden");
+  }, 5000);
+});
 
 const burger = document.querySelector("#burger");
 const navLink = document.querySelector("nav ul");

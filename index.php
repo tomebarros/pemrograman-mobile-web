@@ -20,6 +20,11 @@
 </head>
 
 <body>
+
+  <a href="https://api.whatsapp.com/send?phone=6282146199762&text=Dear+Admin+*RSTome*%0A%0A" class="cs">
+    <img src="template/img/cs.png" alt="customer service">
+  </a>
+
   <nav class="navbar">
     <!-- <h1>Tome Health</h1> -->
     <img src="img/logo.png" alt="logo" class="logo" />
