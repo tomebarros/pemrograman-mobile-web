@@ -87,7 +87,7 @@ include "../controller/other/restrict.php";
         <div class="modal-footer">
           <input type="submit" class="btn btn-success" value="Daftar">
           </form>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
         </div>
       </div>
     </div>
