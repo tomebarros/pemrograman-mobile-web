@@ -15,11 +15,10 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 // Required variables
-$FROMEMAIL  = '"AtoLaundry" <cs@21120055rekammedis.my.id>';
+$FROMEMAIL  = '"TomeHealth" <cs@21120055rekammedis.my.id>';
 $TOEMAIL    = $email;
-$SUBJECT    = "Pesan TomeHealth";
-$PLAINTEXT  = "Admin TomeHealth akan segera membalas pesan Anda \n";
-$PLAINTEXT  .= "Salam Hangat 21120055rekammedis.my.id";
+$SUBJECT    = "Balasan Pesan Dari CS TomeHealth";
+$PLAINTEXT  = "Salam Hangat 21120055rekammedis.my.id";
 $RANDOMHASH = "anyrandomhash";
 $FICTIONALSERVER = "@21120055lrekammedis.my.id";
 
@@ -29,11 +28,11 @@ $headers = "From: " . $FROMEMAIL . "\n";
 $headers .= "Reply-To: " . $FROMEMAIL . "\n";
 $headers .= "Return-path: " . $FROMEMAIL . "\n";
 $headers .= "Message-ID: <" . $RANDOMHASH . $FICTIONALSERVER . ">\n";
-$headers .= "21120055rekammedis.my.id\n";
-$headers .= "Dear $nama ,Terimah kasih atas pesan Anda yang Anda kirim di 21120055rekammedis.my.id \n";
+$headers .= "Balasan dari cs@21120055rekammedis.my.id\n";
+$headers .= "Dear $nama ,Terimah kasih atas pesan Anda yang Anda kirimkan ke Admin TomeHealth \n";
 
 // Add content type (plain text encoded in quoted printable, in this example)
-$headers .= "$judul\r\n";
+$headers .= "Yang berjudul $judul\r\n";
 
 // Convert plain text body to quoted printable
 $message = quoted_printable_encode($PLAINTEXT);
