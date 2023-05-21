@@ -29,9 +29,9 @@ $headers .= "Reply-To: " . $FROMEMAIL . "\n";
 $headers .= "Return-path: " . $FROMEMAIL . "\n";
 $headers .= "Message-ID: <" . $RANDOMHASH . $FICTIONALSERVER . ">\n";
 $headers .= "Kepada $nama, \n";
-$headers .= "Terima kasih atas pesan yang Anda kirimkan kepada Admin TomeHealth dengan judul '$judul'. \n\n";
-$headers .= "Kami ingin memberikan tanggapan yang hangat dari 21120055rekammedis.my.id. Tim Customer Service kami akan segera menanggapi email Anda dalam waktu sesingkat mungkin. \n\n";
-// $headers .= "Terima kasih sekali lagi, dan jika Anda memiliki pertanyaan lebih lanjut atau butuh bantuan, jangan ragu untuk menghubungi kami. \n\n";
+$headers .= "Terima kasih atas pesan yang Anda kirimkan kepada Admin TomeHealth dengan judul '$judul'. \n";
+$headers .= "Kami ingin memberikan tanggapan yang hangat dari 21120055rekammedis.my.id. Tim Customer Service kami akan segera menanggapi email Anda dalam waktu sesingkat mungkin. \n";
+$headers .= "Terima kasih sekali lagi, dan jika Anda memiliki pertanyaan lebih lanjut atau butuh bantuan, jangan ragu untuk menghubungi kami. \n";
 
 
 // Convert plain text body to quoted printable
