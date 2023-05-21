@@ -3,8 +3,8 @@ include 'template/functions.php';
 // var_dump($_POST);
 // die;
 
-$nama = input($_POST['nama']);
-$email = input($_POST['email']);
+$nama = ucwords(input($_POST['nama']));
+$email = strtolower(input($_POST['email']));
 $judul = input($_POST['judul']);
 $pesan = input($_POST['pesan']);
 
