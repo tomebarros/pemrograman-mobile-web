@@ -18,7 +18,7 @@ error_reporting(E_ALL);
 $FROMEMAIL  = '"TomeHealth" <cs@21120055rekammedis.my.id>';
 $TOEMAIL    = $email;
 $SUBJECT    = "Balasan Pesan Dari CS TomeHealth";
-$PLAINTEXT  = "Salam Hangat 21120055rekammedis.my.id";
+$PLAINTEXT  = "Salam Hangat, \n Tim 21120055rekammedis.my.id";
 $RANDOMHASH = "anyrandomhash";
 $FICTIONALSERVER = "@21120055lrekammedis.my.id";
 
@@ -28,11 +28,11 @@ $headers = "From: " . $FROMEMAIL . "\n";
 $headers .= "Reply-To: " . $FROMEMAIL . "\n";
 $headers .= "Return-path: " . $FROMEMAIL . "\n";
 $headers .= "Message-ID: <" . $RANDOMHASH . $FICTIONALSERVER . ">\n";
-$headers .= "Balasan dari cs@21120055rekammedis.my.id\n";
-$headers .= "Dear $nama ,Terimah kasih atas pesan Anda yang Anda kirimkan ke Admin TomeHealth \n";
+$headers .= "Kepada $nama, \n";
+$headers .= "Terima kasih atas pesan yang Anda kirimkan kepada Admin TomeHealth dengan judul '$judul'. \n\n";
+$headers .= "Kami ingin memberikan tanggapan yang hangat dari 21120055rekammedis.my.id. Tim Customer Service kami akan segera menanggapi email Anda dalam waktu sesingkat mungkin. \n\n";
+$headers .= "Terima kasih sekali lagi, dan jika Anda memiliki pertanyaan lebih lanjut atau butuh bantuan, jangan ragu untuk menghubungi kami. \n\n";
 
-// Add content type (plain text encoded in quoted printable, in this example)
-$headers .= "Yang berjudul $judul\r\n";
 
 // Convert plain text body to quoted printable
 $message = quoted_printable_encode($PLAINTEXT);
