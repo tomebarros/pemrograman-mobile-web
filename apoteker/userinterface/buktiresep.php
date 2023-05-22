@@ -19,7 +19,76 @@ $mpdf->SetHeader('');
 ob_start();
 ?>
 
-<h1>hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resep Medis</title>
+  <style>
+    .resep .resep-header table,
+    .resep .resep-body {
+      border: 2px solid #010101;
+      padding: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="resep">
+    <div class="resep-header">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td width="30%">
+            <center>
+              <img width="9rem" src="../../template/img/logo.png" alt="">
+            </center>
+          </td>
+          <td>
+            <h2>Apoteker</h2>
+            <h1>TomeHealth</h1>
+            <p>JL. Perintis Kemerdekaan II</p>
+            <p>Telp. 0821-9999-9999</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="resep-body">
+      <h3 style="margin-bottom: 10px; text-align:center; text-decoration:underline;"> Salinan Resep</h3>
+      <table border="0" cellpadding="5" cellspacing="0" width="100%">
+        <tr>
+          <td>No</td>
+          <td>No medis</td>
+          <td>Tgl : 11-11-1111</td>
+        </tr>
+
+
+        <tr>
+          <td>Dokter</td>
+          <td>Sayyid</td>
+          <td>Tgl : 11-11-1111</td>
+        </tr>
+
+
+        <tr>
+          <td>Untuk: </td>
+          <td colspan="2">Tome Ornai Barros</td>
+        </tr>
+
+      </table>
+
+      <p>paracetamol</p>
+      <!-- SELECT rekammedis.idrekammedis,obat.namaobat,obat.satuan,obat.wujud, resep.dosis FROM rekammedis,resep,obat WHERE rekammedis.idrekammedis = resep.idrekammedis AND resep.idobat = obat.idobat; -->
+
+    </div>
+  </div>
+
+
+</body>
+
+</html>
 
 
 <?php
