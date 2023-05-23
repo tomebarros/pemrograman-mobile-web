@@ -1,12 +1,7 @@
 <?php
 include '../../template/functions.php';
-include '../controller/other/restrict.php';
-
 $idrekammedis = input($_GET['q']);
-$dataResep = query("SELECT rekammedis.idrekammedis,obat.namaobat,obat.satuan,obat.wujud, resep.dosis, rekammedis.tanggalpelayanan,rekammedis.statusperawatan, karyawan.nama AS namadokter, pasien.nama AS namapasien FROM rekammedis,resep,obat,karyawan,pasien WHERE rekammedis.idrekammedis = resep.idrekammedis AND resep.idobat = obat.idobat AND rekammedis.idkaryawandokter = karyawan.idkaryawan AND rekammedis.idpasien = pasien.idpasien AND rekammedis.tanggalpelayanan AND rekammedis.idrekammedis = $idrekammedis;");
-
-$email = $_SESSION['emailApoteker'];
-$namaApoteker = query("SELECT nama FROM karyawan WHERE email = '$email'")[0]['nama'];
+$dataResep = query("SELECT rekammedis.idrekammedis,obat.namaobat,obat.satuan,obat.wujud, resep.dosis, rekammedis.idkaryawan,rekammedis.tanggalpelayanan,rekammedis.statusperawatan, karyawan.nama AS namadokter, pasien.nama AS namapasien FROM rekammedis,resep,obat,karyawan,pasien WHERE rekammedis.idrekammedis = resep.idrekammedis AND resep.idobat = obat.idobat AND rekammedis.idkaryawandokter = karyawan.idkaryawan AND rekammedis.idpasien = pasien.idpasien AND rekammedis.tanggalpelayanan AND rekammedis.idrekammedis = $idrekammedis;");
 
 // $nama_berkas = "BuktiResep-"  .  $namaPasien . "_" . tanggal(date('Y-m-d'));
 $nama_berkas = "RekamMedis-"  .  $dataResep[0]['namapasien'] . "_" . tanggal(date('Y-m-d'));
@@ -87,7 +82,7 @@ ob_start();
       </div>
 
 
-      <h4 style="text-align: right; margin-top: 50px;"><?= $namaApoteker; ?></h4>
+      <h4 style="text-align: right; margin-top: 50px;"><?= getKaryawanById($dataResep[0]['idkaryawan']); ?></h4>
 
     </div>
 
