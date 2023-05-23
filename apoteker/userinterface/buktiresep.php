@@ -2,13 +2,11 @@
 include '../../template/functions.php';
 include '../controller/other/restrict.php';
 
-// $idrekammedis = input($_GET['q']);
-// $dataResep = query("SELECT pasien.nama,pasien.idpasien,rekammedis.idrekammedis, resep.jumlah, obat.namaobat, resep.hargasatuan, resep.hargasatuan * resep.jumlah AS total FROM pasien,rekammedis,resep,obat WHERE rekammedis.idrekammedis = resep.idrekammedis AND resep.idobat = obat.idobat AND rekammedis.idpasien = pasien.idpasien AND rekammedis.idrekammedis = $idrekammedis");
-// $namaPasien = $dataResep[0]['nama'];
+$idrekammedis = input($_GET['q']);
+$dataResep = query("SELECT rekammedis.idrekammedis,obat.namaobat,obat.satuan,obat.wujud, resep.dosis, rekammedis.tanggalpelayanan,rekammedis.statusperawatan, karyawan.nama AS namadokter, pasien.nama AS namapasien FROM rekammedis,resep,obat,karyawan,pasien WHERE rekammedis.idrekammedis = resep.idrekammedis AND resep.idobat = obat.idobat AND rekammedis.idkaryawandokter = karyawan.idkaryawan AND rekammedis.idpasien = pasien.idpasien AND rekammedis.tanggalpelayanan AND rekammedis.idrekammedis = $idrekammedis;");
 
-// $emailKasir = $_SESSION['emailKasir'];
-// $namaKasir = query("SELECT nama FROM karyawan WHERE email = '$emailKasir'")[0]['nama'];
-
+$email = $_SESSION['emailApoteker'];
+$namaApoteker = query("SELECT nama FROM karyawan WHERE email = '$email'")[0]['nama'];
 
 // $nama_berkas = "BuktiResep-"  .  $namaPasien . "_" . tanggal(date('Y-m-d'));
 $nama_berkas = "BuktiResep-";
@@ -59,30 +57,40 @@ ob_start();
       <h3 style="margin-bottom: 10px; text-align:center; text-decoration:underline;"> Salinan Resep</h3>
       <table border="0" cellpadding="5" cellspacing="0" width="100%">
         <tr>
-          <td>No</td>
-          <td>No medis</td>
-          <td>Tgl : 11-11-1111</td>
+          <td>No Medis : </td>
+          <td><?= $idrekammedis; ?></td>
+          <td>Tgl : <?= tanggal($dataResep[0]['tanggalpelayanan']); ?></td>
         </tr>
 
 
         <tr>
           <td>Dokter</td>
-          <td>Sayyid</td>
-          <td>Tgl : 11-11-1111</td>
+          <td><?= $dataResep[0]['namadokter']; ?></td>
+          <td>Tgl : <?= tanggal($dataResep[0]['statusperawatan']); ?></td>
         </tr>
 
 
         <tr>
           <td>Untuk: </td>
-          <td colspan="2">Tome Ornai Barros</td>
+          <td colspan="2"><?= $dataResep[0]['namapasien']; ?></td>
         </tr>
 
       </table>
 
-      <p>paracetamol</p>
-      <!-- SELECT rekammedis.idrekammedis,obat.namaobat,obat.satuan,obat.wujud, resep.dosis FROM rekammedis,resep,obat WHERE rekammedis.idrekammedis = resep.idrekammedis AND resep.idobat = obat.idobat; -->
+      <div class="data-resep" style="text-align: center; margin-top: 90px;">
+
+        <?php
+        foreach ($dataResep as $d) {
+          echo "<li>{$d['namaobat']} | {$d['satuan']} | {$d['wujud']} | {$d['dosis']}</li>";
+        }
+        ?>
+      </div>
+
+
+      <h4 style="text-align: right; margin-top: 50px;"><?= $namaApoteker; ?></h4>
 
     </div>
+
   </div>
 
 
