@@ -1,13 +1,9 @@
 <?php
 include '../../template/functions.php';
-include '../controller/other/restrict.php';
 
 $idrekammedis = input($_GET['q']);
-$dataResep = query("SELECT pasien.nama,pasien.idpasien,rekammedis.idrekammedis, resep.jumlah, obat.namaobat, resep.hargasatuan, resep.hargasatuan * resep.jumlah AS total FROM pasien,rekammedis,resep,obat WHERE rekammedis.idrekammedis = resep.idrekammedis AND resep.idobat = obat.idobat AND rekammedis.idpasien = pasien.idpasien AND rekammedis.idrekammedis = $idrekammedis");
+$dataResep = query("SELECT pasien.nama,pasien.idpasien,rekammedis.idrekammedis, resep.jumlah, obat.namaobat, resep.hargasatuan, resep.hargasatuan * resep.jumlah AS total, rekammedis.idkaryawankasir FROM pasien,rekammedis,resep,obat WHERE rekammedis.idrekammedis = resep.idrekammedis AND resep.idobat = obat.idobat AND rekammedis.idpasien = pasien.idpasien AND rekammedis.idrekammedis = $idrekammedis;");
 $namaPasien = $dataResep[0]['nama'];
-
-$emailKasir = $_SESSION['emailKasir'];
-$namaKasir = query("SELECT nama FROM karyawan WHERE email = '$emailKasir'")[0]['nama'];
 
 
 $nama_berkas = "NotaPembayaran-"  .  $namaPasien . "_" . tanggal(date('Y-m-d'));
@@ -103,7 +99,7 @@ ob_start();
           <td>
             <p>Hormat Kami,</p>
             <br><br><br><br>
-            <p>(<?= $namaKasir; ?>)</p>
+            <p>(<?= getKaryawanById($dataResep[0]['idkaryawankasir']); ?>)</p>
           </td>
         </tr>
       </table>

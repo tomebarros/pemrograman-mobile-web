@@ -21,7 +21,7 @@ include "../../template/functions.php";
     <div class="row">
       <div class="col-md-6">
         <?php
-        $cek = getData("SELECT * FROM resep WHERE idkaryawan IS NULL");
+        $cek = getData("SELECT * FROM rekammedis WHERE idkaryawankasir IS NULL OR metodepembayaran IS NULL");
         if ($cek > 0) {
           include '../view/monitoringpembayaran.php';
         } else {
