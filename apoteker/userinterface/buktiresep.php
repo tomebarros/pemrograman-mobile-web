@@ -57,7 +57,7 @@ ob_start();
       <h3 style="margin-bottom: 10px; text-align:center; text-decoration:underline;"> Salinan Resep</h3>
       <table border="0" cellpadding="5" cellspacing="0" width="100%">
         <tr>
-          <td>No Medis : </td>
+          <td>No Medis</td>
           <td><?= $idrekammedis; ?></td>
           <td>Tgl : <?= tanggal($dataResep[0]['tanggalpelayanan']); ?></td>
         </tr>
@@ -71,7 +71,7 @@ ob_start();
 
 
         <tr>
-          <td>Untuk: </td>
+          <td>Untuk</td>
           <td colspan="2"><?= $dataResep[0]['namapasien']; ?></td>
         </tr>
 
