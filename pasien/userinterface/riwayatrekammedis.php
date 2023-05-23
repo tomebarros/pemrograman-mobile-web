@@ -13,22 +13,26 @@ include "../controller/other/restrict.php";
     #resep:hover::before,
     #nota:hover::before,
     #datamedis:hover::before {
-      content: 'Cetak Resep';
       position: absolute;
-      top: -1.5rem;
+      top: -2.5rem;
       right: 1.9rem;
       border-radius: 1rem 1rem 0 1rem;
       background-color: #31d2f2;
       color: #010101;
+      padding: 0.5rem 1rem;
       width: 7rem;
     }
 
+    #resep:hover::before {
+      content: 'Resep';
+    }
+
     #nota:hover::before {
-      content: 'Cetak Nota';
+      content: 'Nota';
     }
 
     #datamedis:hover::before {
-      content: 'Cetak Data Medis';
+      content: 'Data Medis';
     }
   </style>
 </head>
