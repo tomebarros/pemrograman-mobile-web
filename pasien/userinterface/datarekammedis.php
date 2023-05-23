@@ -5,7 +5,7 @@ $idrekammedis = input($_GET['q']);
 
 $dataMedis = query("SELECT rekammedis.idrekammedis, pasien.nama AS namapasien, pasien.tempatlahir, pasien.tanggallahir, pasien.jeniskelamin, pasien.alamat, pasien.telepon, pasien.email, rekammedis.tanggalpelayanan, ruang.namaruang, poli.namapoli, karyawan.nama AS namadokter, rekammedis.keluhanawal, rekammedis.idkaryawan, rekammedis.tanggalcheckin, rekammedis.jamcheckin, rekammedis.tb AS tinggibadan, rekammedis.bb AS beratbadan, rekammedis.suhu, rekammedis.tensi, rekammedis.catatanhasillab, rekammedis.catatanalergiobat,rekammedis.catatanalergimakanan, CASE rekammedis.jenisperawatan WHEN '0' THEN 'Rawat Jalan' WHEN '1' THEN 'Rawat Inap' END AS jenisperawatan, rekammedis.lamasakit, rekammedis.statusperawatan, rekammedis.tanggalkontrol,rekammedis.idkaryawankasir, CASE rekammedis.metodepembayaran WHEN '1' THEN 'Tunai' WHEN '2' THEN 'Transfer' END AS metodepembayaran FROM rekammedis, pasien, jadwalkaryawan,ruang, poli, karyawan WHERE rekammedis.idpasien = pasien.idpasien AND rekammedis.idjadwalkaryawan = jadwalkaryawan.idjadwalkaryawan AND rekammedis.idpoli = poli.idpoli AND rekammedis.idkaryawandokter = karyawan.idkaryawan AND jadwalkaryawan.idruang = ruang.idruang AND rekammedis.idrekammedis =  $idrekammedis;")[0];
 
-$dataObat = query("SELECT rekammedis.idrekammedis,obat.namaobat,obat.satuan,obat.wujud, resep.dosis, resep.hargasatuan, resep.jumlah, resep.idkaryawan AS idapoteker FROM rekammedis,resep,obat,karyawan,pasien WHERE rekammedis.idrekammedis = resep.idrekammedis AND resep.idobat = obat.idobat AND rekammedis.idkaryawandokter = karyawan.idkaryawan AND rekammedis.idpasien = pasien.idpasien AND rekammedis.tanggalpelayanan AND rekammedis.idrekammedis = $idrekammedis;");
+$dataObat = query("SELECT rekammedis.idrekammedis,obat.namaobat,obat.satuan,obat.wujud, resep.dosis, resep.dosis, resep.hargasatuan, resep.jumlah, resep.hargasatuan * resep.jumlah AS total, resep.idkaryawan AS idapoteker FROM rekammedis,resep,obat,karyawan,pasien WHERE rekammedis.idrekammedis = resep.idrekammedis AND resep.idobat = obat.idobat AND rekammedis.idkaryawandokter = karyawan.idkaryawan AND rekammedis.idpasien = pasien.idpasien AND rekammedis.tanggalpelayanan AND rekammedis.idrekammedis = $idrekammedis;");
 
 $nama_berkas = "DataMedis-NO" . $idrekammedis;
 include("../../mpdf60/mpdf.php");
@@ -33,15 +33,23 @@ ob_start();
     table tr th {
       text-align: left;
     }
+
+    table.resep {
+      margin-top: 20px;
+    }
+
+    table.resep tr td,
+    table.resep tr th {
+      text-align: center;
+    }
+
+    table.resep tbody tr td.rupiah {
+      text-align: right;
+    }
   </style>
 </head>
 
 <body>
-
-  <?php
-  var_dump($dataObat[0]['idapoteker'])
-  ?>
-
   <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
       <td width="10%">
@@ -83,6 +91,8 @@ ob_start();
     <tr>
       <th>Jenis Kelamin</th>
       <td>: <?= $dataMedis['jeniskelamin']; ?></td>
+      <th>No Medis</th>
+      <td>: <?= $idrekammedis; ?></td>
     </tr>
   </table>
 
@@ -157,7 +167,39 @@ ob_start();
 
   </table>
 
-
+  <table width="100%" border="1" cellpadding="5" cellspacing="0" class="resep">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Banyak Baran</th>
+        <th>Nama Obat</th>
+        <th>Dosis</th>
+        <th>Harga Satuan</th>
+        <th>Jumlah</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php
+      $gt = 0;
+      $no = 1;
+      foreach ($dataObat as $d) {
+        $gt += $d['total'];
+      ?>
+        <tr>
+          <td><?= $no++; ?></td>
+          <td><?= $d['jumlah']; ?></td>
+          <td><?= $d['namaobat']; ?></td>
+          <td><?= $d['dosis']; ?></td>
+          <td class="rupiah"><?= rupiah($d['hargasatuan']); ?></td>
+          <td class="rupiah"><?= rupiah($d['total']); ?></td>
+        </tr>
+      <?php } ?>
+      <tr>
+        <th colspan="5">Total</th>
+        <td class="rupiah" style="background-color: #ffc107;"><?= rupiah($gt); ?></td>
+      </tr>
+    </tbody>
+  </table>
 
 </body>
 

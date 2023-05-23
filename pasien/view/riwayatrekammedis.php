@@ -34,9 +34,9 @@
             <?php if (is_null($d['jenisperawatan'])) { ?>
               <a href="../controller/deletepelayanan.php?q=<?= $d['idrekammedis']; ?>">Hapus</a>
             <?php } else { ?>
-              <a target="_blank" href="../../apoteker/userinterface/buktiresep.php?q=<?= $d['idrekammedis']; ?>" class="btn btn-danger btn-sm"><i class="bi bi-receipt-cutoff"></i></a>
-              <a target="_blank" href="../../kasir/userinterface/nota.php?q=<?= $d['idrekammedis']; ?>" class="btn btn-danger btn-sm"><i class="bi bi-wallet"></i></a>
-              <a target="_blank" href="datarekammedis.php?q=<?= $d['idrekammedis']; ?>" class="btn btn-danger btn-sm"><i class="bi bi-table"></i></a>
+              <a target="_blank" id="resep" href="../../apoteker/userinterface/buktiresep.php?q=<?= $d['idrekammedis']; ?>" class="btn btn-danger btn-sm position-relative"><i class="bi bi-receipt-cutoff"></i></a>
+              <a target="_blank" id="nota" href="../../kasir/userinterface/nota.php?q=<?= $d['idrekammedis']; ?>" class="btn btn-danger btn-sm my-2 position-relative"><i class="bi bi-wallet"></i></a>
+              <a target="_blank" id="datamedis" href="datarekammedis.php?q=<?= $d['idrekammedis']; ?>" class="btn btn-danger btn-sm position-relative"><i class="bi bi-table"></i></a>
             <?php } ?>
           </td>
         </tr>

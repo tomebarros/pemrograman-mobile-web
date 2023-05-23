@@ -8,6 +8,29 @@ include "../controller/other/restrict.php";
 <head>
   <title>Rekam Medis</title>
   <?php include "../../template/cdnbs5.php"; ?>
+
+  <style>
+    #resep:hover::before,
+    #nota:hover::before,
+    #datamedis:hover::before {
+      content: 'Cetak Resep';
+      position: absolute;
+      top: -1.5rem;
+      right: 1.9rem;
+      border-radius: 1rem 1rem 0 1rem;
+      background-color: #31d2f2;
+      color: #010101;
+      width: 7rem;
+    }
+
+    #nota:hover::before {
+      content: 'Cetak Nota';
+    }
+
+    #datamedis:hover::before {
+      content: 'Cetak Data Medis';
+    }
+  </style>
 </head>
 
 <body>
