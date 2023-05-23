@@ -9,7 +9,7 @@ $email = $_SESSION['emailApoteker'];
 $namaApoteker = query("SELECT nama FROM karyawan WHERE email = '$email'")[0]['nama'];
 
 // $nama_berkas = "BuktiResep-"  .  $namaPasien . "_" . tanggal(date('Y-m-d'));
-$nama_berkas = "BuktiResep-";
+$nama_berkas = "RekamMedis-"  .  $dataResep[0]['namapasien'] . "_" . tanggal(date('Y-m-d'));
 include("../../mpdf60/mpdf.php");
 $mpdf = new mPDF('utf-8', 'A4');
 $mpdf->SetHeader('');
@@ -23,7 +23,7 @@ ob_start();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resep Medis</title>
+  <title>ResepMedis-<?= $dataResep[0]['namapasien']; ?></title>
   <style>
     .resep .resep-header table,
     .resep .resep-body {
