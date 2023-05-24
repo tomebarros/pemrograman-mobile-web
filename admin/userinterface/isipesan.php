@@ -78,9 +78,9 @@ if ($dataPesan['status'] == '0') {
   $headers .= "Reply-To: " . $FROMEMAIL . "\n";
   $headers .= "Return-path: " . $FROMEMAIL . "\n";
   $headers .= "Message-ID: <" . $RANDOMHASH . $FICTIONALSERVER . ">\n";
-  $headers .= "Kepada  {$dataPesan['nama']}, \n\n";
+  $headers .= "Kepada  {$dataPesan['nama']}, \n \n";
   $headers .= "Pesan Anda yang judul '{$dataPesan['judul']}' telah dibaca oleh TIM 21120055rekammedis.my.id . \n";
-  $headers .= "Status Pesan : Dibaca. \n\n";
+  $headers .= "Status Pesan : Dibaca. \n \n";
 
   $headers .= "Salam Hangat. \n";
   $headers .= "Tim 21120055rekammedis.my.id. \n";
