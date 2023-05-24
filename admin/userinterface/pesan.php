@@ -38,8 +38,8 @@ include "../../template/functions.php";
             <th class="col-3">Nama</th>
             <th class="col-3">Email</th>
             <th class="col-2">Judul</th>
-            <th class="col-2">Tanggal</th>
-            <th class="col-1">Aksi</th>
+            <th class="col-1">Tanggal</th>
+            <th class="col-2">Aksi</th>
           </tr>
         </thead>
         <tbody id="myTable">
@@ -58,8 +58,9 @@ include "../../template/functions.php";
                 <?php if ($d['status'] == '0') { ?>
                   <a href="isipesan.php?q=<?= $d['idpesan']; ?>" class="btn btn-warning btn-sm ">Baca</a>
                 <?php } else { ?>
-                  <a href="#" class="btn btn-secondary btn-sm ">Balas</a>
+                  <a href="isipesan.php?q=<?= $d['idpesan'] ?>" class="btn btn-secondary btn-sm ">Balas</a>
                 <?php } ?>
+                <a href="../controller/pesan/hapus.php?q=<?= $d['idpesan']; ?>" class="btn btn-danger btn-sm mt-1">Hapus</a>
               </td>
             </tr>
           <?php } ?>
