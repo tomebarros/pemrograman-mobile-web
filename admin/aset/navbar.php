@@ -67,7 +67,7 @@ $nama = namakaryawan($_SESSION['emailAdmin']);
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" href="#"><i class="bi bi-person-fill"></i><?= $nama; ?></a>
+          <a class="nav-link active" href="pesan.php"><i class="bi bi-person-fill"></i><?= $nama; ?></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../controller/other/ceklogout.php">Logout</a>
@@ -76,5 +76,3 @@ $nama = namakaryawan($_SESSION['emailAdmin']);
     </div>
   </div>
 </nav>
-
-

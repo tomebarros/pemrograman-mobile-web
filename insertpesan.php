@@ -7,8 +7,10 @@ $nama = ucwords(input($_POST['nama']));
 $email = strtolower(input($_POST['email']));
 $judul = input($_POST['judul']);
 $pesan = input($_POST['pesan']);
+$tanggal = date("Y-m-d");
 
-mysqli_query($koneksi, "INSERT INTO pesan VALUES('', '$nama','$email', '$judul', '$pesan')");
+
+mysqli_query($koneksi, "INSERT INTO pesan VALUES('', '$nama','$email', '$judul', '$pesan','$tanggal','0')");
 
 
 ini_set('display_errors', 1);
