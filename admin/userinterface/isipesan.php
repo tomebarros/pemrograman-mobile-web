@@ -68,7 +68,7 @@ if ($dataPesan['status'] == '0') {
   $FROMEMAIL  = '"TomeHealth" <cs@21120055rekammedis.my.id>';
   $TOEMAIL    = $dataPesan['email'];
   $SUBJECT    = "Status Pesan Dari CS TomeHealth";
-  $PLAINTEXT  = "Salam Hangat, Tim 21120055rekammedis.my.id";
+  $PLAINTEXT  = "Kami Harap Anda Tidak Membalas Email Ini";
   $RANDOMHASH = "anyrandomhash";
   $FICTIONALSERVER = "@21120055lrekammedis.my.id";
 
@@ -78,9 +78,12 @@ if ($dataPesan['status'] == '0') {
   $headers .= "Reply-To: " . $FROMEMAIL . "\n";
   $headers .= "Return-path: " . $FROMEMAIL . "\n";
   $headers .= "Message-ID: <" . $RANDOMHASH . $FICTIONALSERVER . ">\n";
-  $headers .= "Dear {$dataPesan['nama']}, \n";
-  $headers .= "Pesan Anda Yang Berjudul '{$dataPesan['judul']}' telah dibaca oleh TIM 21120055rekammedis.my.id . \n";
-  $headers .= "Status Pesan : Dibaca. \n";
+  $headers .= "Kepada  {$dataPesan['nama']}, \n\n";
+  $headers .= "Pesan Anda yang judul '{$dataPesan['judul']}' telah dibaca oleh TIM 21120055rekammedis.my.id . \n";
+  $headers .= "Status Pesan : Dibaca. \n\n";
+
+  $headers .= "Salam Hangat. \n";
+  $headers .= "Tim 21120055rekammedis.my.id. \n";
 
   // Convert plain text body to quoted printable
   $message = quoted_printable_encode($PLAINTEXT);
