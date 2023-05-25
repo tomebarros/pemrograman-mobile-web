@@ -43,7 +43,7 @@ $dataPesan = query($query)[0];
         <form action="../controller/pesan/balaspesan.php" method="POST">
           <input type="hidden" value="<?= $dataPesan['idpesan'] ?>">
           <div class="form-floating">
-            <textarea class="form-control" required placeholder="Leave a comment here" id="floatingTextarea2" style="min-height: 300px;min-height: 300px;"></textarea>
+            <textarea class="form-control" required placeholder="Leave a comment here" id="floatingTextarea2" style="min-height: 300px;max-height: 300px;"></textarea>
             <label for="floatingTextarea2">Balas Pesan</label>
           </div>
           <div class="d-grid mt-2">
