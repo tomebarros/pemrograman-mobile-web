@@ -1,9 +1,6 @@
 <?php
 include "../controller/other/restrict.php";
 include "../../template/functions.php";
-
-
-
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
@@ -20,15 +17,12 @@ include "../../template/functions.php";
   <div class="container">
     <h1>Pesan</h1>
 
-
-
     <hr>
     <div class="row">
       <div class="col-md-4 ms-auto">
         <input class="form-control" id="myInput" type="search" placeholder="Cari..">
       </div>
     </div>
-
 
     <div class="table-responsive mt-2">
       <table class="table table-striped table-hover table-sm">

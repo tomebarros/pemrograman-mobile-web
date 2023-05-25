@@ -3,7 +3,13 @@ include "../../template/functions.php";
 include "../controller/other/restrict.php";
 
 $idpesan = input($_GET['q']);
-$dataPesan = query("SELECT * FROM pesan WHERE idpesan = '$idpesan'")[0];
+$query = "SELECT * FROM pesan WHERE idpesan = '$idpesan'";
+$cek = getData($query);
+if ($cek < 1) {
+  echo "<a href='pesan.php'>Kembali </a>";
+  die('Pesan Tidak Tersedia');
+}
+$dataPesan = query($query)[0];
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
@@ -18,9 +24,7 @@ $dataPesan = query("SELECT * FROM pesan WHERE idpesan = '$idpesan'")[0];
   <?php include "../aset/navbar.php"; ?>
 
   <div class="container">
-
     <div class="row mx-1">
-
       <div class="col-md-6 border p-3 mt-1">
         <h3>Nomor Pesan <?= $idpesan; ?></h3>
         <ul>
@@ -56,12 +60,9 @@ $dataPesan = query("SELECT * FROM pesan WHERE idpesan = '$idpesan'")[0];
 </body>
 
 </html>
-
-
 <?php
 if ($dataPesan['status'] == '0') {
   mysqli_query($koneksi, "UPDATE pesan SET status = '1' WHERE idpesan = '$idpesan'");
-
 
   ini_set('display_errors', 1);
   error_reporting(E_ALL);
@@ -73,7 +74,6 @@ if ($dataPesan['status'] == '0') {
   $PLAINTEXT  = "Kami Harap Anda Tidak Membalas Email Ini";
   $RANDOMHASH = "anyrandomhash";
   $FICTIONALSERVER = "@21120055lrekammedis.my.id";
-
 
   // Basic headers
   $headers = "From: " . $FROMEMAIL . "\n";
