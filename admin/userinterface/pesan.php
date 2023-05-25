@@ -45,7 +45,7 @@ include "../../template/functions.php";
         <tbody id="myTable">
           <?php
           $no = 1;
-          $data = query("SELECT * FROM pesan ORDER BY status,tanggal");
+          $data = query("SELECT * FROM pesan ORDER BY status,tanggal,keterangan");
           foreach ($data as $d) {
           ?>
             <tr>
@@ -57,10 +57,13 @@ include "../../template/functions.php";
               <td>
                 <?php if ($d['status'] == '0') { ?>
                   <a href="isipesan.php?q=<?= $d['idpesan']; ?>" class="btn btn-warning btn-sm ">Baca</a>
-                <?php } else { ?>
+                <?php } else if ($d['status'] == '1' and $d['keterangan'] == '0') { ?>
                   <a href="isipesan.php?q=<?= $d['idpesan'] ?>" class="btn btn-secondary btn-sm ">Balas</a>
                 <?php } ?>
-                <a href="../controller/pesan/hapus.php?q=<?= $d['idpesan']; ?>" class="btn btn-danger btn-sm mt-1">Hapus</a>
+                <?php if ($d['keterangan'] == '1') { ?>
+                  <a href="isipesan.php?q=<?= $d['idpesan'] ?>" class="btn btn-success btn-sm ">Baca</a>
+                  <a href="../controller/pesan/hapus.php?q=<?= $d['idpesan']; ?>" class="btn btn-danger btn-sm mt-1" onclick="return confirm('Hapus Pesan')">Hapus</a>
+                <?php } ?>
               </td>
             </tr>
           <?php } ?>

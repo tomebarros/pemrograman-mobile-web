@@ -29,15 +29,17 @@ $dataPesan = query("SELECT * FROM pesan WHERE idpesan = '$idpesan'")[0];
           <li>Judul : <?= $dataPesan['judul']; ?></li>
           <li>Tanggal : <?= tanggal($dataPesan['tanggal']); ?></li>
           <li>Status : <?= $dataPesan['status'] == '0' ? 'Belum Dibaca' : 'Dibaca'; ?></li>
+          <li>Keteranggan : <span class="text-warning"> <?= $dataPesan['keterangan'] == '0' ? 'Belum balas pesan ini' : 'Balas' ?></span></li>
         </ul>
         <h4><?= $dataPesan['judul']; ?></h4>
         <p><?= $dataPesan['isipesan']; ?></p>
       </div>
 
       <div class="col-md-6 mt-2">
-        <form action="">
+        <form action="../controller/pesan/balaspesan.php" method="POST">
+          <input type="hidden" value="<?= $dataPesan['idpesan'] ?>">
           <div class="form-floating">
-            <textarea class="form-control" required placeholder="Leave a comment here" id="floatingTextarea2" style="min-height: 300px"></textarea>
+            <textarea class="form-control" required placeholder="Leave a comment here" id="floatingTextarea2" style="min-height: 300px;min-height: 300px;"></textarea>
             <label for="floatingTextarea2">Balas Pesan</label>
           </div>
           <div class="d-grid mt-2">
