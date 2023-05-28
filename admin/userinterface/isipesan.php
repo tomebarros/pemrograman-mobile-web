@@ -32,18 +32,23 @@ $dataPesan = query($query)[0];
           <li>Email : <?= $dataPesan['email']; ?></li>
           <li>Judul : <?= $dataPesan['judul']; ?></li>
           <li>Tanggal : <?= tanggal($dataPesan['tanggal']); ?></li>
-          <li>Status : <?= $dataPesan['status'] == '0' ? 'Belum Dibaca' : 'Dibaca'; ?></li>
-          <li>Keteranggan : <span class="text-warning"> <?= $dataPesan['keterangan'] == '0' ? 'Belum balas pesan ini' : 'Balas' ?></span></li>
+          <li>Status : <?= is_null($dataPesan['status']) ? '<span class="text-warning">Belum Baca Pesan Ini</span>' : 'Sudah Baca'; ?></li>
+          <li>Keteranggan : <?= is_null($dataPesan['keterangan']) ? '<span class="text-warning">Belum Balas</span>' : 'Sudah Balas' ?></li>
         </ul>
         <h4><?= $dataPesan['judul']; ?></h4>
         <p><?= $dataPesan['isipesan']; ?></p>
+        <?php if (!is_null($dataPesan['keterangan'])) { ?>
+          <hr>
+          <p><?= $dataPesan['balasan']; ?></p>
+        <?php } ?>
       </div>
 
       <div class="col-md-6 mt-2">
-        <form action="../controller/pesan/balaspesan.php" method="POST">
+        <form action="../controller/pesan/balaspesan.php" method="POST" onsubmit="return confirm('Balas Pesan Ini?')">
+          <input type="hidden" name="idpesan" value="<?= $idpesan; ?>">
           <input type="hidden" value="<?= $dataPesan['idpesan'] ?>">
           <div class="form-floating">
-            <textarea class="form-control" required placeholder="Leave a comment here" id="floatingTextarea2" style="min-height: 300px;max-height: 300px;"></textarea>
+            <textarea class="form-control" required name="pesan" placeholder="Leave a comment here" id="floatingTextarea2" style="min-height: 300px;max-height: 300px;"></textarea>
             <label for="floatingTextarea2">Balas Pesan</label>
           </div>
           <div class="d-grid mt-2">
@@ -61,7 +66,7 @@ $dataPesan = query($query)[0];
 
 </html>
 <?php
-if ($dataPesan['status'] == '0') {
+if (is_null($dataPesan['status'])) {
   mysqli_query($koneksi, "UPDATE pesan SET status = '1' WHERE idpesan = '$idpesan'");
 
   ini_set('display_errors', 1);

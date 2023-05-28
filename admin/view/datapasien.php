@@ -28,7 +28,7 @@ if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
 ?>
 
 <form action="" method="post">
-  <div class="input-group">
+  <div class="input-group mt-2">
     <input class="form-control" name="keyword" type="search" placeholder="Cari.." value="<?php echo isset($_POST['keyword']) ? $_POST['keyword'] : '' ?>" autofocus>
     <button name="cari" class="btn btn-primary"><i class="bi bi-search"></i></button>
   </div>

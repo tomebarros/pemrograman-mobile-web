@@ -1,4 +1,4 @@
-  <input class="form-control" id="myInput" type="search" placeholder="Cari..">
+  <input class="form-control mt-2" id="myInput" type="search" placeholder="Cari..">
   <br>
   <div class="table-responsive">
     <table class="table table-sm" id="myTable">

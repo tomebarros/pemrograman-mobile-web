@@ -49,9 +49,9 @@ include "../../template/functions.php";
               <td><?= $d['judul']; ?></td>
               <td><?= tanggal($d['tanggal']); ?></td>
               <td>
-                <?php if ($d['status'] == '0') { ?>
+                <?php if (is_null($d['status'])) { ?>
                   <a href="isipesan.php?q=<?= $d['idpesan']; ?>" class="btn btn-warning btn-sm ">Baca</a>
-                <?php } else if ($d['status'] == '1' and $d['keterangan'] == '0') { ?>
+                <?php } else if ($d['status'] == '1' and is_null($d['keterangan'])) { ?>
                   <a href="isipesan.php?q=<?= $d['idpesan'] ?>" class="btn btn-secondary btn-sm ">Balas</a>
                 <?php } ?>
                 <?php if ($d['keterangan'] == '1') { ?>

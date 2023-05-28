@@ -22,7 +22,7 @@ if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
 ?>
 
 <form action="" method="post">
-  <div class="input-group">
+  <div class="input-group mt-2">
     <input class="form-control" name="keyword" type="search" placeholder="Cari.." value="<?php echo isset($_POST['keyword']) ? $_POST['keyword'] : '' ?>" autofocus>
     <button name="cari" class="btn btn-primary"><i class="bi bi-search"></i></button>
   </div>
@@ -77,9 +77,9 @@ if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
                   <div class="input-group mb-2">
                     <span class="input-group-text">Kelas</span>
                     <select name="kelas" class="form-select" required>
-                      <option value="1" <?= $d['kelas'] == '1' ?  "selected" :'' ?>>1</option>
-                      <option value="2" <?= $d['kelas'] == '2' ? "selected" :'' ?>>2</option>
-                      <option value="3" <?= $d['kelas'] == '3' ?  "selected" :'' ?>>3</option>
+                      <option value="1" <?= $d['kelas'] == '1' ?  "selected" : '' ?>>1</option>
+                      <option value="2" <?= $d['kelas'] == '2' ? "selected" : '' ?>>2</option>
+                      <option value="3" <?= $d['kelas'] == '3' ?  "selected" : '' ?>>3</option>
                     </select>
                   </div>
 
