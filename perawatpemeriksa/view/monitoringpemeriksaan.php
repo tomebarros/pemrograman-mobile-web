@@ -36,7 +36,7 @@
 
               <?php if (is_null($d['jenisperawatan'])) {
                 if (is_null($d['tb'])) { ?>
-                  <a href="pemeriksaanawal.php?q=<?= $d['idrekammedis']; ?>">Pemeriksaan</a>
+                  <a href="pemeriksaanawal.php?q=<?= $d['idrekammedis']; ?>">Pemeriksa</a>
                 <?php } ?>
 
                 <a href="../controller/deletepelayanan.php?q=<?= $d['idrekammedis']; ?>">Hapus</a>
