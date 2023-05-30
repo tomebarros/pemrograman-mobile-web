@@ -53,13 +53,13 @@ $datarekammedis = query("SELECT * from rekammedis WHERE idrekammedis = '$idrekam
 
           <div class="input-group mb-2">
             <span class="input-group-text">Tanggal Checkin</span>
-            <input type="date" class="form-control" name="tanggalcheckin" required value="<?= $datarekammedis['tanggalcheckin'] ?>"> 
-          </div> 
+            <input type="date" class="form-control" name="tanggalcheckin" required value="<?= $datarekammedis['tanggalcheckin'] ?>">
+          </div>
 
 
           <div class="input-group mb-2">
             <span class="input-group-text">Jam Checkin</span>
-            <input type="time" class="form-control" name="jamcheckin"required value="<?= $datarekammedis['jamcheckin'] ?>">
+            <input type="time" class="form-control" name="jamcheckin" required value="<?= $datarekammedis['jamcheckin'] ?>">
           </div>
 
 
@@ -81,19 +81,19 @@ $datarekammedis = query("SELECT * from rekammedis WHERE idrekammedis = '$idrekam
 
           <div class="input-group mb-2">
             <span class="input-group-text">Tensi</span>
-            <input type="number" class="form-control" name="tensi" required value="<?= $datarekammedis['tensi'] ?>">
+            <input type="text" class="form-control" name="tensi" required value="<?= $datarekammedis['tensi'] ?>">
           </div>
 
           <div class="input-group mb-2">
             <span class="input-group-text">Catatan Hasil Lab</span>
             <input type="text" class="form-control" name="catatanhasillab" required value="<?= $datarekammedis['catatanhasillab'] ?>">
           </div>
-          
+
           <div class="input-group mb-2">
             <span class="input-group-text">Catatan Alergi Makanan</span>
             <input type="text" class="form-control" name="catatanalergimakanan" required value="<?= $datarekammedis['catatanalergimakanan'] ?>">
           </div>
-          
+
           <div class="input-group mb-2">
             <span class="input-group-text">Catatan Alergi Obat</span>
             <input type="text" class="form-control" name="catatanalergiobat" required value="<?= $datarekammedis['catatanalergiobat'] ?>">

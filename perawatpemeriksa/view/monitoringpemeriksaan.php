@@ -19,7 +19,7 @@
     <tbody>
       <?php
       $no = 1;
-      $data = query("SELECT rekammedis.tb, pasien.idpasien,pasien.nama as namapasien,rekammedis.idrekammedis, rekammedis.tanggalpelayanan, rekammedis.idpoli, poli.namapoli, rekammedis.idkaryawandokter, karyawan.nama,IF (rekammedis.statusperawatan = '0000-00-00', 'Dalam Perawatan', rekammedis.statusperawatan) AS statusperawatan,CASE rekammedis.metodepembayaran WHEN '1' THEN 'Tunai' WHEN '2' THEN 'Transfer' END AS metodepembayaran, CASE rekammedis.jenisperawatan WHEN '1' THEN 'Rawat Inap' WHEN '0' THEN 'Rawat Jalan' END AS jenisperawatan FROM rekammedis,karyawan,poli,pasien WHERE rekammedis.idkaryawandokter = karyawan.idkaryawan AND rekammedis.idpoli = poli.idpoli AND rekammedis.idpasien=pasien.idpasien  ORDER BY rekammedis.jenisperawatan, rekammedis.tanggalpelayanan DESC;");
+      $data = query("SELECT rekammedis.tb, pasien.idpasien,pasien.nama as namapasien,rekammedis.idrekammedis, rekammedis.tanggalpelayanan, rekammedis.idpoli, poli.namapoli, rekammedis.idkaryawandokter, karyawan.nama,IF (rekammedis.statusperawatan = '0000-00-00', 'Dalam Perawatan', rekammedis.statusperawatan) AS statusperawatan,CASE rekammedis.metodepembayaran WHEN '1' THEN 'Tunai' WHEN '2' THEN 'Transfer' END AS metodepembayaran, CASE rekammedis.jenisperawatan WHEN '1' THEN 'Rawat Inap' WHEN '0' THEN 'Rawat Jalan' END AS jenisperawatan, rekammedis.checkin FROM rekammedis,karyawan,poli,pasien WHERE rekammedis.idkaryawandokter = karyawan.idkaryawan AND rekammedis.idpoli = poli.idpoli AND rekammedis.idpasien=pasien.idpasien  ORDER BY rekammedis.jenisperawatan, rekammedis.tanggalpelayanan DESC;");
       foreach ($data as $d) {
       ?>
         <tr>
@@ -32,11 +32,10 @@
           <td><small><?= tanggal($d['statusperawatan']); ?></small></td>
           <td><small><?= is_null($d['metodepembayaran']) ? '-' : $d['metodepembayaran']; ?></small></td>
           <td><small><?= is_null($d['jenisperawatan']) ? '-' : $d['jenisperawatan']; ?></small></td>
-          <td><small>
+          <td <?= ($d['checkin'] == '1') ? "class='bg-warning'" : "" ?>><small>
 
-              <?php if (is_null($d['jenisperawatan'])) { ?>
-
-                <?php if (is_null($d['tb'])) { ?>
+              <?php if (is_null($d['jenisperawatan'])) {
+                if (is_null($d['tb'])) { ?>
                   <a href="pemeriksaanawal.php?q=<?= $d['idrekammedis']; ?>">Pemeriksaan</a>
                 <?php } ?>
 

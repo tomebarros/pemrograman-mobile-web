@@ -22,7 +22,7 @@ $namaVariabel = input($_POST['idrekammedis']);
 
 
 // update data ke database
-mysqli_query($koneksi, "update rekammedis set tanggalcheckin='$namaVariabel1', jamcheckin='$namaVariabel2', tb='$namaVariabel3', bb='$namaVariabel4', suhu='$namaVariabel5', tensi='$namaVariabel6',  catatanhasillab='$namaVariabel7', catatanalergimakanan='$namaVariabel8', catatanalergiobat='$namaVariabel9', idkaryawan='$namaVariabel10' where idrekammedis='$namaVariabel'");
+mysqli_query($koneksi, "update rekammedis set tanggalcheckin='$namaVariabel1', jamcheckin='$namaVariabel2', tb='$namaVariabel3', bb='$namaVariabel4', suhu='$namaVariabel5', tensi='$namaVariabel6',  catatanhasillab='$namaVariabel7', catatanalergimakanan='$namaVariabel8', catatanalergiobat='$namaVariabel9', idkaryawan='$namaVariabel10', checkin='0' where idrekammedis='$namaVariabel'");
 
 // mengalihkan halaman kembali ke index.php
 header("location: ../userinterface/pemeriksaanawal.php?q=$namaVariabel");
