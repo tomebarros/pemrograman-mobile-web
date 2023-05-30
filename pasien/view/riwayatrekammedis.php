@@ -18,7 +18,7 @@
       $no = 1;
       $email = $_SESSION['emailPasien'];
       $idpasien = query("SELECT idpasien FROM pasien WHERE email = '$email'")[0]['idpasien'];
-      $data = query("SELECT pasien.idpasien,rekammedis.idrekammedis, rekammedis.tanggalpelayanan, rekammedis.idpoli, poli.namapoli, rekammedis.idkaryawandokter, karyawan.nama,IF (rekammedis.statusperawatan = '0000-00-00', 'Dalam Perawatan', rekammedis.statusperawatan) AS statusperawatan,CASE rekammedis.metodepembayaran WHEN '1' THEN 'Tunai' WHEN '2' THEN 'Transfer' END AS metodepembayaran, CASE rekammedis.jenisperawatan WHEN '1' THEN 'Rawat Inap' WHEN '0' THEN 'Rawat Jalan' END AS jenisperawatan, rekammedis.checkin FROM rekammedis,karyawan,poli,pasien WHERE rekammedis.idkaryawandokter = karyawan.idkaryawan AND rekammedis.idpoli = poli.idpoli AND rekammedis.idpasien=pasien.idpasien AND pasien.idpasien = '$idpasien' ORDER BY rekammedis.tanggalpelayanan");
+      $data = query("SELECT pasien.idpasien,rekammedis.idrekammedis, rekammedis.tanggalpelayanan, rekammedis.idpoli, poli.namapoli, rekammedis.idkaryawandokter, karyawan.nama,IF (rekammedis.statusperawatan = '0000-00-00', 'Dalam Perawatan', rekammedis.statusperawatan) AS statusperawatan,CASE rekammedis.metodepembayaran WHEN '1' THEN 'Tunai' WHEN '2' THEN 'Transfer' END AS metodepembayaran, CASE rekammedis.jenisperawatan WHEN '1' THEN 'Rawat Inap' WHEN '0' THEN 'Rawat Jalan' END AS jenisperawatan, rekammedis.checkin FROM rekammedis,karyawan,poli,pasien WHERE rekammedis.idkaryawandokter = karyawan.idkaryawan AND rekammedis.idpoli = poli.idpoli AND rekammedis.idpasien=pasien.idpasien AND pasien.idpasien = '$idpasien' ORDER BY rekammedis.tanggalpelayanan DESC");
       foreach ($data as $d) {
       ?>
         <tr>
