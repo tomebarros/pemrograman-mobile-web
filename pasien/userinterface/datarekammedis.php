@@ -7,6 +7,8 @@ $dataMedis = query("SELECT rekammedis.idrekammedis, pasien.nama AS namapasien, p
 
 $dataObat = query("SELECT rekammedis.idrekammedis,obat.namaobat,obat.satuan,obat.wujud, resep.dosis, resep.dosis, resep.hargasatuan, resep.jumlah, resep.hargasatuan * resep.jumlah AS total, resep.idkaryawan AS idapoteker FROM rekammedis,resep,obat,karyawan,pasien WHERE rekammedis.idrekammedis = resep.idrekammedis AND resep.idobat = obat.idobat AND rekammedis.idkaryawandokter = karyawan.idkaryawan AND rekammedis.idpasien = pasien.idpasien AND rekammedis.tanggalpelayanan AND rekammedis.idrekammedis = $idrekammedis;");
 
+$dataPenyakit = query("SELECT penyakit.nama namapenyakit FROM penyakit,rekammedis,detailpenyakit WHERE rekammedis.idrekammedis = detailpenyakit.idrekammedis AND detailpenyakit.idpenyakit = penyakit.idpenyakit AND rekammedis.idrekammedis = $idrekammedis;");
+
 $nama_berkas = "DataMedis-NO" . $idrekammedis;
 include("../../mpdf60/mpdf.php");
 $mpdf = new mPDF('utf-8', 'A4');
@@ -35,7 +37,7 @@ ob_start();
     }
 
     table.resep {
-      margin-top: 20px;
+      margin: 20px 0 20px;
     }
 
     table.resep tr td,
@@ -171,7 +173,7 @@ ob_start();
     <thead>
       <tr>
         <th>No</th>
-        <th>Banyak Baran</th>
+        <th>Banyak Barang</th>
         <th>Nama Obat</th>
         <th>Dosis</th>
         <th>Harga Satuan</th>
@@ -201,6 +203,21 @@ ob_start();
     </tbody>
   </table>
 
+  <h3>Diagnosa Penyakit</h3>
+  <table border="1" style="margin:0 25%;" width="100%" cellpadding="5" cellspacing="0">
+    <tr>
+      <th>No</th>
+      <th>Penyakit</th>
+    </tr>
+    <?php
+    $no = 1;
+    foreach ($dataPenyakit as $penyakit) { ?>
+      <tr>
+        <td><?= $no++; ?></td>
+        <td><?= $penyakit['namapenyakit']; ?></td>
+      </tr>
+    <?php } ?>
+  </table>
 </body>
 
 </html>
