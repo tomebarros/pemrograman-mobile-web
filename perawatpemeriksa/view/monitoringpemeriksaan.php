@@ -36,10 +36,10 @@
 
               <?php if (is_null($d['jenisperawatan'])) {
                 if (is_null($d['tb'])) { ?>
-                  <a href="pemeriksaanawal.php?q=<?= $d['idrekammedis']; ?>">Pemeriksa</a>
+                  <a href="pemeriksaanawal.php?q=<?= $d['idrekammedis']; ?>" class="text-dark">Pemeriksa</a>
                 <?php } ?>
 
-                <a href="../controller/deletepelayanan.php?q=<?= $d['idrekammedis']; ?>">Hapus</a>
+                <a href="../controller/deletepelayanan.php?q=<?= $d['idrekammedis']; ?>" class="text-dark">Hapus</a>
               <?php } ?>
             </small>
           </td>

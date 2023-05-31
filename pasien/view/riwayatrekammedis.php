@@ -32,7 +32,7 @@
           <td><small><?= is_null($d['jenisperawatan']) ? '-' : $d['jenisperawatan']; ?></small></td>
           <td>
             <?php if (is_null($d['jenisperawatan'])) { ?>
-              <a href="../controller/deletepelayanan.php?q=<?= $d['idrekammedis']; ?>" onclick="return confirm('Hapus Data Rekam Medis')">Hapus</a>
+              <a href="../controller/deletepelayanan.php?q=<?= $d['idrekammedis']; ?>" onclick="return confirm('Hapus Data Rekam Medis')" class="btn btn-warning btn-sm"><i class="bi bi-trash"></i> </a>
               <?php if (is_null($d['checkin'])) { ?>
                 | <a href="../controller/updatecheckin.php?q=<?= $d['idrekammedis'] ?>" onclick="return confirm('Check In Sekarang')">Check In</a>
               <?php } ?>
