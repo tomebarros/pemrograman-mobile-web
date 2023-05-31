@@ -51,7 +51,7 @@
   <section id="home" class="hero">
     <div class="judul">
       <span></span>
-      <h3>TomeHealth RS</h3>
+      <h3>TomeHealth</h3>
       <span></span>
     </div>
     <p>Dedikasi untuk Kesehatan, Keunggulan dalam Perawatan</p>
