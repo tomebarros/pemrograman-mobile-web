@@ -345,6 +345,10 @@ nav .burger {
 
 /* contact */
 
+.contact {
+  padding-bottom: 7rem;
+}
+
 .contact .row {
   display: flex;
 }
