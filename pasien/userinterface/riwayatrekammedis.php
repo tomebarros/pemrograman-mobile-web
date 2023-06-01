@@ -132,6 +132,7 @@ include "../controller/other/restrict.php";
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Profil Pasien</h1>
+          <a href="kartunama.php" target="_blank" title="Kartu Nama" class="text-lg"><i class="bi bi-person-vcard-fill"></i></a>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -188,9 +189,9 @@ include "../controller/other/restrict.php";
 
         </div>
         <div class="modal-footer">
-          <input type="submit" class="btn btn-success" value="Ubah">
+          <button type="submit" class="btn btn-success">Ubah</button>
           </form>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
         </div>
       </div>
     </div>

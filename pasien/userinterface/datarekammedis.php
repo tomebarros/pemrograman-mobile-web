@@ -56,14 +56,14 @@ ob_start();
     <tr>
       <td width="10%">
         <center>
-          <img width="9rem" src="../../template/img/logo.png" alt="">
+          <img width="9rem" src="../../img/logo.png" alt="">
         </center>
       </td>
       <td>
         <center>
           <h1>TomeHealth</h1>
           <p>JL. Perintis Kemerdekaan II, Telp. 0821-9999-9999</p>
-          <p>Email : admin@21120055rekammedis.my.id</p>
+          <p>Email : cs@21120055rekammedis.my.id</p>
         </center>
       </td>
     </tr>

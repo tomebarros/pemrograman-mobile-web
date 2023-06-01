@@ -36,7 +36,7 @@ ob_start();
         <tr>
           <td width="30%">
             <center>
-              <img width="9rem" src="../../template/img/logo.png" alt="">
+              <iqmg width="9rem" src="../../img/bg-card.png" alt="Logo">
             </center>
           </td>
           <td>

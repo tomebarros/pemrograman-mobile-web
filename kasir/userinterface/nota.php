@@ -48,7 +48,7 @@ ob_start();
       <table cellpadding="0" cellspacing="0" width="100%">
         <tr>
           <td width="70%">
-            <img src="../../template/img/logo.png" width="5rem" alt="">
+            <img src="../../img/logo.png" width="5rem" alt="">
             <p>JL. Perintis Kemerdekaan II</p>
             <p>Telp : 08121212122</p>
             <h2>TomeHealth</h2>
