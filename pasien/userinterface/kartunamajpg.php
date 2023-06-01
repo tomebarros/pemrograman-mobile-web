@@ -1,10 +1,17 @@
+<?php
+include '../../template/functions.php';
+include '../controller/other/restrict.php';
+$emailPasien = $_SESSION['emailPasien'];
+$dataPasien = query("SELECT * FROM pasien WHERE email = '$emailPasien'")[0];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kartu Nama</title>
+  <title>Kartu Nama <?= $dataPasien['nama']; ?></title>
   <link rel="stylesheet" href="css/kartunama.css">
 
   <!-- link download file foto -->
@@ -16,7 +23,6 @@
 </head>
 
 <body>
-
   <div class="container">
     <div class="card" id="card">
       <div class="card-header">
@@ -39,12 +45,13 @@
           <p>Email</p>
         </div>
         <div class="right">
-          <p>: Tome Ornai Barros</p>
-          <p>: Timor-Lester</p>
-          <p>: 13-13-1212</p>
-          <p>: Laki-Laki</p>
-          <p>: 081231231232</p>
-          <p>: tomeobarros@gmail.com</p>
+          <p>: <?= $dataPasien['nama']; ?></p>
+          <p>: <?= $dataPasien['tempatlahir']; ?></p>
+          <p>: <?= tanggal($dataPasien['tanggallahir']); ?></p>
+          <p>: <?= $dataPasien['jeniskelamin']; ?></p>
+          <p>: <?= $dataPasien['alamat']; ?></p>
+          <p>: <?= $dataPasien['telepon']; ?></p>
+          <p>: <?= $dataPasien['email']; ?></p>
         </div>
       </div>
 
@@ -56,6 +63,10 @@
 
 
   <script>
+    let time = new Date();
+    let timeNow;
+    timeNow = time.getHours() + "-" + time.getMinutes() + "-" + time.getSeconds();
+
     jQuery(document).ready(function() {
       jQuery("#download").click(function() {
         screenshot();
@@ -64,7 +75,7 @@
 
     function screenshot() {
       html2canvas(document.getElementById("card")).then(function(canvas) {
-        downloadImage(canvas.toDataURL(), "KartuPelanggan_.png");
+        downloadImage(canvas.toDataURL(), "KartuPelanggan_<?= str_replace(' ', '', $dataPasien['nama']); ?>_" + timeNow + ".png");
       });
     }
 
