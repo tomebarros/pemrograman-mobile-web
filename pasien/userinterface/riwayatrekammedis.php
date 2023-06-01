@@ -207,7 +207,7 @@ include "../controller/other/restrict.php";
 
           <div class="d-grid gap-2">
             <a href="kartunamapdf.php" target="_blank" class="btn btn-danger"> <i class="bi bi-filetype-pdf"></i> </a>
-            <a href="kartunamajpg.php" class="btn btn-warning" target="_blank"> <i class="bi bi-filetype-jpg"></i> </a>
+            <a href="kartunamajpg.php" class="btn btn-warning" target="_blank"> <i class="bi bi-filetype-png"></i> </a>
           </div>
 
         </div>
