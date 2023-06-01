@@ -18,6 +18,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  transition: all .3s !important;
+}
+
 .dark-mode {
   --bg-dark: #f6f8fa;
   --bg-light: #24292e;
@@ -72,7 +76,7 @@ html {
 
 .navbar .logo {
   width: 5rem;
-  cursor: cell;
+  cursor: pointer;
   filter: drop-shadow(2px 2px 0px rgb(47, 54, 61));
   transition: .3;
 }
@@ -98,14 +102,20 @@ html {
   text-shadow: 1px 1px 10px rgba(1, 1, 1, 0);
 }
 
-.navbar .navbar-link li a:hover::after {
+.navbar .navbar-link li a:after {
   content: '';
   display: block;
   border-bottom: 3px solid var(--primary);
-  width: 70%;
   margin: auto;
-  padding-bottom: 5px;
-  margin-bottom: -8px;
+  /* padding-bottom: 5px; */
+  /* margin-bottom: -8px; */
+  transform: scale(0);
+  transition: .3s;
+}
+
+.navbar .navbar-link li a:hover::after {
+  content: '';
+  transform: scale(1);
 }
 
 nav .navbar-contain .theme {
@@ -247,7 +257,9 @@ nav .burger {
 
 .hero a:hover {
   color: #fff;
-  background-color: #2f363d;
+  background-color: var(--primary);
+  color: #fff;
+  border: 3px solid var(--primary);
 }
 
 /* about */
@@ -590,6 +602,11 @@ footer .login a:hover {
     box-shadow: 0 -5px 5px var(--dark);
     transition: all 0.8s ease;
     opacity: 0;
+  }
+
+  .navbar .navbar-link li a:hover::after {
+    content: '';
+    margin-bottom: -0.1px;
   }
 
   .show {
