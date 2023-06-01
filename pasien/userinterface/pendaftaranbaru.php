@@ -17,7 +17,7 @@ include "../../template/functions.php";
     <h1>Pendaftaran Pasien Baru </h1>
     <p>silahkan siapkan dokument kependuduka Anda sebelum mengisi formulir pendaftaran berikut ini: </p>
     <div class="row">
-      <div class="col-md-4"></div>
+      <div class="col-md-4"><img src="../../img/logo.png" alt="" class="img-fluid"></div>
       <div class="col-md-8">
 
         <form action="../controller/insertpendaftaranbaru.php" method="post">

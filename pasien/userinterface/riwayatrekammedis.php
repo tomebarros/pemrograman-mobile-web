@@ -45,7 +45,7 @@ include "../controller/other/restrict.php";
     <h1>Riwayat Pelayanan</h1>
 
     <div class="row mb-2">
-      <div class="col-md-3 d-grid">
+      <div class="col-md-3 d-grid mb-2">
         <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPendaftaran">Pendaftaran Pelayanan</button>
       </div>
       <div class="col-md-9">
