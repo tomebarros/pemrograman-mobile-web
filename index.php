@@ -22,7 +22,7 @@
 <body>
 
   <a target="_blank" href="https://api.whatsapp.com/send?phone=6282146199762&text=Dear+Admin+*TomeHealth*%0A%0A" class="cs">
-    <img src="template/img/cs.png" alt="customer service">
+    <img src="img/cs.png" alt="customer service">
   </a>
 
   <nav class="navbar">
