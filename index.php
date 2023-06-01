@@ -12,7 +12,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,200&amp;display=swap" rel="stylesheet">
 
   <!-- fether icon -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
   <!-- icon web -->
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
@@ -150,6 +152,7 @@
   <footer>
     <div class="links">
       <p>ikuti kami</p>
+      <i class="fab fa-instagram"></i>
       <a href="https://www.instagram.com/tome_barros/" target="_blank"><i class="bi bi-instagram"></i></a>
       <a href="https://www.youtube.com/@tomebarros2153" target="_blank"><i class="bi bi-youtube"></i></a>
       <a href="https://github.com/tomebarros" target="_blank"><i class="bi bi-github"></i></a>
