@@ -44,24 +44,24 @@ const theme = localStorage.getItem("theme");
 
 if (theme) {
   document.body.classList.add(theme);
-  themeToggleBtn.classList.remove("bi-moon-fill");
-  themeToggleBtn.classList.add("bi-sun");
+  themeToggleBtn.classList.remove("fa-moon");
+  themeToggleBtn.classList.add("fa-sun");
 }
 
 themeToggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 
-  themeToggleBtn.classList.remove("bi-moon-fill");
-  themeToggleBtn.classList.add("bi-sun");
+  themeToggleBtn.classList.remove("fa-moon");
+  themeToggleBtn.classList.add("fa-sun");
 
   if (document.body.classList.contains("dark-mode")) {
     localStorage.setItem("theme", "dark-mode");
 
-    themeToggleBtn.classList.remove("bi-moon-fill");
-    themeToggleBtn.classList.add("bi-sun");
+    themeToggleBtn.classList.remove("fa-moon");
+    themeToggleBtn.classList.add("fa-sun");
   } else {
-    themeToggleBtn.classList.remove("bi-sun");
-    themeToggleBtn.classList.add("bi-moon-fill");
+    themeToggleBtn.classList.remove("fa-sun");
+    themeToggleBtn.classList.add("fa-moon");
     localStorage.removeItem("theme");
   }
 });
