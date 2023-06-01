@@ -37,7 +37,7 @@
     </ul>
 
     <div class="navbar-contain">
-      <i class="fa-solid fa-moon theme" id="theme-toggle"></i>
+      <i class="fa-solid fa-moon fa-fade theme" id="theme-toggle"></i>
       <label class="burger" for="burger">
         <input type="checkbox" id="burger" />
         <span></span>
