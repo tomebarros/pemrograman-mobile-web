@@ -120,19 +120,17 @@ include "../controller/other/restrict.php";
     </div>
   </div>
 
-
-
   <?php
   $dataPasien = query("SELECT * FROM pasien WHERE email = '$emailPasien'")[0];
   ?>
 
-  <!-- Modal -->
+  <!-- Modal Profile -->
   <div class="modal fade" id="ModalProfil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Profil Pasien</h1>
-          <a href="kartunama.php" target="_blank" title="Kartu Nama" class="text-lg"><i class="bi bi-person-vcard-fill"></i></a>
+          <a href="#" title="Kartu Nama" data-bs-toggle="modal" data-bs-target="#Modalkartu"><i class="bi bi-person-vcard-fill"></i></a>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -192,6 +190,29 @@ include "../controller/other/restrict.php";
           <button type="submit" class="btn btn-success">Ubah</button>
           </form>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Kartu -->
+  <div class="modal fade" id="Modalkartu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Tipe Kartu</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="d-grid gap-2">
+            <a href="kartunamapdf.php" target="_blank" class="btn btn-danger"> <i class="bi bi-filetype-pdf"></i> </a>
+            <a href="kartunamajpg.php" class="btn btn-warning" target="_blank"> <i class="bi bi-filetype-jpg"></i> </a>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#ModalProfil">Tutup</button>
         </div>
       </div>
     </div>

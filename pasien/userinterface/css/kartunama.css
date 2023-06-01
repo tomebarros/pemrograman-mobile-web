@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', sans-serif;
+  color: #fff;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background-image: url('../../../img/bg-idcard.png');
+  background-position: center;
+  background-size: cover;
+  width: 35rem;
+  padding: 0.2rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  /* gap: 2rem; */
+  justify-content: space-evenly;
+}
+
+.card-header img {
+  width: 6rem;
+}
+
+.card-header .text-header {
+  text-align: center;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
+  padding-bottom: 0.5rem;
+}
+
+
+button {
+  background-color: #fff;
+  color: #252327;
+  border: 1px solid #252327;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin: auto;
+  transition: .2s all ease;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #252327;
+  border: 1px solid #252327;
+  padding: 0.5rem 1.1rem;
+}
+
+button:hover::after {
+  content: ' Kartu';
+  position: relative;
+}
