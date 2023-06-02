@@ -336,15 +336,62 @@ nav .burger {
   width: 30%;
 }
 
+.services .cards .card .card-header {
+  overflow: hidden;
+  position: relative;
+}
+
+.services .cards .card .card-header::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -100%;
+  right: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(0deg, var(--bg-light) 3%, rgba(36, 41, 46, 0) 90%);
+  transition: .3s;
+}
+
+.services .cards .card-header:hover img {
+  transform: scale(1.3);
+}
+
+.services .cards .card .card-header:hover:after {
+  bottom: 0;
+}
+
 .services .cards .card img {
   width: 100%;
-  border-radius: 1rem;
   transition: .3s;
   transition: .3s all ease;
 }
 
 .services .cards .card img:hover {
   filter: drop-shadow(4px 4px 15px #000);
+}
+
+.card-header .detail {
+  position: absolute;
+  bottom: -3rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 2rem;
+  z-index: 2;
+  transition: .7s ease;
+}
+
+.card-header .detail a {
+  color: var(--bg-dark);
+}
+
+.card-header .detail a:hover {
+  color: var(--primary);
+}
+
+.services .cards .card-header:hover .detail {
+  bottom: 2rem;
 }
 
 .services .cards .card h4 {
@@ -571,7 +618,7 @@ footer .login a:hover {
   }
 }
 
-/* CSS Anda untuk smartphone di sini */
+/* CSS Anda untuk smartphone */
 @media (max-width: 480px) {
   .navbar {
     height: 4rem;
@@ -659,6 +706,10 @@ footer .login a:hover {
 
   .services .cards .card {
     width: 100% !important;
+  }
+
+  .card .card-header .detail {
+    font-size: 1rem;
   }
 
   .contact .row {

@@ -77,31 +77,66 @@
 
     <div class="cards">
       <div class="card">
-        <img src="img/service1.jpg" alt="Gambar Ruang Operasi" />
+        <div class="card-header">
+          <img src="img/service1.jpg" alt="Gambar Ruang Operasi" />
+          <div class="detail">
+            <a href="#" title="Info Gambar"><i class="fa-solid fa-circle-info"></i></a>
+            <a href="#" title="Detail Gambar"><i class="fa-solid fa-book-open"></i></a>
+            <a href="#" title="View Gambar"><i class="fa-solid fa-eye"></i></a>
+          </div>
+        </div>
         <h4>~ Ruang Operasi ~</h4>
         <p>Ruang Operasi Pasien</p>
       </div>
 
       <div class="card">
-        <img src="img/service2.jpg" alt="Gambar Ruang Inap" />
+        <div class="card-header">
+          <img src="img/service2.jpg" alt="Gambar Ruang Inap" />
+          <div class="detail">
+            <a href="#" title="Info Gambar"><i class="fa-solid fa-circle-info"></i></a>
+            <a href="#" title="Detail Gambar"><i class="fa-solid fa-book-open"></i></a>
+            <a href="#" title="View Gambar"><i class="fa-solid fa-eye"></i></a>
+          </div>
+        </div>
         <h4>~ Ruang Inap ~</h4>
         <p>Ruang Pasien Rawat Inap</p>
       </div>
 
       <div class="card">
-        <img src="img/service3.jpg" alt="Gambar Ruang Inap VIP" />
+        <div class="card-header">
+          <img src="img/service3.jpg" alt="Gambar Ruang Inap VIP" />
+          <div class="detail">
+            <a href="#" title="Info Gambar"><i class="fa-solid fa-circle-info"></i></a>
+            <a href="#" title="Detail Gambar"><i class="fa-solid fa-book-open"></i></a>
+            <a href="#" title="View Gambar"><i class="fa-solid fa-eye"></i></a>
+          </div>
+        </div>
         <h4>~ Ruang Inap VIP ~</h4>
         <p>Ruang Pasien Rawat Inap VIP</p>
       </div>
 
       <div class="card">
-        <img src="img/service4.jpg" alt="Gambar Rumah Sakit TomeHealth" />
+        <div class="card-header">
+          <img src="img/service4.jpg" alt="Gambar Rumah Sakit TomeHealth" />
+          <div class="detail">
+            <a href="#" title="Info Gambar"><i class="fa-solid fa-circle-info"></i></a>
+            <a href="#" title="Detail Gambar"><i class="fa-solid fa-book-open"></i></a>
+            <a href="#" title="View Gambar"><i class="fa-solid fa-eye"></i></a>
+          </div>
+        </div>
         <h4>~ Rumah Sakit ~</h4>
         <p>Rumah Sakit TomeHealth</p>
       </div>
 
       <div class="card">
-        <img src="img/service5.jpg" alt="Gambar Website TomeHealth" />
+        <div class="card-header">
+          <img src="img/service5.jpg" alt="Gambar Website TomeHealth" />
+          <div class="detail">
+            <a href="#" title="Info Gambar"><i class="fa-solid fa-circle-info"></i></a>
+            <a href="#" title="Detail Gambar"><i class="fa-solid fa-book-open"></i></a>
+            <a href="#" title="View Gambar"><i class="fa-solid fa-eye"></i></a>
+          </div>
+        </div>
         <h4>~ Website ~</h4>
         <p>Pelayanan Medis Berbasis Online</p>
       </div>
