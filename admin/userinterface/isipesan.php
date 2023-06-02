@@ -7,9 +7,13 @@ $query = "SELECT * FROM pesan WHERE idpesan = '$idpesan'";
 $cek = getData($query);
 if ($cek < 1) {
   echo "<a href='pesan.php'>Kembali </a>";
-  die('Pesan Tidak Tersedia');
+  die('Pesan tidak tersedia atau telah dihapus');
 }
+
 $dataPesan = query($query)[0];
+$dataBalasPesan = query("SELECT detailpesan.iddetailpesan, detailpesan.tanggalbalas, detailpesan.jambalas, detailpesan.email, detailpesan.isibalaspesan FROM pesan,detailpesan WHERE pesan.idpesan = detailpesan.idpesan AND pesan.idpesan = $idpesan");
+$cekPesan = getData("SELECT * FROM detailpesan WHERE idpesan = $idpesan");
+
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
@@ -33,14 +37,30 @@ $dataPesan = query($query)[0];
           <li>Judul : <?= $dataPesan['judul']; ?></li>
           <li>Tanggal : <?= tanggal($dataPesan['tanggal']); ?></li>
           <li>Status : <?= is_null($dataPesan['status']) ? '<span class="text-warning">Belum Baca Pesan Ini</span>' : 'Sudah Baca'; ?></li>
-          <li>Keteranggan : <?= is_null($dataPesan['keterangan']) ? '<span class="text-warning">Belum Balas</span>' : 'Sudah Balas' ?></li>
+          <li>Keteranggan : <?= ($cekPesan == 0) ? '<span class="text-warning">Belum Balas</span>' : 'Sudah Balas' ?></li>
         </ul>
         <h4><?= $dataPesan['judul']; ?></h4>
         <p><?= $dataPesan['isipesan']; ?></p>
-        <?php if (!is_null($dataPesan['keterangan'])) { ?>
-          <hr>
-          <p><?= $dataPesan['balasan']; ?></p>
-        <?php } ?>
+
+        <span class="badge bg-success"><?= count($dataBalasPesan) . " Kali dibalas" ?></span>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <?php foreach ($dataBalasPesan as $d) { ?>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?= $d['iddetailpesan'] ?>" aria-expanded="false" aria-controls="flush-collapse<?= $d['iddetailpesan'] ?>">
+                  <?= "Tanggal : " .  tanggal($d['tanggalbalas']) . " | Jam : {$d['jambalas']} | Email : {$d['email']}" ?>
+                </button>
+              </h2>
+              <div id="flush-collapse<?= $d['iddetailpesan'] ?>" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><?= $d['isibalaspesan']; ?></div>
+              </div>
+            </div>
+          <?php } ?>
+
+
+        </div>
+
+
       </div>
 
       <div class="col-md-6 mt-2">
