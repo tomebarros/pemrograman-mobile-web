@@ -108,8 +108,6 @@ body {
   display: block;
   border-bottom: 3px solid var(--primary);
   margin: auto;
-  /* padding-bottom: 5px; */
-  /* margin-bottom: -8px; */
   transform: scale(0);
   transition: .3s;
 }
@@ -117,6 +115,13 @@ body {
 .navbar .navbar-link li a:hover::after {
   content: '';
   transform: scale(1);
+}
+
+nav .navbar-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 nav .navbar-contain .theme {
@@ -620,7 +625,7 @@ footer .login a:hover {
   }
 }
 
-/* CSS Anda untuk smartphone */
+/* CSS untuk smartphone */
 @media (max-width: 480px) {
   .navbar {
     height: 4rem;
@@ -673,9 +678,6 @@ footer .login a:hover {
   }
 
   nav .navbar-contain .theme {
-    position: absolute;
-    top: 1.3rem;
-    right: 3.9rem;
     font-size: 1rem;
   }
 
