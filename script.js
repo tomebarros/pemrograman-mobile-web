@@ -9,13 +9,13 @@ if (theme) {
 }
 
 themeToggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
+  document.body.classList.toggle("dark");
 
   themeToggleBtn.classList.remove("fa-moon");
   themeToggleBtn.classList.add("fa-sun");
 
-  if (document.body.classList.contains("dark-mode")) {
-    localStorage.setItem("theme", "dark-mode");
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
 
     themeToggleBtn.classList.remove("fa-moon");
     themeToggleBtn.classList.add("fa-sun");

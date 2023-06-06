@@ -19,7 +19,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.dark-mode {
+.dark {
   --bg-dark: #f6f8fa;
   --bg-light: #24292e;
   --dark: #fff;
@@ -473,6 +473,14 @@ nav .burger {
 
 .contact form .input-group input:focus~span,
 .contact form .input-group input:valid~span {
+  top: -10%;
+  left: 0;
+  font-size: 0.8rem;
+  color: var(--primary);
+  opacity: 1;
+}
+
+.email.contain {
   top: -10%;
   left: 0;
   font-size: 0.8rem;
