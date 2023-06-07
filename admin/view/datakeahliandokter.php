@@ -75,14 +75,9 @@ if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
         <div class="input">
           <select name="idpoli" class="form-select" required>
             <?php
-            $id = '1';
             $dataPoli = query("SELECT * FROM poli");
             foreach ($dataPoli as $d2) {
-              if ($d2['idpoli'] == $id) {
-                echo "<option selected value='{$d2['idpoli']}'>{$d2['namapoli']}</option>";
-              } else {
-                echo "<option value='{$d2['idpoli']}'>{$d2['namapoli']}</option>";
-              }
+              echo "<option selected value='{$d2['idpoli']}'>{$d2['namapoli']}</option>";
             }
             ?>
           </select>
