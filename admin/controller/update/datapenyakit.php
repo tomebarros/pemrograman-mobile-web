@@ -1,7 +1,6 @@
 <?php
 include '../../../template/functions.php';
-
-
+include '../other/restrict.php';
 
 // menangkap data yang di kirim dari form
 $namaVariabel1 = input($_POST['nama']);

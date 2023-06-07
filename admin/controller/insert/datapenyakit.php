@@ -1,8 +1,6 @@
 <?php
 include '../../../template/functions.php';
-
-
-
+include '../other/restrict.php';
 $fariabel1 = input($_POST['nama']);
 
 
