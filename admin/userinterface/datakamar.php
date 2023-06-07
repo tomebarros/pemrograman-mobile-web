@@ -1,8 +1,6 @@
 <?php
 include "../controller/other/restrict.php";
 include "../../template/functions.php";
-
-
 ?>
 
 <!doctype html>

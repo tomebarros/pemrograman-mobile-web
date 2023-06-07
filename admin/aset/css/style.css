@@ -1,0 +1,410 @@
+:root {
+  --primary: #dc3545;
+  --bg-dark: #24292e;
+  --bg-light: #f6f8fa;
+  --light: #ffffff;
+  --dark: #2f363d;
+  --text: 1rem;
+}
+
+.dark {
+  --bg-dark: #f6f8fa;
+  --bg-light: #24292e;
+  --light: #2f363d;
+  --dark: #fff;
+}
+
+/* Webkit browsers (Chrome, Safari) */
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark);
+  border-radius: 50rem;
+  margin-bottom: 1rem;
+}
+
+::-webkit-scrollbar {
+  height: .4rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  transition: all .6s;
+}
+
+#toggleNavbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: .4rem 2rem;
+  font-size: 1.6rem;
+  display: none;
+  z-index: 3;
+  color: var(--dark);
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: var(--primary);
+  max-height: 100vh;
+  min-width: 20vw;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+}
+
+.navbar .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 0;
+  position: relative;
+}
+
+.navbar .profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  color: #f6f8fa;
+}
+
+.navbar .profile p {
+  color: #f6f8fa;
+}
+
+.navbar .header img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.navbar .header i,
+.navbar .profile i {
+  cursor: pointer;
+  color: #f6f8fa;
+}
+
+.navbar .profile {
+  color: #f6f8fa;
+}
+
+.navbar .detail-profile {
+  width: 100%;
+  padding: 0 1rem;
+  display: none;
+}
+
+.navbar .detail-profile.active {
+  display: inline-block;
+}
+
+.navbar .detail-profile a,
+.navbar .detail-profile i {
+  color: #f6f8fa;
+}
+
+.navbar .nav-link {
+  padding-top: 1rem;
+}
+
+.navbar .nav-link li a {
+  color: #f6f8fa;
+  font-size: var(--text);
+  text-transform: capitalize;
+  margin-right: auto;
+  transition: all .2s;
+}
+
+.navbar .nav-link li a:hover {
+  background-color: #ff5c6c;
+  padding: 0 0.2rem;
+  border-radius: .2rem;
+}
+
+
+/* content */
+.container .content {
+  padding: 2rem 1rem;
+  background-color: var(--light);
+  min-width: 78vw;
+}
+
+.container .content .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .content .header h1 {
+  font-size: 2rem;
+  color: var(--dark);
+}
+
+.container .content .row {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+}
+
+.container .content .row .kiri {
+  min-width: 29%;
+}
+
+.container .content .kanan {
+  width: 69%;
+}
+
+.container .content .kanan .table {
+  max-width: 100%;
+  overflow-x: scroll;
+  font-size: .8rem;
+  padding-bottom: .2rem;
+  margin-bottom: 1rem;
+}
+
+.container .content .kanan table {
+  width: 90rem;
+}
+
+.container .content .kanan table tr th {
+  color: var(--dark);
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-size: .7rem;
+}
+
+.container .content .kanan table td {
+  color: var(--dark);
+}
+
+.container .content .kanan table td a {
+  color: #0d6efd;
+}
+
+.container .content .kanan .paginations {
+  display: flex;
+  gap: .3rem;
+  overflow-x: scroll;
+}
+
+.container .content .kanan .paginations a {
+  font-size: .8rem;
+  border: 1px solid var(--bg-dark);
+  padding: .3rem .7rem;
+  color: var(--bg-dark);
+  transition: all .3s;
+}
+
+.container .content .kanan .paginations a:hover {
+  color: var(--light);
+  background-color: var(--bg-dark);
+}
+
+.container .content .kanan .paginations a.active {
+  background-color: #0d6efd;
+  border: 1px solid #0953c3;
+  color: #fff;
+}
+
+.container .content .kanan .paginations a.active:hover {
+  background-color: #0953c3;
+  /* color: #fff; */
+}
+
+
+/* utiliti */
+
+/* modalUbah */
+.modal {
+  position: fixed;
+  background: var(--bg-light);
+  top: 10%;
+  left: 30%;
+  right: 30%;
+  padding: 1rem 2rem;
+  display: none;
+  box-shadow: 5px 5px 20px #2f363d;
+}
+
+.modal.lg {
+  left: 10%;
+  right: 10%;
+}
+
+.modal .profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal .profile .deskripsi {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.modal .profile img {
+  max-width: 10rem;
+  min-height: 10rem;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  border-bottom: 2px solid var(--bg-dark);
+  padding: 2.5rem 0;
+}
+
+.modal .modal-header h3 {
+  font-size: 2rem;
+  color: var(--bg-dark);
+}
+
+.modal .modal-header i {
+  font-size: 2rem;
+  color: var(--bg-dark);
+  cursor: pointer;
+}
+
+.modal .modal-body {
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--bg-light);
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: end;
+  gap: .3rem;
+  padding-top: 1rem;
+}
+
+form .form-input,
+form .form-select {
+  margin-bottom: .3rem;
+  background: none;
+  width: 100%;
+  height: 2rem;
+  border-radius: .3rem;
+  border: 1px solid var(--dark);
+  padding: 0rem .8rem;
+  color: var(--bg-dark);
+  outline: none;
+}
+
+form .form-select {
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+.tombol {
+  background-color: #198754;
+  height: 2rem;
+  color: #f6f8fa;
+  padding: 0 1rem;
+  border: none;
+  border-radius: .3rem;
+  cursor: pointer;
+}
+
+.tombol.merah {
+  background-color: #dc3545;
+}
+
+.tombol.secondary {
+  background-color: #7b7b7b;
+}
+
+.tombol:hover {
+  background-color: #02c04e;
+}
+
+
+/* medis queri */
+
+@media (max-width: 992px) {
+  /* * {
+    font-size: 20%;
+  } */
+}
+
+/* tablet */
+@media (max-width: 768px) {
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    min-width: 18rem;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+
+  .navbar.show {
+    left: 0;
+    opacity: 1;
+  }
+
+  #toggleNavbar {
+    display: inline;
+  }
+
+  /* .container .content .header, */
+  .container .content .row {
+    flex-direction: column-reverse;
+    gap: 0.9rem;
+  }
+
+  .container .content .row .kanan,
+  .container .content .row .kiri {
+    width: 100%;
+  }
+
+  .modal {
+    left: 10%;
+    right: 10%;
+  }
+
+  .modal .profile {
+    flex-direction: column;
+  }
+
+  .modal .modal-header h3,
+  .modal .modal-header i {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .container .content .header h1 {
+    font-size: 2rem;
+  }
+
+  .container .content .header {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .modal .modal-header h3,
+  .modal .modal-header i {
+    font-size: 1.5rem;
+  }
+
+  .modal .profile {
+    font-size: .6rem;
+  }
+}
