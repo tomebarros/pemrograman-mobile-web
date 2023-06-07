@@ -220,7 +220,6 @@
   /* color: #fff; */
 }
 
-
 /* utiliti */
 
 /* modalUbah */
@@ -250,6 +249,11 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
+}
+
+.modal .profile .deskripsi .label p,
+.modal .profile .deskripsi .data p {
+  color: var(--dark);
 }
 
 .modal .profile img {
