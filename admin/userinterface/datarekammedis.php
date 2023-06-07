@@ -2,28 +2,54 @@
 include "../controller/other/restrict.php";
 include "../../template/functions.php";
 ?>
-
-<!doctype html>
-<html lang="en" data-bs-theme="dark">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <title>Rekam Medis</title>
-  <?php include "../../template/cdnbs5.php"; ?>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TomeHealth | Rekam Medis</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,200&amp;display=swap" rel="stylesheet" />
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <link rel="stylesheet" href="../aset/css/style.css" />
+  <link rel="shortcut icon" href="../../img/logo.png" type="image/x-icon">
+  <style>
+    .container .content .kanan {
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
 
-  <?php include "../aset/navbar.php"; ?>
+  <i class="fa-solid fa-bars" id="toggleNavbar"></i>
 
-  <div class="container-fluid">
-    <h1>Rekam Medis</h1>
+  <div class="container">
 
-    <?php include '../view/datarekammedis.php'; ?>
+    <?php include '../aset/nav.php'; ?>
 
+    <div class="content">
+      <div class="header">
+        <h1>Data Rekammedis</h1>
+        <i class="fa-solid fa-chevrons"></i>
+      </div>
+
+      <div class="row">
+        <div class="kanan">
+          <?php include '../view/datarekammedis.php'; ?>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <script src="../../template/js/dark-mode.js"></script>
-  <script src="../../template/js/script.js"></script>
+  <script src="../aset/js/script.js"></script>
+
 </body>
 
 </html>
