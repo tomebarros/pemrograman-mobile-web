@@ -106,7 +106,7 @@ include "../../template/functions.php";
     // Mengambil elemen-elemen yang diperlukan
     const table = document.querySelector('table');
     const btnUbahs = document.querySelectorAll('#modalTargetUbah');
-    const modal = document.querySelector('.modal');
+    const modal = document.querySelector('#modalUbah');
     // const tombolModalClose = modal.querySelector('#tutupModalUbah');
     const formUbah = document.forms['Ubah'];
 

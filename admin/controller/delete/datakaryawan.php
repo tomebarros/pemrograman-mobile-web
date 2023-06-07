@@ -7,4 +7,4 @@ $namaVariabel = input($_GET['q']);
 mysqli_query($koneksi, "DELETE FROM karyawan WHERE idkaryawan='$namaVariabel'");
 
 // mengalihkan halaman kembali ke index.php
-header("location:../../userinterface/indes.php");
+header("location:../../userinterface/datakaryawan.php");
