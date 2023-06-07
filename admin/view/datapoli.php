@@ -62,7 +62,7 @@ if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
     <div class="modal-body">
       <form name="Ubah" action="../controller/update/datapoli.php" method="POST">
 
-        <input name="idpoli" type="text">
+        <input name="idpoli" type="hidden">
 
         <div class="input">
           <input type="text" class="form-input" required placeholder="Nama Poli" name="namapoli">

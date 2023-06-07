@@ -19,19 +19,17 @@ if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
 ?>
 
 <form action="" method="post">
-  <div class="input-group mt-2">
-    <input class="form-control" name="keyword" type="search" placeholder="Cari.." value="<?php echo isset($_POST['keyword']) ? $_POST['keyword'] : '' ?>" autofocus>
-    <button name="cari" class="btn btn-primary"><i class="bi bi-search"></i></button>
+  <div class="input">
+    <input type="search" class="form-input" placeholder="Cari" name="keyword" value="<?php echo isset($_POST['keyword']) ? $_POST['keyword'] : '' ?>" autofocus />
+    <button type="submit" name="cari" hidden>ok</button>
   </div>
 </form>
-<div class="table-responsive">
-  <table class="table table-striped table-hover table-sm" id="myTable">
+<div class="table">
+  <table border="1" cellpadding="0" cellspacing="0" width="100%">
     <thead>
-      <tr>
-        <th><small>No</small></th>
-        <th><small>Nama Ruang</small></th>
-        <th><small>Aksi</small></th>
-      </tr>
+      <th>No</th>
+      <th>Nama Ruang</th>
+      <th>aksi</th>
     </thead>
     <tbody>
       <?php
@@ -39,52 +37,40 @@ if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
       foreach ($data as $d) {
       ?>
         <tr>
-          <td><small><?php echo $no++; ?></small></td>
-          <td><small><?php echo $d['namaruang']; ?></small></td>
+          <th><?= $no++; ?></th>
+          <td><?= $d['namaruang']; ?></td>
           <td>
-            <small>
-              <a href="#" data-bs-toggle="modal" data-bs-target="#modalUbah<?= $d['idruang']; ?>">Ubah</a>
-              <a href="../controller/delete/dataruang.php?q=<?= $d['idruang']; ?>">Hapus</a>
-            </small>
+            <a href="../controller/delete/dataruang.php?q=<?= $d['idruang']; ?>" onclick="return confirm('Hapus Data!')">Hapus</a>
+            <a href="#" class="btn-ubah" id="modalTargetUbah" namaruang="<?= $d['namaruang'] ?>" idruang="<?= $d['idruang'] ?>">Ubah</a>
           </td>
         </tr>
-
-
-
-
-        <!-- Modal -->
-        <div class="modal fade" id="modalUbah<?= $d['idruang']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Ubah Data</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-
-                <form action="../controller/update/dataruang.php" method="post">
-                  <input type="hidden" name="idruang" value="<?= $d['idruang']; ?>">
-
-                  <div class="input-group mb-2">
-                    <span class="input-group-text">Nama Ruang</span>
-                    <input type="text" name="namaruang" class="form-control" value="<?= $d['namaruang']; ?>" required>
-                  </div>
-
-              </div>
-              <div class="modal-footer">
-                <input type="submit" class="btn btn-primary" value="Simpan">
-                </form>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
       <?php } ?>
     </tbody>
   </table>
+
 </div>
-<?php include "../../template/navtab.php"; ?>
+
+<div class="modal" id="modalUbah">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Ubah Data</h3>
+      <i class="fas fa-close" id="iconModalTutupUbah"></i>
+    </div>
+    <div class="modal-body">
+      <form name="Ubah" action="../controller/update/dataruang.php" method="POST">
+
+        <input name="idruang" type="hidden">
+
+        <div class="input">
+          <input type="text" class="form-input" required placeholder="Nama Ruang" name="namaruang">
+        </div>
+
+    </div>
+    <div class="modal-footer">
+      <button class="tombol btn-tutup" type="submit">Simpan</button>
+      </form>
+      <button class="tombol btn-tutup" type="button" id="tutupModalUbah">Tutup</button>
+    </div>
+  </div>
+</div>
+<?php include '../../template/pagination.php'; ?>
