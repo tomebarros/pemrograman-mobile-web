@@ -44,7 +44,7 @@ if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
       foreach ($data as $d) {
       ?>
         <tr>
-          <td><?= $no++; ?></td>
+          <th><?= $no++; ?></th>
           <td><?= nama($d['nama']); ?></td>
           <td><?= email($d['email']); ?></td>
           <td><?= $d['namaruang']; ?></td>
