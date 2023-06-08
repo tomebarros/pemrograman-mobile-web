@@ -194,7 +194,6 @@
       <a href="apoteker/userinterface/">Apoteker</a>
       <a href="dokter/userinterface/">Dokter</a>
       <a href="kasir/userinterface/">Kasir</a>
-      <a href="perawatjaga/userinterface/">PerawatJaga</a>
       <a href="perawatpemeriksa/userinterface/">PerawatPemeriksa</a>
       <a href="perawatpendaftaran/userinterface/">PerawatPendaftaran</a>
     </div>
