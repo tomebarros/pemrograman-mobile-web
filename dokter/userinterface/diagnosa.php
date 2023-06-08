@@ -86,6 +86,7 @@ $dataPasien = query("SELECT rekammedis.idrekammedis, rekammedis.idpasien,pasien.
 
 
 
+  <script src="../../template/js/dark-mode.js"></script>
   <script src="../../template/js/script.js"></script>
 </body>
 

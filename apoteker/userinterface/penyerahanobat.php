@@ -87,6 +87,7 @@ $idapoteker = query("SELECT idkaryawan FROM karyawan WHERE email = '{$_SESSION['
       })
     })
   </script>
+  <script src="../../template/js/dark-mode.js"></script>
   <script src="../../template/js/script.js"></script>
 </body>
 

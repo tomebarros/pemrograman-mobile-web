@@ -6,7 +6,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
 
-      <ul class="navbar-nav ms-auto">
+      <!-- <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <div class="nav-link dropdown">
             <button class="btn dropdown-toggle btn-sm " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
@@ -18,7 +18,7 @@
             </ul>
           </div>
         </li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </nav>

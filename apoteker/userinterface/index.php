@@ -10,7 +10,7 @@
   <?php include "../aset/navbarlogin.php"; ?>
   <div class="container">
     <div class="row mx-2">
-      <div class="col-sm-4 bg-light shadow mx-auto p-5 mt-5 border rounded-2">
+      <div class="col-sm-4  shadow mx-auto p-5 mt-5 border rounded-2">
         <h3>Login Apoteker</h3>
         <?php include "../../template/notifikasilogin.php"; ?>
         <form action="../controller/other/ceklogin.php" method="post">
@@ -29,6 +29,7 @@
     </div>
   </div>
   <script src="../../template/js/login.js"></script>
+  <script src="../../template/js/dark-mode.js"></script>
 </body>
 
 </html>

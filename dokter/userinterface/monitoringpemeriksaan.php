@@ -27,7 +27,7 @@ include "../../template/functions.php";
   </div>
 
 
-
+  <script src="../../template/js/dark-mode.js"></script>
   <script src="../../template/js/script.js"></script>
 </body>
 
