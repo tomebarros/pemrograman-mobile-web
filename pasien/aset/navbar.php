@@ -24,7 +24,6 @@ $nama = namapasien($_SESSION['emailPasien']);
           </div>
         </li>
 
-
         <li class="nav-item">
           <a class="nav-link active" href="riwayatrekammedis.php">Rekam Medis</a>
         </li>
