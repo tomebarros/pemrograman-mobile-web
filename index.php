@@ -195,7 +195,6 @@
       <a href="dokter/userinterface/">Dokter</a>
       <a href="kasir/userinterface/">Kasir</a>
       <a href="perawatpemeriksa/userinterface/">PerawatPemeriksa</a>
-      <a href="perawatpendaftaran/userinterface/">PerawatPendaftaran</a>
     </div>
 
     <h4><a href="http://21120055rekammedis.my.id/">&copy; TomeHealth</a></h4>

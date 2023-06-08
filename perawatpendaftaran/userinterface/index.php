@@ -11,7 +11,7 @@
   <div class="container">
 
     <div class="row mx-2 mt-5">
-      <div class="col-sm-4 mx-auto bg-light shadow p-5 border rounded-2">
+      <div class="col-sm-4 mx-auto  shadow p-5 border rounded-2">
         <h3>Login Perawat Pendaftaran</h3>
         <?php include "../../template/notifikasilogin.php"; ?>
         <form action="../controller/other/ceklogin.php" method="post">
@@ -32,6 +32,7 @@
   </div>
 
   <script src="../../template/js/login.js"></script>
+  <script src="../../template/js/dark-mode.js"></script>
 </body>
 
 </html>
