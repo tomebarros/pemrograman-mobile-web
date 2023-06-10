@@ -1,5 +1,5 @@
 :root {
-  --primary: #dc3545;
+  --primary: #0d6efd;
   --bg-dark: #24292e;
   --bg-light: #f6f8fa;
   --light: #ffffff;
@@ -87,7 +87,12 @@
   border-radius: 50%;
 }
 
-.navbar .header i,
+.navbar .header h1 {
+  color: #eee;
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
 .navbar .profile i {
   cursor: pointer;
   color: #f6f8fa;
@@ -125,7 +130,8 @@
 }
 
 .navbar .nav-link li a:hover {
-  background-color: #ff5c6c;
+  background-color: var(--light);
+  color: var(--bg-dark);
   padding: 0 0.2rem;
   border-radius: .2rem;
 }
@@ -187,7 +193,7 @@
 }
 
 .container .content .kanan table td a {
-  color: #0d6efd;
+  color: var(--primary);
 }
 
 .container .content .kanan .paginations {
@@ -232,15 +238,12 @@
   padding: 1rem 2rem;
   display: none;
   box-shadow: 5px 5px 20px #2f363d;
-}
-
-.modal.lg {
-  left: 10%;
-  right: 10%;
+  border-radius: 1rem;
 }
 
 .modal .profile {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
@@ -321,6 +324,7 @@ form .form-select {
   border: none;
   border-radius: .3rem;
   cursor: pointer;
+  transition: .1s;
 }
 
 .tombol.merah {
@@ -332,7 +336,7 @@ form .form-select {
 }
 
 .tombol:hover {
-  background-color: #02c04e;
+  background-color: var(--primary);
 }
 
 
@@ -381,10 +385,6 @@ form .form-select {
   .modal {
     left: 10%;
     right: 10%;
-  }
-
-  .modal .profile {
-    flex-direction: column;
   }
 
   .modal .modal-header h3,

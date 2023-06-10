@@ -9,7 +9,7 @@ $awalData = ($jumlahDataPerHalaman * $halamanAktif) - $jumlahDataPerHalaman;
 $data = query("SELECT * FROM ruang  ORDER BY namaruang ASC LIMIT $awalData,$jumlahDataPerHalaman");
 
 if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
-  $keyword = $_POST['keyword'];
+  $keyword = input($_POST['keyword']);
   $query = "SELECT * FROM ruang WHERE
           namaruang LIKE '%$keyword%'
   ";

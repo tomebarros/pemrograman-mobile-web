@@ -10,7 +10,7 @@ $awalData = ($jumlahDataPerHalaman * $halamanAktif) - $jumlahDataPerHalaman;
 $data = query("SELECT * FROM kamar");
 
 if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
-  $keyword = $_POST['keyword'];
+  $keyword = input($_POST['keyword']);
   $query = "SELECT * FROM kamar WHERE
           nama LIKE '%$keyword%' OR
           kelas LIKE '%$keyword%' OR

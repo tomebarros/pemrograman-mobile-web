@@ -10,7 +10,7 @@ $data = query("SELECT * FROM penyakit ORDER BY nama LIMIT $awalData,$jumlahDataP
 
 
 if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
-  $keyword = $_POST['keyword'];
+  $keyword = input($_POST['keyword']);
   $query = "SELECT * FROM penyakit WHERE
           nama LIKE '%$keyword%'
           ORDER BY nama ASC

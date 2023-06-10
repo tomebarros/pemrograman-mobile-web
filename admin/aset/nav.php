@@ -7,7 +7,7 @@ $dataAdmin = query("SELECT * FROM karyawan WHERE email = '$emailAdmin'")[0];
 <nav class="navbar">
   <div class="header">
     <img src="../aset/img/user.png" alt="Profile" />
-    <i class="fa-solid fa-moon" id="theme"></i>
+    <h1>Tome Health</h1>
   </div>
   <div class="profile">
     <div class="kiri">
@@ -18,12 +18,9 @@ $dataAdmin = query("SELECT * FROM karyawan WHERE email = '$emailAdmin'")[0];
   </div>
   <div class="detail-profile">
     <ul>
-      <li>
-        <a href="#" id="modalTargetProfile"><i class="fa-solid fa-user"></i> Profile</a>
-      </li>
-      <li>
-        <a href="../controller/other/ceklogout.php"> <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i> Logout</a>
-      </li>
+      <li><a href="#"><i class="fa-solid fa-moon" id="theme"></i></a></li>
+      <li><a href="#" id="modalTargetProfile"><i class="fa-solid fa-user"></i> Profile</a></li>
+      <li><a href="../controller/other/ceklogout.php" onclick="return confirm('Logout Sekarang?')"> <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i> Logout</a></li>
     </ul>
   </div>
 
@@ -41,6 +38,7 @@ $dataAdmin = query("SELECT * FROM karyawan WHERE email = '$emailAdmin'")[0];
     <li><a href="datarawatinap.php">Rawat Inap</a></li>
     <li><a href="datadetailperawatjaga.php">Perawat Jaga</a></li>
     <li><a href="datacekkebersihan.php">Kebersihan</a></li>
+    <li><a href="pesan.php">Pesan</a></li>
   </ul>
 </nav>
 

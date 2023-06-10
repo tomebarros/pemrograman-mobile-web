@@ -9,7 +9,7 @@ $data = query("SELECT * FROM karyawan  ORDER BY nama ASC LIMIT $awalData,$jumlah
 
 // script cari data ke database
 if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
-  $keyword = $_POST['keyword'];
+  $keyword = input($_POST['keyword']);
   $query = "SELECT * FROM karyawan WHERE
           nama LIKE '%$keyword%' OR
           tempatlahir LIKE '%$keyword%' OR
@@ -144,7 +144,7 @@ if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
     <div class="modal-footer">
       <button class="tombol btn-tutup" type="submit">Simpan</button>
       </form>
-      <button class="tombol btn-tutup" type="button" id="tutupModalUbah">Tutup</button>
+      <button class="tombol secondary btn-tutup" type="button" id="tutupModalUbah">Tutup</button>
     </div>
   </div>
 </div>

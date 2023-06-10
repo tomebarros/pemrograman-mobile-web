@@ -3,7 +3,7 @@
 $data = query("SELECT rekammedis.idkaryawandokter,rekammedis.idrekammedis, pasien.idpasien, pasien.nama AS namapasien, pasien.tempatlahir, pasien.tanggallahir, pasien.jeniskelamin, rekammedis.tanggalpelayanan, rekammedis.idjadwalkaryawan, karyawan.nama namapetugas, jadwalkaryawan.idruang, ruang.namaruang, jadwalkaryawan.hari, jadwalkaryawan.jammulai, jadwalkaryawan.jamselesai,jadwalkaryawan.statusketersediaan, rekammedis.idpoli, poli.namapoli, rekammedis.tanggalcheckin,rekammedis.jamcheckin, rekammedis.bb as beratbadan, rekammedis.tb as tinggibadan, rekammedis.suhu,rekammedis.tensi,rekammedis.catatanhasillab,rekammedis.catatanalergiobat,rekammedis.catatanalergimakanan,rekammedis.jenisperawatan, rekammedis.lamasakit, rekammedis.statusperawatan,rekammedis.tanggalkontrol, rekammedis.idkaryawankasir, rekammedis.metodepembayaran FROM rekammedis,pasien,karyawan,jadwalkaryawan,ruang,poli WHERE rekammedis.idpasien = pasien.idpasien AND rekammedis.idkaryawan = karyawan.idkaryawan AND rekammedis.idjadwalkaryawan = jadwalkaryawan.idjadwalkaryawan AND jadwalkaryawan.idruang = ruang.idruang AND rekammedis.idpoli = poli.idpoli;");
 
 if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
-  $keyword = $_POST['keyword'];
+  $keyword = input($_POST['keyword']);
   $query = "SELECT rekammedis.idkaryawandokter,rekammedis.idrekammedis, pasien.idpasien, pasien.nama AS namapasien, pasien.tempatlahir, pasien.tanggallahir, pasien.jeniskelamin, rekammedis.tanggalpelayanan, rekammedis.idjadwalkaryawan, karyawan.nama namapetugas, jadwalkaryawan.idruang, ruang.namaruang, jadwalkaryawan.hari, jadwalkaryawan.jammulai, jadwalkaryawan.jamselesai,jadwalkaryawan.statusketersediaan, rekammedis.idpoli, poli.namapoli, rekammedis.tanggalcheckin,rekammedis.jamcheckin, rekammedis.bb as beratbadan, rekammedis.tb as tinggibadan, rekammedis.suhu,rekammedis.tensi,rekammedis.catatanhasillab,rekammedis.catatanalergiobat,rekammedis.catatanalergimakanan,rekammedis.jenisperawatan, rekammedis.lamasakit, rekammedis.statusperawatan,rekammedis.tanggalkontrol, rekammedis.idkaryawankasir, rekammedis.metodepembayaran FROM rekammedis,pasien,karyawan,jadwalkaryawan,ruang,poli WHERE rekammedis.idpasien = pasien.idpasien AND rekammedis.idkaryawan = karyawan.idkaryawan AND rekammedis.idjadwalkaryawan = jadwalkaryawan.idjadwalkaryawan AND jadwalkaryawan.idruang = ruang.idruang AND rekammedis.idpoli = poli.idpoli AND 
   (
     pasien.nama like '%$keyword%'
@@ -71,7 +71,7 @@ if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
           <td><?= getKaryawanById($d['idkaryawandokter']); ?></td>
           <td><?= $d['namapetugas']; ?></td>
           <td><?= $d['namaruang']; ?></td>
-          <td><?= $d['hari']; ?><< /td>
+          <td><?= $d['hari']; ?></td>
           <td><?= $d['jammulai']; ?></td>
           <td><?= $d['jamselesai']; ?></td>
           <td><?= $d['statusketersediaan']; ?></td>

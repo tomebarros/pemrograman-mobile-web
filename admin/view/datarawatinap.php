@@ -9,7 +9,7 @@ $awalData = ($jumlahDataPerHalaman * $halamanAktif) - $jumlahDataPerHalaman;
 $data = query("SELECT rawatinap.idrawatinap, rekammedis.idrekammedis, pasien.nama AS namapasien ,pasien.tanggallahir,pasien.jeniskelamin,pasien.telepon,karyawan.nama AS namadokter, poli.namapoli,rawatinap.tanggalmulai,rawatinap.tanggalselesai,kamar.idkamar,kamar.nama AS namakamar, kamar.harga,kamar.kelas FROM rawatinap,rekammedis,pasien,karyawan,kamar,poli WHERE rawatinap.idrekammedis = rekammedis.idrekammedis AND rawatinap.idkamar = kamar.idkamar AND rekammedis.idpasien = pasien.idpasien AND rekammedis.idkaryawandokter = karyawan.idkaryawan AND rekammedis.idpoli = poli.idpoli LIMIT $awalData,$jumlahDataPerHalaman");
 
 if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
-  $keyword = $_POST['keyword'];
+  $keyword = input($_POST['keyword']);
   $query = "SELECT rekammedis.idrekammedis, pasien.nama AS namapasien ,pasien.tanggallahir,pasien.jeniskelamin,pasien.telepon,karyawan.nama AS namadokter, poli.namapoli,rawatinap.tanggalmulai,rawatinap.tanggalselesai,kamar.nama AS namakamar, kamar.harga 
             FROM rawatinap,rekammedis,pasien,karyawan,kamar,poli 
             WHERE rawatinap.idrekammedis = rekammedis.idrekammedis 

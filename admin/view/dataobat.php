@@ -9,7 +9,7 @@ $awalData = ($jumlahDataPerHalaman * $halamanAktif) - $jumlahDataPerHalaman;
 $data = query("SELECT idobat,barcode,namaobat,hargasatuan,satuan,wujud, if(ketersediaan = '0', 'Tidak Ada', 'Ada') AS ketersediaan FROM obat ORDER BY namaobat ASC LIMIT $awalData,$jumlahDataPerHalaman");
 
 if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
-  $keyword = $_POST['keyword'];
+  $keyword = input($_POST['keyword']);
   $query = "SELECT idobat, barcode, namaobat, hargasatuan, satuan, wujud, IF(ketersediaan = 0,'Tidak Ada', 'Ada') AS ketersediaan FROM obat WHERE 
         barcode LIKE '%$keyword%' OR
         namaobat LIKE '%$keyword%' OR 

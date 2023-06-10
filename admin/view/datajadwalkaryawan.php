@@ -10,7 +10,7 @@ $awalData = ($jumlahDataPerHalaman * $halamanAktif) - $jumlahDataPerHalaman;
 $data = query("SELECT karyawan.idkaryawan,ruang.idruang, jadwalkaryawan.idjadwalkaryawan, karyawan.nama, karyawan.email, ruang.namaruang,jadwalkaryawan.hari,jadwalkaryawan.jammulai,jadwalkaryawan.jamselesai,jadwalkaryawan.statusketersediaan FROM jadwalkaryawan, karyawan, ruang WHERE jadwalkaryawan.idkaryawan = karyawan.idkaryawan AND jadwalkaryawan.idruang = ruang.idruang ORDER BY jadwalkaryawan.idjadwalkaryawan DESC LIMIT $awalData,$jumlahDataPerHalaman");
 
 if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
-  $keyword = $_POST['keyword'];
+  $keyword = input($_POST['keyword']);
   $query = "SELECT karyawan.idkaryawan,ruang.idruang,karyawan.nama, karyawan.email, ruang.namaruang, jadwalkaryawan.hari, jadwalkaryawan.jammulai, jadwalkaryawan.jamselesai, jadwalkaryawan.statusketersediaan, jadwalkaryawan.idjadwalkaryawan FROM jadwalkaryawan, karyawan, ruang WHERE jadwalkaryawan.idkaryawan = karyawan.idkaryawan AND jadwalkaryawan.idruang = ruang.idruang AND (karyawan.nama LIKE '%$keyword%' OR karyawan.email LIKE '%$keyword%' OR ruang.namaruang LIKE '%$keyword%' OR jadwalkaryawan.hari LIKE '%$keyword%' OR jadwalkaryawan.statusketersediaan LIKE '%$keyword%') ORDER BY jadwalkaryawan.idjadwalkaryawan ASC;
         ";
 
