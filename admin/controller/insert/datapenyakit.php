@@ -1,9 +1,17 @@
 <?php
 include '../../../template/functions.php';
 include '../other/restrict.php';
-$fariabel1 = input($_POST['nama']);
 
+$nama = input($_POST['nama']);
 
-mysqli_query($koneksi, "insert into penyakit values('','$fariabel1')");
-
-header("location:../../userinterface/datapenyakit.php");
+$duplikasi = getData("SELECT * FROM penyakit WHERE nama LIKE '$nama'");
+if ($duplikasi > 0) {
+  echo "<script>
+    alert('Data Sudah Tersedia');
+    history.go(-1);
+  </script>";
+  die;
+} else {
+  mysqli_query($koneksi, "insert into penyakit values('','$nama')");
+  header("location:../../userinterface/datapenyakit.php");
+}

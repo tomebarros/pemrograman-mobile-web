@@ -3,11 +3,18 @@ include '../../../template/functions.php';
 include '../other/restrict.php';
 
 // menangkap data yang di kirim dari form
-$namaVariabel1 = input($_POST['nama']);
-$namaVariabel = input($_POST['idpenyakit']);
+$nama = input($_POST['nama']);
+$idpenyakit = input($_POST['idpenyakit']);
 
-// update data ke database
-mysqli_query($koneksi, "update penyakit set nama='$namaVariabel1' where idpenyakit='$namaVariabel'");
+$duplikasi = getData("SELECT * FROM penyakit WHERE nama LIKE '$nama' AND idpenyakit != '$idpenyakit'");
 
-// mengalihkan halaman kembali ke index.php
-header("location: ../../userinterface/datapenyakit.php");
+if ($duplikasi > 0) {
+  echo "<script>
+    alert('Data Sudah Tersedia');
+    history.go(-1);
+  </script>";
+  die;
+} else {
+  mysqli_query($koneksi, "update penyakit set nama='$nama' where idpenyakit='$idpenyakit'");
+  header("location: ../../userinterface/datapenyakit.php");
+}
