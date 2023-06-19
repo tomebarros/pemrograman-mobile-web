@@ -1,17 +1,22 @@
 <?php
 include '../../../template/functions.php';
+include '../other/restrict.php';
 
+$nama = input($_POST['nama']);
+$kelas = input($_POST['kelas']);
+$harga = input($_POST['harga']);
 
+$idkamar = input($_POST['idkamar']);
 
-// menangkap data yang di kirim dari form
-$namaVariabel1 = input($_POST['nama']);
-$namaVariabel2 = input($_POST['kelas']);
-$namaVariabel3 = input($_POST['harga']);
+$duplikasi = getData("SELECT * FROM kamar WHERE nama LIKE '$nama' AND idkamar != '$idkamar'");
 
-$namaVariabel = input($_POST['idkamar']);
-
-// update data ke database
-mysqli_query($koneksi, "update kamar set nama='$namaVariabel1', kelas='$namaVariabel2', harga='$namaVariabel3' where idkamar='$namaVariabel'");
-
-// mengalihkan halaman kembali ke index.php
-header("location: ../../userinterface/datakamar.php");
+if ($duplikasi > 0) {
+  echo "<script>
+    alert('Data Sudah Tersedia');
+    history.go(-1);
+  </script>";
+  die;
+} else {
+  mysqli_query($koneksi, "update kamar set nama='$nama', kelas='$kelas', harga='$harga' where idkamar='$idkamar'");
+  header("location: ../../userinterface/datakamar.php");
+}

@@ -7,7 +7,7 @@ $halamanAktif = (isset($_GET['page']) and $_GET['page'] != '') ? $_GET['page'] :
 $awalData = ($jumlahDataPerHalaman * $halamanAktif) - $jumlahDataPerHalaman;
 
 
-$data = query("SELECT * FROM kamar");
+$data = query("SELECT * FROM kamar ORDER BY nama");
 
 if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
   $keyword = input($_POST['keyword']);
