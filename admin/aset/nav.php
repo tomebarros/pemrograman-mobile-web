@@ -25,20 +25,20 @@ $dataAdmin = query("SELECT * FROM karyawan WHERE email = '$emailAdmin'")[0];
   </div>
 
   <ul class="nav-link">
-    <li><a href="datakaryawan.php">Karyawan</a></li>
-    <li><a href="datapasien.php">Pasien</a></li>
-    <li><a href="datakeahliandokter.php">Keahlian Dokter</a></li>
-    <li><a href="datapoli.php">Poli</a></li>
-    <li><a href="dataruang.php">Ruang</a></li>
-    <li><a href="datajadwalkaryawan.php">Jadwal Karyawan</a></li>
-    <li><a href="datarekammedis.php">Rekam Medis</a></li>
-    <li><a href="datapenyakit.php">Penyakit</a></li>
-    <li><a href="dataobat.php">Obat</a></li>
-    <li><a href="datakamar.php">Kamar</a></li>
-    <li><a href="datarawatinap.php">Rawat Inap</a></li>
-    <li><a href="datadetailperawatjaga.php">Perawat Jaga</a></li>
-    <li><a href="datacekkebersihan.php">Kebersihan</a></li>
-    <li><a href="pesan.php">Pesan</a></li>
+    <li><a href="datakaryawan.php"><i class="fa-solid fa-user-doctor"></i>Karyawan</a></li>
+    <li><a href="datapasien.php"><i class="fa-solid fa-head-side-mask"></i>Pasien</a></li>
+    <li><a href="datakeahliandokter.php"><i class="fa-solid fa-stethoscope"></i>Keahlian Dokter</a></li>
+    <li><a href="datapoli.php"><i class="fa-solid fa-briefcase-medical"></i>Poli</a></li>
+    <li><a href="dataruang.php"><i class="fa-solid fa-door-open"></i>Ruang</a></li>
+    <li><a href="datajadwalkaryawan.php"><i class="fa-regular fa-calendar"></i>Jadwal Karyawan</a></li>
+    <li><a href="datarekammedis.php"><i class="fa-solid fa-scroll"></i>Rekam Medis</a></li>
+    <li><a href="datapenyakit.php"><i class="fa-solid fa-viruses"></i>Penyakit</a></li>
+    <li><a href="dataobat.php"><i class="fa-solid fa-pills"></i>Obat</a></li>
+    <li><a href="datakamar.php"><i class="fa-solid fa-solid fa-bed"></i>Kamar</a></li>
+    <li><a href="datarawatinap.php"><i class="fa-solid fa-bed-pulse"></i>Rawat Inap</a></li>
+    <li><a href="datadetailperawatjaga.php"><i class="fa-solid fa-user-nurse"></i>Perawat Jaga</a></li>
+    <li><a href="datacekkebersihan.php"><i class="fa-solid fa-broom"></i>Kebersihan</a></li>
+    <li><a href="pesan.php"><i class="fa-solid fa-envelopes-bulk"></i>Pesan</a></li>
   </ul>
 </nav>
 
