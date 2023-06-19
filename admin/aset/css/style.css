@@ -178,7 +178,7 @@
 }
 
 .container .content .kanan table {
-  min-width: 10rem;
+  max-width: 70rem;
 }
 
 .container .content .kanan table tr th {
@@ -208,6 +208,11 @@
   padding: .3rem .7rem;
   color: var(--bg-dark);
   transition: all .3s;
+}
+
+.container .content .kanan .paginations a.disabled {
+  cursor: not-allowed;
+  opacity: 0.2;
 }
 
 .container .content .kanan .paginations a:hover {
