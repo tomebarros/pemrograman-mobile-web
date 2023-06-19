@@ -45,7 +45,7 @@ include "../../template/functions.php";
             </div>
 
             <div class="input">
-              <input type="text" class="form-input" required placeholder="Biaya" name="biaya">
+              <input type="number" class="form-input" required placeholder="Biaya" name="biaya">
             </div>
 
 

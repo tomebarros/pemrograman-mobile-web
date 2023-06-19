@@ -11,12 +11,8 @@
     $gt += $d['total'];
   } ?>
 </ol>
-
 <hr>
 <?php
-
 echo "Grand Total : " . rupiah($gt)  . "<br>";
-
 echo "Terbilang " . ucwords(terbilang($gt)) . " Rupiah";
-
 ?>

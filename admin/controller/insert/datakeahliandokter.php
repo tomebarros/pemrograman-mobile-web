@@ -1,13 +1,22 @@
 <?php
 include '../../../template/functions.php';
+include '../other/restrict.php';
 
 
+$nama = input($_POST['nama']);
+$biaya = input($_POST['biaya']);
+$idpoli = input($_POST['idpoli']);
 
-$fariabel1 = input($_POST['nama']);
-$fariabel2 = input($_POST['biaya']);
-$fariabel3 = input($_POST['idpoli']);
 
+$duplikasi = getData("SELECT nama FROM keahliandokter WHERE nama like '$nama'");
 
-mysqli_query($koneksi, "insert into keahliandokter values('','$fariabel1','$fariabel2', '$fariabel3')");
-
-header("location:../../userinterface/datakeahliandokter.php");
+if ($duplikasi > 0) {
+  echo "<script>
+    alert('Data Yang Anda Masukan Sudah Teredia');
+    history.go(-1);
+  </script>";
+  die;
+} else {
+  mysqli_query($koneksi, "insert into keahliandokter values('','$nama','$biaya', '$idpoli')");
+  header("location:../../userinterface/datakeahliandokter.php");
+}
