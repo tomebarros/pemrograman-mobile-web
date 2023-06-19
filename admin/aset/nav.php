@@ -18,7 +18,7 @@ $dataAdmin = query("SELECT * FROM karyawan WHERE email = '$emailAdmin'")[0];
   </div>
   <div class="detail-profile">
     <ul>
-      <li><a href="#"><i class="fa-solid fa-moon" id="theme"></i></a></li>
+      <li><a href="#"><i class="fa-solid fa-moon" id="theme"></i> Mode</a></li>
       <li><a href="#" id="modalTargetProfile"><i class="fa-solid fa-user"></i> Profile</a></li>
       <li><a href="../controller/other/ceklogout.php" onclick="return confirm('Logout Sekarang?')"> <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i> Logout</a></li>
     </ul>

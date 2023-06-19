@@ -54,7 +54,7 @@
 
 .navbar {
   background-color: var(--primary);
-  max-height: 100vh;
+  min-height: 100vh;
   min-width: 20vw;
   padding: 1rem;
   position: sticky;
@@ -104,7 +104,7 @@
 
 .navbar .detail-profile {
   width: 100%;
-  padding: 0 1rem;
+  padding: 1rem 1rem 0;
   display: none;
 }
 
@@ -121,19 +121,19 @@
   padding-top: 1rem;
 }
 
+.navbar .nav-link li {
+  padding: .55rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 .navbar .nav-link li a {
   color: #f6f8fa;
-  font-size: var(--text);
+  font-size: 1.1rem;
+  width: 100%;
   text-transform: capitalize;
   margin-right: auto;
   transition: all .2s;
-}
-
-.navbar .nav-link li a:hover {
-  background-color: var(--light);
-  color: var(--bg-dark);
-  padding: 0 0.2rem;
-  border-radius: .2rem;
+  letter-spacing: .3rem;
 }
 
 
