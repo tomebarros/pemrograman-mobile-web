@@ -1,15 +1,19 @@
 <?php
 include '../../../template/functions.php';
+include '../other/restrict.php';
 
+$namaRuang = input($_POST['namaruang']);
+$idRuang = input($_POST['idruang']);
 
+$duplikasi = getData("SELECT * FROM ruang WHERE namaruang LIKE '$namaRuang' AND idruang != '$idRuang'");
 
-// menangkap data yang di kirim dari form
-$namaVariabel1 = input($_POST['namaruang']);
-
-$namaVariabel = input($_POST['idruang']);
-
-// update data ke database
-mysqli_query($koneksi, "update ruang set namaruang='$namaVariabel1' where idruang='$namaVariabel'");
-
-// mengalihkan halaman kembali ke index.php
-header("location: ../../userinterface/dataruang.php");
+if ($duplikasi > 0) {
+  echo "<script>
+    alert('Data Sudah Tersedia');
+    history.go(-1);
+  </script>";
+  die;
+} else {
+  mysqli_query($koneksi, "update ruang set namaruang='$namaRuang' where idruang='$idRuang'");
+  header("location: ../../userinterface/dataruang.php");
+}
