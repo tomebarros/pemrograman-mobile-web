@@ -178,7 +178,7 @@
 }
 
 .container .content .kanan table {
-  width: 90rem;
+  min-width: 10rem;
 }
 
 .container .content .kanan table tr th {
