@@ -57,7 +57,9 @@ if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
           <td><?= tanggal($d['tanggallahir']); ?></td>
           <td><?= $d['jeniskelamin']; ?></td>
           <td><?= $d['alamat']; ?></td>
-          <td><?= $d['telepon']; ?></td>
+          <td>
+            <a target="_blank" href="tel:<?= $d['telepon'] ?>"><?= $d['telepon']; ?></a>
+          </td>
           <td>
             <?php
             if ($d['pekerjaan'] == 'Dokter') {
