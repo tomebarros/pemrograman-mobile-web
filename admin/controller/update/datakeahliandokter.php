@@ -2,14 +2,22 @@
 include '../../../template/functions.php';
 include '../other/restrict.php';
 // menangkap data yang di kirim dari form
-$namaVariabel1 = input($_POST['nama']);
-$namaVariabel2 = input($_POST['biaya']);
-$namaVariabel3 = input($_POST['idpoli']);
+$nama = input($_POST['nama']);
+$biaya = input($_POST['biaya']);
+$idpoli = input($_POST['idpoli']);
 
-$namaVariabel = input($_POST['idkeahliandokter']);
+$idkeahliandokter = input($_POST['idkeahliandokter']);
 
-// update data ke database
-mysqli_query($koneksi, "update keahliandokter set nama='$namaVariabel1', biaya='$namaVariabel2', idpoli='$namaVariabel3' where idkeahliandokter='$namaVariabel'");
 
-// mengalihkan halaman kembali ke index.php
-header("location: ../../userinterface/datakeahliandokter.php");
+$duplikasi = getData("SELECT * FROM keahliandokter WHERE nama LIKE '$nama' AND idkeahliandokter != '$idkeahliandokter'");
+
+if ($duplikasi > 0) {
+  echo "<script>
+    alert('Data Sudah Tersedia');
+    history.go(-1);
+  </script>";
+  die;
+} else {
+  mysqli_query($koneksi, "update keahliandokter set nama='$nama', biaya='$biaya', idpoli='$idpoli' where idkeahliandokter='$idkeahliandokter'");
+  header("location: ../../userinterface/datakeahliandokter.php");
+}

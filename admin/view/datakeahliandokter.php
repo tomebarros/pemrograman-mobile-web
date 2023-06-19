@@ -69,7 +69,7 @@ if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
         </div>
 
         <div class="input">
-          <input type="text" class="form-input" required placeholder="Biaya" name="biaya">
+          <input type="number" class="form-input" required placeholder="Biaya" name="biaya">
         </div>
 
         <div class="input">

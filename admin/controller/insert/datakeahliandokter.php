@@ -12,7 +12,7 @@ $duplikasi = getData("SELECT nama FROM keahliandokter WHERE nama like '$nama'");
 
 if ($duplikasi > 0) {
   echo "<script>
-    alert('Data Yang Anda Masukan Sudah Teredia');
+    alert('Data Sudah Teredia');
     history.go(-1);
   </script>";
   die;
