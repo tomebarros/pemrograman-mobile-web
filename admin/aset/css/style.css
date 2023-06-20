@@ -17,13 +17,14 @@
 /* Webkit browsers (Chrome, Safari) */
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--dark);
+  background-color: rgba(1, 1, 1, 0.3);
   border-radius: 50rem;
   margin-bottom: 1rem;
 }
 
 ::-webkit-scrollbar {
-  height: .4rem;
+  max-height: .2rem;
+  max-width: .4rem;
 }
 
 * {
@@ -59,6 +60,7 @@
   padding: 1rem;
   position: sticky;
   top: 0;
+  overflow-y: scroll;
 }
 
 .navbar .header {
@@ -128,7 +130,7 @@
 
 .navbar .nav-link li a {
   color: #f6f8fa;
-  font-size: 1.1rem;
+  font-size: .7rem;
   width: 100%;
   text-transform: capitalize;
   margin-right: auto;
@@ -178,7 +180,7 @@
 }
 
 .container .content .kanan table {
-  max-width: 70rem;
+  min-width: 70rem;
 }
 
 .container .content .kanan table tr th {
@@ -367,6 +369,12 @@ form .form-select {
     bottom: 0;
   }
 
+  .navbar .nav-link li {
+    padding: .4rem;
+  }
+
+
+
   .navbar.show {
     left: 0;
     opacity: 1;
@@ -374,6 +382,10 @@ form .form-select {
 
   #toggleNavbar {
     display: inline;
+  }
+
+  .container .content .kanan .table table {
+    width: 50rem;
   }
 
   /* .container .content .header, */
@@ -406,6 +418,10 @@ form .form-select {
   .container .content .header {
     display: block;
     margin-bottom: 0;
+  }
+
+  .container .content .kanan .table table {
+    min-width: 30rem;
   }
 
   .modal .modal-header h3,
