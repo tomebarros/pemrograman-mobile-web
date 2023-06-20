@@ -247,7 +247,8 @@
   padding: 1rem 2rem;
   display: none;
   box-shadow: 5px 5px 20px #2f363d;
-  border-radius: 1rem;
+  border-radius: .1rem;
+  z-index: 2;
 }
 
 .modal .profile {
