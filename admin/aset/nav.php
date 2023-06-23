@@ -6,7 +6,7 @@ $dataAdmin = query("SELECT * FROM karyawan WHERE email = '$emailAdmin'")[0];
 
 <nav class="navbar">
   <div class="header">
-    <img src="../aset/img/user.png" alt="Profile" />
+    <img src="../aset/img/profile/user.png" alt="Profile" />
     <h1>Tome Health</h1>
   </div>
   <div class="profile">

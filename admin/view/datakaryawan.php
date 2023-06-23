@@ -1,5 +1,5 @@
 <?php
-$jumlahDataPerHalaman = 10; // jumlah data yg ingn di tamoilkan
+$jumlahDataPerHalaman = 6; // jumlah data yg ingn di tamoilkan
 $jumlahData = count(query("SELECT * FROM karyawan")); // menghitun ad berapa data di tabel karyawan
 $jumlahHalaman = ceil($jumlahData / $jumlahDataPerHalaman); // membuat jumlah navtab
 $halamanAktif = (isset($_GET['page']) and $_GET['page'] != '') ? $_GET['page'] : 1; // default navtab yg aktif adalah satu
@@ -35,6 +35,7 @@ if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
   <table border="1" cellpadding="0" cellspacing="0" width="100%">
     <thead>
       <th>No</th>
+      <th>Foto</th>
       <th>Nama</th>
       <th>Tempat Lahir</th>
       <th>Tanggal Lahir</th>
@@ -52,6 +53,20 @@ if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
       ?>
         <tr>
           <th><?= $no++; ?></th>
+
+          <td>
+            <?php
+            $file = $d['idkaryawan'];
+            if (file_exists("../aset/img/profile/$file.png")) {
+            ?>
+              <a href="../aset/img/profile/<?= $file ?>.png" target="_blank">
+                <img src="../aset/img/profile/<?= $file ?>.png" width="70">
+              </a>
+            <?php } else { ?>
+              <img src="../aset/img/profile/user.png" width="70">
+            <?php } ?>
+          </td>
+
           <td><?= $d['nama']; ?></td>
           <td><?= $d['tempatlahir']; ?></td>
           <td><?= tanggal($d['tanggallahir']); ?></td>
@@ -70,6 +85,7 @@ if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
             ?>
           </td>
           <td><?= $d['email']; ?></td>
+
           <td>
             <a href="../controller/delete/datakaryawan.php?q=<?= $d['idkaryawan']; ?>" onclick="return confirm('Hapus Data!')">Hapus</a>
             <a href="#" class="btn-ubah" id="modalTargetUbah" nama="<?= $d['nama'] ?>" tempatlahir="<?= $d['tempatlahir'] ?>" tanggallahir="<?= $d['tanggallahir'] ?>" jeniskelamin="<?= $d['jeniskelamin'] ?>" alamat="<?= $d['alamat'] ?>" telepon="<?= $d['telepon'] ?>" pekerjaan="<?= $d['pekerjaan'] ?>" email="<?= $d['email'] ?>" password="<?= $d['password'] ?>" idkaryawan="<?= $d['idkaryawan'] ?>">Ubah</a>
