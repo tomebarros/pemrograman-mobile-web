@@ -22,14 +22,16 @@ include "../../template/functions.php";
 </head>
 
 <body>
-
-  <i class="fa-solid fa-bars" id="toggleNavbar"></i>
-
   <div class="container">
-
     <?php include '../aset/nav.php'; ?>
-
     <div class="content">
+
+      <header>
+        <p>Admin</p>
+        <img src="../aset/img/profile/user.png" alt="Profile">
+        <i class="fa-solid fa-bars" id="toggleNavbar"></i>
+      </header>
+
       <div class="header">
         <h1>Data Karyawan</h1>
         <i class="fa-solid fa-chevrons"></i>

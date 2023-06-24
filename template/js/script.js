@@ -20,8 +20,8 @@ for (var i = 0; i < activeLinks.length; i++) {
   var link = activeLinks[i];
 
   // memotong string untuk mendapatkan nama file tanpa ekstensi dari URL link
-  console.log(namaFile)
-  
+  console.log(namaFile);
+
   var namaurl = link.href.split("/").pop().split(".")[0];
 
   var urlTerakhir = link.href.substring(link.href.lastIndexOf("/") + 1);

@@ -37,17 +37,6 @@
   transition: all .6s;
 }
 
-#toggleNavbar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: .4rem 2rem;
-  font-size: 1.6rem;
-  display: none;
-  z-index: 3;
-  color: var(--dark);
-}
-
 .container {
   display: flex;
   min-height: 100vh;
@@ -87,6 +76,7 @@
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
+  filter: drop-shadow(1px 1px 3px #fff);
 }
 
 .navbar .header h1 {
@@ -124,7 +114,7 @@
 }
 
 .navbar .nav-link li a {
-  color: #f6f8fa;
+  color: rgb(203, 203, 203);
   font-size: .8rem;
   width: 100%;
   text-transform: capitalize;
@@ -136,16 +126,48 @@
   padding: .7rem .5rem;
 }
 
+.navbar .nav-link li a.active {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 10px #fff;
+}
+
 .navbar .nav-link li a:hover {
   background-color: #0a60e2;
-  transform: scale(1.1);
+  color: rgb(232, 232, 232);
+  /* transform: scale(1.1); */
 }
 
 /* content */
 .container .content {
-  padding: 2rem 1rem;
+  padding: 0 1rem 2rem;
   background-color: var(--light);
   min-width: 78vw;
+}
+
+header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: .5rem;
+  padding: .4rem 3%;
+  border-bottom: 3px solid var(--bg-dark);
+  color: var(--dark);
+}
+
+header img {
+  display: inline;
+  height: 2.9rem;
+  width: 2.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+  width: 3rem;
+}
+
+header #toggleNavbar {
+  font-size: 1.6rem;
+  display: none;
+  color: var(--dark);
+  z-index: 3;
 }
 
 .container .content .header {
@@ -386,7 +408,7 @@ form .form-select {
     opacity: 1;
   }
 
-  #toggleNavbar {
+  header #toggleNavbar {
     display: inline;
   }
 

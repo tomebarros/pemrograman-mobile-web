@@ -6,7 +6,7 @@ $dataAdmin = query("SELECT * FROM karyawan WHERE email = '$emailAdmin'")[0];
 
 <nav class="navbar">
   <div class="header">
-    <img src="../aset/img/profile/user.png" alt="Profile" />
+    <img src="../../img/logo.png" alt="Profile" />
     <h1>Tome Health</h1>
   </div>
   <div class="profile">
@@ -25,20 +25,20 @@ $dataAdmin = query("SELECT * FROM karyawan WHERE email = '$emailAdmin'")[0];
   </div>
 
   <ul class="nav-link">
-    <li><a href="datakaryawan.php"><i class="fa-solid fa-user-doctor"></i>Karyawan</a></li>
-    <li><a href="datapasien.php"><i class="fa-solid fa-head-side-mask"></i>Pasien</a></li>
-    <li><a href="datakeahliandokter.php"><i class="fa-solid fa-stethoscope"></i>Keahlian Dokter</a></li>
-    <li><a href="datapoli.php"><i class="fa-solid fa-briefcase-medical"></i>Poli</a></li>
-    <li><a href="dataruang.php"><i class="fa-solid fa-door-open"></i>Ruang</a></li>
-    <li><a href="datajadwalkaryawan.php"><i class="fa-regular fa-calendar"></i>Jadwal Karyawan</a></li>
-    <li><a href="datarekammedis.php"><i class="fa-solid fa-scroll"></i>Rekam Medis</a></li>
-    <li><a href="datapenyakit.php"><i class="fa-solid fa-viruses"></i>Penyakit</a></li>
-    <li><a href="dataobat.php"><i class="fa-solid fa-pills"></i>Obat</a></li>
-    <li><a href="datakamar.php"><i class="fa-solid fa-solid fa-bed"></i>Kamar</a></li>
-    <li><a href="datarawatinap.php"><i class="fa-solid fa-bed-pulse"></i>Rawat Inap</a></li>
-    <li><a href="datadetailperawatjaga.php"><i class="fa-solid fa-user-nurse"></i>Perawat Jaga</a></li>
-    <li><a href="datacekkebersihan.php"><i class="fa-solid fa-broom"></i>Kebersihan</a></li>
-    <li><a href="pesan.php"><i class="fa-solid fa-envelopes-bulk"></i>Pesan</a></li>
+    <li><a href="datakaryawan.php" class="active"><i class="fa-solid fa-user-doctor"></i>Karyawan</a></li>
+    <li><a href="datapasien.php" class="active"><i class="fa-solid fa-head-side-mask"></i>Pasien</a></li>
+    <li><a href="datakeahliandokter.php" class="active"><i class="fa-solid fa-stethoscope"></i>Keahlian Dokter</a></li>
+    <li><a href="datapoli.php" class="active"><i class="fa-solid fa-briefcase-medical"></i>Poli</a></li>
+    <li><a href="dataruang.php" class="active"><i class="fa-solid fa-door-open"></i>Ruang</a></li>
+    <li><a href="datajadwalkaryawan.php" class="active"><i class="fa-regular fa-calendar"></i>Jadwal Karyawan</a></li>
+    <li><a href="datarekammedis.php" class="active"><i class="fa-solid fa-scroll"></i>Rekam Medis</a></li>
+    <li><a href="datapenyakit.php" class="active"><i class="fa-solid fa-viruses"></i>Penyakit</a></li>
+    <li><a href="dataobat.php" class="active"><i class="fa-solid fa-pills"></i>Obat</a></li>
+    <li><a href="datakamar.php" class="active"><i class="fa-solid fa-solid fa-bed"></i>Kamar</a></li>
+    <li><a href="datarawatinap.php" class="active"><i class="fa-solid fa-bed-pulse"></i>Rawat Inap</a></li>
+    <li><a href="datadetailperawatjaga.php" class="active"><i class="fa-solid fa-user-nurse"></i>Perawat Jaga</a></li>
+    <li><a href="datacekkebersihan.php" class="active"><i class="fa-solid fa-broom"></i>Kebersihan</a></li>
+    <li><a href="pesan.php" class="active"><i class="fa-solid fa-envelopes-bulk"></i>Pesan</a></li>
   </ul>
 </nav>
 
@@ -50,7 +50,7 @@ $dataAdmin = query("SELECT * FROM karyawan WHERE email = '$emailAdmin'")[0];
     </div>
     <div class="modal-body">
       <div class="profile">
-        <img src="../aset/img/user.png" alt="">
+        <img src="../aset/img/profile/user.png" alt="">
         <div class="deskripsi">
           <div class="label">
             <p>Nama</p>
