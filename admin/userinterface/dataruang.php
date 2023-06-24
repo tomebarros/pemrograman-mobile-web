@@ -22,32 +22,23 @@ include "../../template/functions.php";
 </head>
 
 <body>
-
-  <i class="fa-solid fa-bars" id="toggleNavbar"></i>
-
   <div class="container">
-
     <?php include '../aset/nav.php'; ?>
-
     <div class="content">
+      <?php include '../aset/header.php'; ?>
       <div class="header">
         <h1>Data Ruang</h1>
         <i class="fa-solid fa-chevrons"></i>
       </div>
-
       <div class="row">
-
         <div class="kiri">
-
           <form action="../controller/insert/dataruang.php" method="POST">
             <div class="input">
               <input type="text" class="form-input" required placeholder="Nama Ruang" name="namaruang">
             </div>
-
             <button class="tombol" type="submit">Tambah</button>
           </form>
         </div>
-
         <div class="kanan">
           <?php include '../view/dataruang.php'; ?>
         </div>

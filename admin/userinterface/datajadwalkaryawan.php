@@ -22,23 +22,17 @@ include "../../template/functions.php";
 </head>
 
 <body>
-
-  <i class="fa-solid fa-bars" id="toggleNavbar"></i>
-
   <div class="container">
-
     <?php include '../aset/nav.php'; ?>
-
     <div class="content">
+      <?php include '../aset/header.php'; ?>
       <div class="header">
         <h1>Data Jadwal Karyawan</h1>
         <i class="fa-solid fa-chevrons"></i>
       </div>
 
       <div class="row">
-
         <div class="kiri">
-
           <form action="../controller/insert/datajadwalkaryawan.php" method="POST">
             <div class="input">
               <select name="idkaryawan" class="form-select" required>
