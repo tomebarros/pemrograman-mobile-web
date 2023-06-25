@@ -56,8 +56,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.1rem 0;
-  position: relative;
 }
 
 .navbar .profile {
@@ -73,39 +71,22 @@
 }
 
 .navbar .header img {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
+  width: 4rem;
   filter: drop-shadow(1px 1px 3px #fff);
 }
 
 .navbar .header h1 {
   color: #eee;
   letter-spacing: 1px;
-  font-weight: 100;
+  font-weight: 600;
 }
 
-.navbar .profile i {
-  cursor: pointer;
-  color: #f6f8fa;
+.links {
+  display: flex;
+  justify-content: space-around;
 }
 
-.navbar .profile {
-  color: #f6f8fa;
-}
-
-.navbar .detail-profile {
-  width: 100%;
-  padding: 1rem 1rem 0;
-  display: none;
-}
-
-.navbar .detail-profile.active {
-  display: inline-block;
-}
-
-.navbar .detail-profile a,
-.navbar .detail-profile i {
+.links li a {
   color: #f6f8fa;
 }
 

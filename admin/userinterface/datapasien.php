@@ -23,20 +23,15 @@ include "../../template/functions.php";
 
 <body>
   <div class="container">
-
     <?php include '../aset/nav.php'; ?>
-
     <div class="content">
       <?php include '../aset/header.php'; ?>
       <div class="header">
         <h1>Data Pasien</h1>
         <i class="fa-solid fa-chevrons"></i>
       </div>
-
       <div class="row">
-
         <div class="kiri">
-
           <form action="../controller/insert/datapasien.php" method="POST">
             <div class="input">
               <input type="text" class="form-input" required placeholder="Nama" name="nama">
@@ -140,21 +135,6 @@ include "../../template/functions.php";
         modalPassword.value = atrPassword;
         modalIdKaryawan.value = atrIdKaryawan;
       });
-    });
-
-    // modal profile
-    const modalProfile = document.querySelector('#modalProfile');
-    document.querySelector('#modalTargetProfile').addEventListener('click', function(e) {
-      e.preventDefault();
-      modalProfile.style.display = 'block';
-    });
-
-    document.querySelector('#iconModalTutupProfile').addEventListener('click', () => {
-      modalProfile.style.display = 'none';
-    });
-
-    document.querySelector('#tutupModalProfile').addEventListener('click', () => {
-      modalProfile.style.display = 'none';
     });
   </script>
 </body>

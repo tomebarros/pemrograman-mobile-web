@@ -1,28 +1,18 @@
 <?php
 $emailAdmin = $_SESSION['emailAdmin'];
 $dataAdmin = query("SELECT * FROM karyawan WHERE email = '$emailAdmin'")[0];
-
 ?>
-
 <nav class="navbar">
   <div class="header">
     <img src="../../img/logo.png" alt="Profile" />
     <h1>Tome Health</h1>
   </div>
-  <div class="profile">
-    <div class="kiri">
-      <p><?= $dataAdmin['nama']; ?></p>
-      <p><?= $dataAdmin['email']; ?></p>
-    </div>
-    <i class="fa-solid fa-chevron-down" id="dropdown"></i>
-  </div>
-  <div class="detail-profile">
-    <ul>
-      <li><a href="#"><i class="fa-solid fa-moon" id="theme"></i> Mode</a></li>
-      <li><a href="#" id="modalTargetProfile"><i class="fa-solid fa-user"></i> Profile</a></li>
-      <li><a href="../controller/other/ceklogout.php" onclick="return confirm('Logout Sekarang?')"> <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i> Logout</a></li>
-    </ul>
-  </div>
+
+  <ul class="links">
+    <li><a href="../controller/other/ceklogout.php" onclick="return confirm('Logout Sekarang?')"> <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i></a></li>
+    <li><a href="#" id="modalTargetProfile"><i class="fa-solid fa-user"></i></a></li>
+    <li><a href="#"><i class="fa-solid fa-moon" id="theme"></i></a></li>
+  </ul>
 
   <ul class="nav-link">
     <li><a href="datakaryawan.php" class="active"><i class="fa-solid fa-user-doctor"></i>Karyawan</a></li>

@@ -30,7 +30,6 @@ include "../../template/functions.php";
         <h1>Data Jadwal Karyawan</h1>
         <i class="fa-solid fa-chevrons"></i>
       </div>
-
       <div class="row">
         <div class="kiri">
           <form action="../controller/insert/datajadwalkaryawan.php" method="POST">
@@ -149,21 +148,6 @@ include "../../template/functions.php";
         modalIdJadwalKaryawan.value = atrIdJadwalKaryawan;
 
       });
-    });
-
-    // modal profile
-    const modalProfile = document.querySelector('#modalProfile');
-    document.querySelector('#modalTargetProfile').addEventListener('click', function(e) {
-      e.preventDefault();
-      modalProfile.style.display = 'block';
-    });
-
-    document.querySelector('#iconModalTutupProfile').addEventListener('click', () => {
-      modalProfile.style.display = 'none';
-    });
-
-    document.querySelector('#tutupModalProfile').addEventListener('click', () => {
-      modalProfile.style.display = 'none';
     });
   </script>
 </body>

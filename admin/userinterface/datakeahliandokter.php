@@ -108,21 +108,6 @@ include "../../template/functions.php";
         modalIdKeahlianDokter.value = atrIdKeahlianDokter;
       });
     });
-
-    // modal profile
-    const modalProfile = document.querySelector('#modalProfile');
-    document.querySelector('#modalTargetProfile').addEventListener('click', function(e) {
-      e.preventDefault();
-      modalProfile.style.display = 'block';
-    });
-
-    document.querySelector('#iconModalTutupProfile').addEventListener('click', () => {
-      modalProfile.style.display = 'none';
-    });
-
-    document.querySelector('#tutupModalProfile').addEventListener('click', () => {
-      modalProfile.style.display = 'none';
-    });
   </script>
 </body>
 
