@@ -50,6 +50,7 @@
   position: sticky;
   top: 0;
   overflow-y: scroll;
+  z-index: 999;
 }
 
 .navbar .header {
@@ -88,6 +89,7 @@
 
 .links li a {
   color: #f6f8fa;
+  font-size: .9rem;
 }
 
 .navbar .nav-link li {
@@ -131,8 +133,11 @@ header {
   align-items: center;
   gap: .5rem;
   padding: .4rem 3%;
+  background-color: var(--light);
   border-bottom: 3px solid var(--bg-dark);
   color: var(--dark);
+  position: sticky;
+  top: 0;
 }
 
 header img {
@@ -365,10 +370,9 @@ form .form-select {
 @media (max-width: 768px) {
 
   .navbar {
-    position: absolute;
     top: 0;
     left: -100%;
-    min-width: 18rem;
+    min-width: 13rem;
     opacity: 0;
     position: fixed;
     top: 0;
@@ -421,7 +425,7 @@ form .form-select {
 
 @media (max-width: 575.98px) {
   .container .content .header h1 {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   .container .content .header {
