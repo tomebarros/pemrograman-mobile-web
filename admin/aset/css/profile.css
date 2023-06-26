@@ -1,7 +1,3 @@
-.container .content {
-  min-width: 100%;
-}
-
 .profile {
   display: grid;
   place-items: center;
@@ -133,6 +129,9 @@
 
 /* media query hp */
 @media (max-width: 768px) {
+  .container .content {
+    min-width: 100%;
+  }
 
   .card .header-profile .profile-img,
   .card .header-profile .profile-img img {
