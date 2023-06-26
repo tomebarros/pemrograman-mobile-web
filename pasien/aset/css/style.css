@@ -66,6 +66,7 @@ form .input-group {
 form .input-group input {
   font-size: 1rem;
   min-width: 100%;
+  max-width: 100%;
   color: var(--dark);
   margin-top: 2rem;
   padding-bottom: 0.4rem;
