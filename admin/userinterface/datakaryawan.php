@@ -91,7 +91,7 @@ include "../../template/functions.php";
         </div>
 
         <div class="kanan">
-          <?php include '../view/datakaryawan.php'; ?>
+          <!-- <?php include '../view/datakaryawan.php'; ?> -->
         </div>
       </div>
     </div>
