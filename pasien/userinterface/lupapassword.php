@@ -40,7 +40,7 @@
         <span></span>
       </div>
 
-      <p>Belum punya Akun?<a href="pendaftaranbaru.php">Daftar</a> | <a href="../../index.php">Home</a></p>
+      <p>Belum punya Akun?<a href="pendaftaranbaru.php">Daftar</a> | <a href="../../index.php">Home</a> | <a href="index.php">Login</a></p>
     </form>
   </div>
 
