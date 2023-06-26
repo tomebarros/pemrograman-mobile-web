@@ -25,7 +25,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--bg-light);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container form {
@@ -79,7 +79,6 @@ form .input-group select {
   transition: all .5s;
 }
 
-
 form .input-group span {
   position: absolute;
   bottom: 10%;
@@ -91,12 +90,15 @@ form .input-group span {
   transition: .3s;
 }
 
-
 form .input-group input:focus~span,
 form .input-group input:valid~span {
   bottom: 45%;
   opacity: .5;
   font-size: .8rem;
+}
+
+form .input-group select option {
+  color: #2f363d;
 }
 
 form #lock {
@@ -114,6 +116,11 @@ form .lupa-password {
 
 form .lupa-password a {
   color: var(--primary);
+  text-transform: capitalize;
+}
+
+form .lupa-password a.warning {
+  color: #ad9613;
 }
 
 form button {
@@ -147,7 +154,6 @@ form .title span {
   margin: auto 0;
 }
 
-
 form p {
   color: var(--dark);
   font-size: .8rem;
@@ -169,7 +175,6 @@ form button:hover {
 
   form h1 {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
   }
 
   form button {

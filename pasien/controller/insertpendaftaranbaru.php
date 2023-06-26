@@ -2,11 +2,11 @@
 include '../../template/functions.php';
 
 
-$fariabel1 = input($_POST['nama']);
-$fariabel2 = input($_POST['tempatlahir']);
+$fariabel1 = ucwords(input($_POST['nama']));
+$fariabel2 = ucwords(input($_POST['tempatlahir']));
 $fariabel3 = input($_POST['tanggallahir']);
 $fariabel4 = input($_POST['jeniskelamin']);
-$fariabel5 = input($_POST['alamat']);
+$fariabel5 = ucwords(input($_POST['alamat']));
 $fariabel6 = input($_POST['telepon']);
 $fariabel7 = input($_POST['email']);
 $fariabel8 = input($_POST['password']);

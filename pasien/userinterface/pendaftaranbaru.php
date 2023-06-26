@@ -18,8 +18,7 @@
   <link rel="shortcut icon" href="../../img/logo.png" type="image/x-icon">
 </head>
 
-<body class="da">
-
+<body>
   <div class="container">
     <div class="alert"></div>
     <form action="../controller/insertpendaftaranbaru.php" method="post">
@@ -39,11 +38,6 @@
         <input type="date" id="tanggallahir" name="tanggallahir" required autocomplete="off" />
         <span>Tanggal Lahir</span>
       </div>
-      <!-- 
-      <div class="input-group">
-        <input type="text" id="jeniskelamin" name="jeniskelamin" required autocomplete="off" />
-        <span>Jenis Kelamin</span>
-      </div> -->
 
       <div class="input-group">
         <select name="jeniskelamin" required>
@@ -74,9 +68,9 @@
         <i class="fa-solid fa-lock" id="lock"></i>
       </div>
       <div class="lupa-password">
-        <a href="#">Lupa Password?</a>
+        <a class="warning">Harap menggunakan password yang ada kombinasi angka dan simbol</a>
       </div>
-      <button type="submit">Login</button>
+      <button type="submit">Daftar</button>
 
       <div class="title">
         <span></span>
