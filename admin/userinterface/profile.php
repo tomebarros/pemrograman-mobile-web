@@ -28,6 +28,16 @@ $datakaryawan = query("SELECT * FROM karyawan WHERE idkaryawan = '$idkaryawan'")
 </head>
 
 <body>
+
+  <div class="modal-foto">
+    <form action="../controller/insert/uploadprofile.php" enctype="multipart/form-data" method="post">
+      <input type="hidden" name="idkaryawan" value="<?= $datakaryawan['idkaryawan'] ?>">
+      <input type="file" required class="form-input" accept=".jpg, .png, .jpeg" name="foto">
+      <button class="tombol" type="submit">Simpan</button>
+    </form>
+    <i class="fa-solid fa-close" id="tutupModal"></i>
+  </div>
+
   <div class="container">
     <?php include '../aset/nav.php'; ?>
     <div class="content">
@@ -50,14 +60,14 @@ $datakaryawan = query("SELECT * FROM karyawan WHERE idkaryawan = '$idkaryawan'")
                 <img src="../aset/img/profile/<?= $namaFile ?>.png" alt="Profile Karyawan">
 
                 <div class="aksi">
-                  <a href="../controller/delete/deleteprofile.php?q=<?= $datakaryawan['idkaryawan'] ?>"><i class="fa-solid fa-trash"></i></a>
+                  <a href="../controller/delete/deleteprofile.php?q=<?= $datakaryawan['idkaryawan'] ?>" onclick="return confirm('Hapus Foto Profile?')"><i class="fa-solid fa-trash"></i></a>
                   <a href="../aset/img/profile/<?= $namaFile ?>.png" target="_blank"><i class="fa-solid fa-image"></i></a>
                 </div>
 
               <?php } else { ?>
                 <img src="../aset/img/profile/user.png" alt="Profile Karyawan">
                 <div class="aksi up">
-                  <a href="#"><i class="fa-solid fa-cloud-arrow-up"></i></a>
+                  <a href="#" id="tombolUpload"><i class="fa-solid fa-cloud-arrow-up"></i></a>
                 </div>
               <?php } ?>
 
@@ -120,6 +130,25 @@ $datakaryawan = query("SELECT * FROM karyawan WHERE idkaryawan = '$idkaryawan'")
   </div>
 
   <script src="../aset/js/script.js"></script>
+
+  <script>
+    const uploadTombol = document.querySelector('#tombolUpload');
+    const tutupModal = document.querySelector('#tutupModal');
+    const modalFoto = document.querySelector('.modal-foto');
+
+    console.log(modalFoto);
+
+    uploadTombol.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      modalFoto.classList.toggle('show')
+    });
+
+    tutupModal.addEventListener('click', function() {
+      modalFoto.classList.remove('show')
+    })
+  </script>
+
 </body>
 
 </html>
