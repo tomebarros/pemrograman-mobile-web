@@ -1,6 +1,6 @@
-/* .container .content {
-  padding: 0;
-} */
+.container .content {
+  min-width: 100%;
+}
 
 .profile {
   display: grid;
@@ -34,7 +34,6 @@
   background-color: #703a3a;
   height: 10rem;
   position: relative;
-  /* overflow: hidden; */
   border-radius: 50%;
   transition: all .3s !important;
 }
