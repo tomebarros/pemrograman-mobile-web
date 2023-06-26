@@ -55,7 +55,7 @@ form h1 {
   font-size: 3rem;
   color: var(--dark);
   letter-spacing: 1rem;
-  margin: 1rem 0 2rem;
+  margin-top: 1rem;
 }
 
 form .input-group {
@@ -63,7 +63,8 @@ form .input-group {
   position: relative;
 }
 
-form .input-group input {
+form .input-group input,
+form .input-group select {
   font-size: 1rem;
   min-width: 100%;
   max-width: 100%;

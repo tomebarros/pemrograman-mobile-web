@@ -4,7 +4,7 @@ include '../../template/functions.php';
 
 $fariabel1 = input($_POST['nama']);
 $fariabel2 = input($_POST['tempatlahir']);
-$fariabel3 = input($_POST['tanggallahir ']);
+$fariabel3 = input($_POST['tanggallahir']);
 $fariabel4 = input($_POST['jeniskelamin']);
 $fariabel5 = input($_POST['alamat']);
 $fariabel6 = input($_POST['telepon']);

@@ -1,87 +1,96 @@
-<?php
-include "../../template/functions.php";
-?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Pendaftaran Pasien Baru</title>
-  <?php include "../../template/cdnbs5.php"; ?>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TomeHealth | Pendaftaran Baru</title>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,200&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="../aset/css/style.css" />
+  <link rel="shortcut icon" href="../../img/logo.png" type="image/x-icon">
 </head>
 
-<body>
-
-  <?php include "../aset/navbarlogin.php"; ?>
+<body class="da">
 
   <div class="container">
-    <h1>Pendaftaran Pasien Baru </h1>
-    <p>silahkan siapkan dokument kependuduka Anda sebelum mengisi formulir pendaftaran berikut ini: </p>
-    <div class="row">
-      <div class="col-md-4"><img src="../../img/logo.png" alt="" class="img-fluid"></div>
-      <div class="col-md-8">
+    <div class="alert"></div>
+    <form action="../controller/insertpendaftaranbaru.php" method="post">
+      <h1>Daftar</h1>
 
-        <form action="../controller/insertpendaftaranbaru.php" method="post">
-
-          <div class="input-group mb-2">
-            <span class="input-group-text">Nama</span>
-            <input type="text" class="form-control" name="nama" required>
-          </div>
-
-          <div class="input-group mb-2">
-            <span class="input-group-text">Tempat Lahir</span>
-            <input type="text" class="form-control" name="tempatlahir" required>
-          </div>
-
-          <div class="input-group mb-2">
-            <span class="input-group-text">Tanggal Lahir</span>
-            <input type="date" class="form-control" name="tanggallahir" required>
-          </div>
-
-          <div class="input-group mb-2">
-            <span class="input-group-text">Jenis Kelamin</span>
-            <select name="jeniskelamin" class="form-select" required>
-              <option value=""></option>
-              <option value="Laki-Laki">Laki-Laki</option>
-              <option value="Perempuan">Perempuan</option>
-            </select>
-          </div>
-
-          <div class="input-group mb-2">
-            <span class="input-group-text">Alamat</span>
-            <input type="text" class="form-control" name="alamat" required>
-          </div>
-
-          <div class="input-group mb-2">
-            <span class="input-group-text">Telepon</span>
-            <input type="number" class="form-control" name="telepon" required>
-          </div>
-
-          <div class="input-group mb-2">
-            <span class="input-group-text">Email</span>
-            <input type="email" class="form-control" name="email" required>
-          </div>
-
-          <div class="input-group mb-2">
-            <span class="input-group-text">Password</span>
-            <input type="password" class="form-control" name="password" required>
-          </div>
-
-          <div class="d-grid gap-2 col-4 mx-auto">
-            <button class="btn btn-success" type="submit">Simpan</button>
-            <a href="index.php" class="btn btn-info">Kembali</a>
-          </div>
-        </form>
-
-
+      <div class="input-group">
+        <input type="text" id="nama" name="nama" required autocomplete="off" />
+        <span>Nama</span>
       </div>
-    </div>
 
+      <div class="input-group">
+        <input type="text" id="tempatlahir" name="tempatlahir" required autocomplete="off" />
+        <span>Tempat Lahir</span>
+      </div>
 
+      <div class="input-group">
+        <input type="date" id="tanggallahir" name="tanggallahir" required autocomplete="off" />
+        <span>Tanggal Lahir</span>
+      </div>
+      <!-- 
+      <div class="input-group">
+        <input type="text" id="jeniskelamin" name="jeniskelamin" required autocomplete="off" />
+        <span>Jenis Kelamin</span>
+      </div> -->
+
+      <div class="input-group">
+        <select name="jeniskelamin" required>
+          <option value="">Pilih Jenis Kelamin</option>
+          <option value="Laki-Laki">Laki-Laki</option>
+          <option value="Perempuan">Perempuan</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <input type="text" id="alamat" name="alamat" required autocomplete="off" />
+        <span>Alamat</span>
+      </div>
+
+      <div class="input-group">
+        <input type="number" id="telepon" name="telepon" required autocomplete="off" />
+        <span>Telepon</span>
+      </div>
+
+      <div class="input-group">
+        <input type="email" id="email" name="email" required autocomplete="off" />
+        <span>Email</span>
+      </div>
+
+      <div class="input-group">
+        <input type="password" id="password" name="password" required />
+        <span>Password</span>
+        <i class="fa-solid fa-lock" id="lock"></i>
+      </div>
+      <div class="lupa-password">
+        <a href="#">Lupa Password?</a>
+      </div>
+      <button type="submit">Login</button>
+
+      <div class="title">
+        <span></span>
+        <p>Atau</p>
+        <span></span>
+      </div>
+
+      <p>Sudah punya Akun?<a href="index.php">Login</a> | <a href="../../index.php">Home</a></p>
+    </form>
   </div>
 
+  <script src="../aset/js/dark-mode.js"></script>
+  <script src="../aset/js/pesan.js"></script>
 
-  <script src="../../template/js/dark-mode.js"></script>
-  <script src="../../template/js/script.js"></script>
 </body>
 
 </html>
