@@ -55,16 +55,16 @@ if (isset($_POST['cari']) and !empty($_POST['keyword'])) {
           <th><?= $no++; ?></th>
 
           <td>
-            <?php
-            $file = $d['idkaryawan'];
-            if (file_exists("../aset/img/profile/$file.png")) {
-            ?>
-              <a href="../aset/img/profile/<?= $file ?>.png" target="_blank">
+            <a href="profile.php?q=<?= $d['idkaryawan']; ?>">
+              <?php
+              $file = $d['idkaryawan'];
+              if (file_exists("../aset/img/profile/$file.png")) {
+              ?>
                 <img src="../aset/img/profile/<?= $file ?>.png" width="70">
-              </a>
-            <?php } else { ?>
-              <img src="../aset/img/profile/user.png" width="70">
-            <?php } ?>
+              <?php } else { ?>
+                <img src="../aset/img/profile/user.png" width="70">
+              <?php } ?>
+            </a>
           </td>
 
           <td><?= $d['nama']; ?></td>

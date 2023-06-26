@@ -1,0 +1,143 @@
+/* .container .content {
+  padding: 0;
+} */
+
+.profile {
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  border-radius: 2px;
+  color: var(--dark);
+  width: 100%;
+}
+
+.profile .card-header {
+  background-image: url("../img/header-profile.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  height: 20rem;
+}
+
+.profile .header-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  margin-top: -5rem;
+}
+
+.card .header-profile .profile-img {
+  background-color: #703a3a;
+  height: 10rem;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 50%;
+  transition: all .3s !important;
+}
+
+.card .header-profile .profile-img:hover:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 101%;
+  background: rgba(1, 1, 1, .5);
+  top: 0;
+  border-radius: 50%;
+}
+
+.card .header-profile .profile-img img {
+  width: 10rem;
+  border: 4px solid var(--primary);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.card .header-profile .profile-img .aksi {
+  position: absolute;
+  bottom: 35%;
+  right: 25%;
+  letter-spacing: .4rem;
+  transition: all .3s;
+  display: none;
+}
+
+.card .header-profile .profile-img .aksi.up {
+  right: 35%;
+}
+
+.card .header-profile .profile-img:hover .aksi {
+  display: inline-block;
+}
+
+.card .header-profile .profile-img .aksi a {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.profile .card .header-profile .contact {
+  text-align: center;
+  color: #fff;
+}
+
+.profile .card .contact a i {
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 50%;
+  padding: .4rem;
+}
+
+.card-body table {
+  width: 60%;
+  margin: auto;
+  font-size: .8rem;
+}
+
+.card-body table tr td {
+  padding: .5rem;
+  margin: 0;
+}
+
+.card-body table tr:nth-child(odd) {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .profile .card-header {
+    height: 10rem;
+  }
+
+  .card-body table {
+    width: 100%;
+    font-size: .6rem;
+  }
+
+  .profile .header-profile {
+    flex-direction: column;
+    bottom: 0;
+  }
+
+  .profile .header-profile .contact h3 {
+    color: var(--dark);
+  }
+
+  .profile .header-profile img {
+    width: 8rem;
+  }
+}
+
+/* media query hp */
+@media (max-width: 768px) {
+
+  .card .header-profile .profile-img,
+  .card .header-profile .profile-img img {
+    height: 7rem;
+    width: 7rem;
+  }
+}

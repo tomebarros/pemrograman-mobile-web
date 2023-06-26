@@ -125,6 +125,7 @@
   padding: 0 1rem 2rem;
   background-color: var(--light);
   min-width: 78vw;
+  width: 100vw;
 }
 
 header {
