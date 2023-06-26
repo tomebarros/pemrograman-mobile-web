@@ -18,7 +18,7 @@
   <link rel="shortcut icon" href="../../img/logo.png" type="image/x-icon">
 </head>
 
-<body class="da">
+<body>
 
   <div class="container">
     <div class="alert"></div>
