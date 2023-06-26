@@ -54,7 +54,7 @@
 form h1 {
   font-size: 3rem;
   color: var(--dark);
-  letter-spacing: 1rem;
+  letter-spacing: .2rem;
   margin-top: 1rem;
 }
 
@@ -120,7 +120,7 @@ form .lupa-password a {
 }
 
 form .lupa-password a.warning {
-  color: #ad9613;
+  color: #b1851e;
 }
 
 form button {

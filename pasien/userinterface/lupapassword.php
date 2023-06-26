@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TomeHealth | Login Pasien</title>
+  <title>TomeHealth | Lupa Password</title>
 
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,22 +22,17 @@
 
   <div class="container">
     <div class="alert"></div>
-    <form action="../controller/other/ceklogin.php" method="post">
-      <h1>Login</h1>
+    <form action="../controller/emaillupapassword.php" method="post">
+      <h1>Lupa Password</h1>
       <div class="input-group">
         <input type="email" id="email" name="email" required autocomplete="off" />
         <span>Email</span>
       </div>
 
-      <div class="input-group">
-        <input type="password" id="password" name="password" required />
-        <span>Password</span>
-        <i class="fa-solid fa-lock" id="lock"></i>
-      </div>
       <div class="lupa-password">
-        <a href="lupapassword.php">Lupa Password?</a>
+        <a class="warning">Masukan Email yang terdaftar di TomeHealth</a>
       </div>
-      <button type="submit">Login</button>
+      <button type="submit">Kirim</button>
 
       <div class="title">
         <span></span>
