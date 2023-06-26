@@ -27,11 +27,11 @@
 }
 
 .card .header-profile .profile-img {
-  background-color: #703a3a;
   height: 10rem;
   position: relative;
   border-radius: 50%;
   transition: all .3s !important;
+  overflow: hidden;
 }
 
 .card .header-profile .profile-img:hover:before {
@@ -55,19 +55,14 @@
 
 .card .header-profile .profile-img .aksi {
   position: absolute;
-  bottom: 35%;
-  right: 25%;
-  letter-spacing: .4rem;
-  transition: all .3s;
-  display: none;
-}
-
-.card .header-profile .profile-img .aksi.up {
-  right: 36%;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  letter-spacing: .3rem;
 }
 
 .card .header-profile .profile-img:hover .aksi {
-  display: inline-block;
+  top: 50%;
 }
 
 .card .header-profile .profile-img .aksi a {
@@ -132,10 +127,17 @@
   .container .content {
     min-width: 100%;
   }
+}
+
+@media (max-width: 575.98px) {
 
   .card .header-profile .profile-img,
   .card .header-profile .profile-img img {
     height: 7rem;
     width: 7rem;
+  }
+
+  .card .header-profile .profile-img .aksi a {
+    font-size: .8rem;
   }
 }
