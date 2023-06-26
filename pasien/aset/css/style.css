@@ -1,0 +1,187 @@
+:root {
+  --primary: #0c88ef;
+  --bg-dark: #24292e;
+  --dark: #2f363d;
+  --bg-light: #f6f8fa;
+  --light: #ffffff;
+}
+
+.dark {
+  --bg-dark: #f6f8fa;
+  --bg-light: #24292e;
+  --dark: #fff;
+  --light: #2f363d;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-light);
+  height: 100vh;
+}
+
+.container form {
+  background-color: var(--bg-light);
+  filter: drop-shadow(1rem 1rem 5rem #010101);
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  width: 30rem;
+  font-weight: 50;
+}
+
+.alert {
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  text-transform: capitalize;
+  padding: 1rem 2rem;
+  transform: scaleY(0);
+  transition: 0.5s;
+}
+
+.alert.active {
+  transform: scaleY(1);
+}
+
+form h1 {
+  font-size: 3rem;
+  color: var(--dark);
+  letter-spacing: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+form .input-group {
+  width: 100%;
+  position: relative;
+}
+
+form .input-group input {
+  font-size: 1rem;
+  min-width: 100%;
+  color: var(--dark);
+  margin-top: 2rem;
+  padding-bottom: 0.4rem;
+  padding-left: .2rem;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid var(--dark);
+  transition: all .5s;
+}
+
+
+form .input-group span {
+  position: absolute;
+  bottom: 10%;
+  left: 1%;
+  opacity: .3;
+  color: var(--dark);
+  font-size: .9rem;
+  pointer-events: none;
+  transition: .3s;
+}
+
+
+form .input-group input:focus~span,
+form .input-group input:valid~span {
+  bottom: 45%;
+  opacity: .5;
+  font-size: .8rem;
+}
+
+form #lock {
+  position: absolute;
+  top: 2.5rem;
+  right: .5rem;
+  cursor: pointer;
+  color: var(--dark);
+}
+
+form .lupa-password {
+  font-size: .7rem;
+  margin-top: .5rem;
+}
+
+form .lupa-password a {
+  color: var(--primary);
+}
+
+form button {
+  font-size: .8rem;
+  background: none;
+  color: var(--dark);
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  border: 2px solid var(--dark);
+  border-radius: 0.2rem;
+  transition: .3s all ease;
+  margin-top: 2rem;
+}
+
+form .title {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+form .title p {
+  color: var(--dark);
+  font-size: .8rem;
+  padding: 0 0.5rem;
+  text-transform: uppercase;
+}
+
+form .title span {
+  width: 20%;
+  border-bottom: 2px solid var(--dark);
+  margin: auto 0;
+}
+
+
+form p {
+  color: var(--dark);
+  font-size: .8rem;
+}
+
+form p a {
+  color: var(--primary);
+}
+
+form button:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+@media screen and (max-width: 576px) {
+  .container form {
+    width: 95%;
+  }
+
+  form h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  form button {
+    padding: 0.1rem 1rem;
+  }
+
+  .alert {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.1rem;
+  }
+}
+
+/* utility */
+.d-none {
+  display: none;
+}

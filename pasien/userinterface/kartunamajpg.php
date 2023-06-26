@@ -12,7 +12,7 @@ $dataPasien = query("SELECT * FROM pasien WHERE email = '$emailPasien'")[0];
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kartu Nama <?= $dataPasien['nama']; ?></title>
-  <link rel="stylesheet" href="css/kartunama.css">
+  <link rel="stylesheet" href="../aset/css/kartunama.css">
 
   <!-- link download file foto -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

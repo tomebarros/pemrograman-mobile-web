@@ -1,4 +1,4 @@
-<?php 
+<?php
 include '../../template/functions.php';
 
 
@@ -12,7 +12,7 @@ $fariabel7 = input($_POST['email']);
 $fariabel8 = input($_POST['password']);
 
 // menginput data ke database
-mysqli_query($koneksi,"insert into pasien values('','$fariabel1','$fariabel2','$fariabel3','$fariabel4','$fariabel5','$fariabel6','$fariabel7','$fariabel8')");
+mysqli_query($koneksi, "insert into pasien values('','$fariabel1','$fariabel2','$fariabel3','$fariabel4','$fariabel5','$fariabel6','$fariabel7','$fariabel8')");
 
 // mengalihkan halaman kembali ke index.php
-header("location:../userinterface/index.php?q=berhasil");
+header("location:../userinterface/index.php?pesan=daftar");
