@@ -63,10 +63,11 @@ mail($TOEMAIL, $subject, $message, $headers, "-f" . $FROMEMAIL);
 
 // kirim pesan end
 
-
+// enkripsi otp
+$otphash = password_hash($otp, PASSWORD_DEFAULT);
 
 // menginput data ke database
-mysqli_query($koneksi, "insert into pasien values('','$nama','$tempatlahir','$tanggallahir','$jeniskelamin','$alamat','$telepon','$email','$passwordhash','$otp')");
+mysqli_query($koneksi, "insert into pasien values('','$nama','$tempatlahir','$tanggallahir','$jeniskelamin','$alamat','$telepon','$email','$passwordhash','$otphash')");
 
 // die;
 // mengalihkan halaman kembali ke index.php
