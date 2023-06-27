@@ -14,7 +14,7 @@ if (pesan == "gagal") {
   alert.style.color = "#880606";
 } else if (pesan == "daftar") {
   alert.classList.add("active");
-  alert.innerHTML = "Data Berhasil Ditambahkan Silahkan Login";
+  alert.innerHTML = "Data Berhasil Ditambahkan Silahkan cek email anda";
   alert.style.background = "#25d366";
   alert.style.color = "#0e5328";
 } else if (pesan == "logout") {
