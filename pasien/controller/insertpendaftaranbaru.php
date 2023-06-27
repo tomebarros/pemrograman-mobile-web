@@ -2,17 +2,35 @@
 include '../../template/functions.php';
 
 
-$fariabel1 = ucwords(input($_POST['nama']));
-$fariabel2 = ucwords(input($_POST['tempatlahir']));
-$fariabel3 = input($_POST['tanggallahir']);
-$fariabel4 = input($_POST['jeniskelamin']);
-$fariabel5 = ucwords(input($_POST['alamat']));
-$fariabel6 = input($_POST['telepon']);
-$fariabel7 = input($_POST['email']);
-$fariabel8 = input($_POST['password']);
+$nama = ucwords(input($_POST['nama']));
+$tempatlahir = ucwords(input($_POST['tempatlahir']));
+$tanggallahir = input($_POST['tanggallahir']);
+$jeniskelamin = input($_POST['jeniskelamin']);
+$alamat = ucwords(input($_POST['alamat']));
+$telepon = input($_POST['telepon']);
+$email = input($_POST['email']);
+
+$password = mysqli_real_escape_string($koneksi, $_POST['password']);
+
+// cek duplikasi data
+$cekDuplikasi = getData("SELECT * FROM pasien WHERE email = '$email'");
+if ($cekDuplikasi > 0) {
+  echo "<script>
+    alert('Email Sudah Tersedia');
+    history.go(-1);
+  </script>";
+  die;
+}
+
+
+$passwordhash = password_hash($password, PASSWORD_DEFAULT);
+
+// var_dump($passwordhash);
+// die;
+
 
 // menginput data ke database
-mysqli_query($koneksi, "insert into pasien values('','$fariabel1','$fariabel2','$fariabel3','$fariabel4','$fariabel5','$fariabel6','$fariabel7','$fariabel8')");
+mysqli_query($koneksi, "insert into pasien values('','$nama','$tempatlahir','$tanggallahir','$jeniskelamin','$alamat','$telepon','$email','$passwordhash')");
 
 // mengalihkan halaman kembali ke index.php
 header("location:../userinterface/index.php?pesan=daftar");
