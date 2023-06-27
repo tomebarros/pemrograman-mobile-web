@@ -1,7 +1,5 @@
 <?php
 
-var_dump($_COOKIE);
-
 if (is_null($_COOKIE['emailOTP'])) {
   header("location: index.php");
 }
@@ -46,11 +44,10 @@ if (is_null($_COOKIE['emailOTP'])) {
 
       <div class="title">
         <span></span>
-        <p>Atau</p>
+        <p>-</p>
         <span></span>
       </div>
 
-      <p>Belum punya Akun?<a href="pendaftaranbaru.php">Daftar</a> | <a href="../../index.php">Home</a></p>
     </form>
   </div>
 

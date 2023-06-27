@@ -17,6 +17,7 @@ if (password_verify($otp, $row['otp'])) {
   mysqli_query($koneksi, "UPDATE pasien SET otp = '1' WHERE email = '$email'");
   $_SESSION['emailPasien'] = $email;
   $_SESSION['statusPasien'] = 'login';
+  setcookie("emailOTP", "", time() - 3600, "/");
   header("location: ../userinterface/riwayatrekammedis.php");
   die;
 } else {

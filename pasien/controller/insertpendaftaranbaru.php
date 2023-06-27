@@ -1,7 +1,6 @@
 <?php
 include '../../template/functions.php';
 
-
 $nama = ucwords(input($_POST['nama']));
 $tempatlahir = ucwords(input($_POST['tempatlahir']));
 $tanggallahir = input($_POST['tanggallahir']);
@@ -10,16 +9,15 @@ $alamat = ucwords(input($_POST['alamat']));
 $telepon = input($_POST['telepon']);
 $email = input($_POST['email']);
 
-
 // cek duplikasi data
-// $cekDuplikasi = getData("SELECT * FROM pasien WHERE email = '$email'");
-// if ($cekDuplikasi > 0) {
-//   echo "<script>
-//     alert('Email Sudah Tersedia');
-//     history.go(-1);
-//   </script>";
-//   die;
-// }
+$cekDuplikasi = getData("SELECT * FROM pasien WHERE email = '$email'");
+if ($cekDuplikasi > 0) {
+  echo "<script>
+    alert('Email Sudah Tersedia');
+    history.go(-1);
+  </script>";
+  die;
+}
 
 // enkripsi password
 $password = mysqli_real_escape_string($koneksi, $_POST['password']);
