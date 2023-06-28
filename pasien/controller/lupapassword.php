@@ -37,7 +37,7 @@ error_reporting(E_ALL);
 
 // Required variables
 $FROMEMAIL  = '"TomeHealth" <cs@21120055rekammedis.my.id>';
-$TOEMAIL    = $email;
+$TOEMAIL    = $emailLupaPassword;
 $SUBJECT    = "Lupa Password";
 $PLAINTEXT  = "Salam Hangat";
 $RANDOMHASH = "anyrandomhash";
