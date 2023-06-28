@@ -13,7 +13,7 @@ if ($result > 0) {
 
   if ($cekOTP > 0) {
     setcookie("emailOTP", $email, time() + 300, "/");
-    header("location: ../../userinterface/verifikasiotp.php");
+    header("location: ../../userinterface/verifikasiemail.php");
     die;
   }
   $row = query("SELECT password FROM pasien WHERE email = '$email'")[0];

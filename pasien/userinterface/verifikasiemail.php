@@ -38,9 +38,10 @@ if (is_null($_COOKIE['emailOTP'])) {
         <span>Kode OTP</span>
       </div>
       <div class="lupa-password">
-        <a href="lupapassword.php">Kirim Ulang</a>
+        <a class="warning">Silahkan cek kode OTP yang terkirim di di Email Anda</a>
+        <a href="#">Kirim Ulang</a>
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit">Verifikasi</button>
 
       <div class="title">
         <span></span>

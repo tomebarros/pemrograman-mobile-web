@@ -22,7 +22,7 @@
 
   <div class="container">
     <div class="alert"></div>
-    <form action="../controller/emaillupapassword.php" method="post">
+    <form action="../controller/lupapassword.php" method="post">
       <h1>Lupa Password</h1>
       <div class="input-group">
         <input type="email" id="email" name="email" required autocomplete="off" />
