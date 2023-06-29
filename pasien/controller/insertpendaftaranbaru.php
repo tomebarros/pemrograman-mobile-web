@@ -65,8 +65,10 @@ mail($TOEMAIL, $subject, $message, $headers, "-f" . $FROMEMAIL);
 $otphash = password_hash($otp, PASSWORD_DEFAULT);
 
 // menginput data ke database
-mysqli_query($koneksi, "insert into pasien values('','$nama','$tempatlahir','$tanggallahir','$jeniskelamin','$alamat','$telepon','$email','$passwordhash','$otphash')");
-
 // die;
-// mengalihkan halaman kembali ke index.php
-header("location:../userinterface/index.php?pesan=daftar");
+
+$insert = mysqli_query($koneksi, "INSERT INTO pasien VALUES('','$nama','$tempatlahir','$tanggallahir','$jeniskelamin','$alamat','$telepon','$email','$passwordhash','$otphash')");
+
+$emailHash = md5($email);
+setcookie("id", $emailHash, time() + 300, "/");
+header("location:../userinterface/verifikasiemail.php?pesan=daftar");
