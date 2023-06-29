@@ -45,7 +45,7 @@ if (!$akses) {
     <div class="alert"></div>
     <form action="../controller/updateotp.php" method="post">
       <h1>Verifikasi OTP</h1>
-      <input type="hidden" name="email" required autocomplete="off" value="<?= $_COOKIE['emailOTP'] ?>" />
+      <input type="hidden" name="email" required autocomplete="off" value="<?= $emailDecript ?>" />
 
 
       <div class="input-group">
