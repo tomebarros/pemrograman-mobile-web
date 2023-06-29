@@ -17,7 +17,6 @@ if (md5($dataPasien['email']) !== $emailHash) {
 
 $otpBaru = rand(1, 1000000);
 
-
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -28,7 +27,6 @@ $SUBJECT    = "Kode OTP";
 $PLAINTEXT  = "Salam Hangat";
 $RANDOMHASH = "anyrandomhash";
 $FICTIONALSERVER = "@21120055lrekammedis.my.id";
-
 
 // Basic headers
 $headers = "From: " . $FROMEMAIL . "\n";
