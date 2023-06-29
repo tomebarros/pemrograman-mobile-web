@@ -7,10 +7,11 @@ if (is_null($_COOKIE['id'])) {
 }
 $emailHash = input($_COOKIE['id']);
 $akses = false;
-$dataPasien = query("SELECT email FROM pasien");
+$dataPasien = query("SELECT * FROM pasien");
 foreach ($dataPasien as $d) {
   if ($emailHash === md5($d['email'])) {
     $emailDecript = $d['email'];
+    $id = $d['idpasien'];
     $akses = true;
   }
 }
@@ -54,7 +55,7 @@ if (!$akses) {
       </div>
       <div class="lupa-password">
         <a class="warning">Silahkan cek kode OTP yang terkirim di di Email Anda</a>
-        <a href="#">Kirim Ulang</a>
+        <a href="../controller/kirimotp.php?q=<?= $id; ?>">Kirim Ulang</a>
       </div>
       <button type="submit">Verifikasi</button>
 
