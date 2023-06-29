@@ -1,4 +1,5 @@
 <?php
+include '../controller/other/restrict.php';
 include '../../template/functions.php';
 $namaVariabel = input($_GET['q']);
 

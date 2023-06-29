@@ -1,7 +1,22 @@
 <?php
+include "../../template/functions.php";
 
-if (is_null($_COOKIE['emailOTP'])) {
+if (is_null($_COOKIE['id'])) {
   header("location: index.php");
+  die;
+}
+$emailHash = input($_COOKIE['id']);
+$akses = false;
+$dataPasien = query("SELECT email FROM pasien");
+foreach ($dataPasien as $d) {
+  if ($emailHash === md5($d['email'])) {
+    $emailDecript = $d['email'];
+    $akses = true;
+  }
+}
+if (!$akses) {
+  header("location: index.php");
+  die;
 }
 ?>
 <!DOCTYPE html>

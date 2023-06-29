@@ -12,7 +12,8 @@ if ($result > 0) {
   $cekOTP = getData("SELECT * FROM pasien WHERE email = '$email' AND otp != '1'");
 
   if ($cekOTP > 0) {
-    setcookie("emailOTP", $email, time() + 300, "/");
+    $emailHash = md5($email);
+    setcookie("id", $emailHash, time() + 300, "/");
     header("location: ../../userinterface/verifikasiemail.php");
     die;
   }

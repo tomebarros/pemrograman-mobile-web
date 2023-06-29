@@ -1,5 +1,5 @@
 <?php
-session_start();
+include '../controller/other/restrict.php';
 include '../../template/functions.php';
 
 $email = $_SESSION['emailPasien'];

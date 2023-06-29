@@ -16,7 +16,8 @@ if ($emailTerdaftar == 0) {
 // cek email sudah validasi atau belum (arahkan ke halaman verifikasi)
 $emailVerifikasi = getData("SELECT * FROM pasien WHERE email = '$emailLupaPassword' AND otp = '1'");
 if ($emailVerifikasi == 0) {
-  setcookie("emailOTP", $emailLupaPassword, time() + 300, "/");
+  $emailHashOTP = md5($emailLupaPassword);
+  setcookie("id", $emailHashOTP, time() + 300, "/");
   echo "<script>
   alert('Email Anda belum melakukan Verifikasi !!!');
   document.location.href = '../userinterface/verifikasiemail.php';
