@@ -31,7 +31,7 @@ $emailHash = md5($dataPasien['email']);
 $passwordHash = md5($dataPasien['password']);
 $nama = $dataPasien['nama'];
 
-$link = "21120055rekammedis.my.id/pasien/userinterface/resetpassword.php?q={$emailHash}&k={$passwordHash}";
+$link = "https://www.21120055rekammedis.my.id/pasien/userinterface/resetpassword.php?q={$emailHash}&k={$passwordHash}";
 
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
