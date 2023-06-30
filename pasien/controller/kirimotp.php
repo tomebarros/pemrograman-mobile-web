@@ -2,7 +2,7 @@
 include '../../template/functions.php';
 
 if (is_null($_COOKIE['id'])) {
-  header("location: index.php");
+  header("location: ../userinterface/index.php");
   die;
 }
 
