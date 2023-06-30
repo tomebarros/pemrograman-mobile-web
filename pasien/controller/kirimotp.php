@@ -46,7 +46,7 @@ $subject = "=?UTF-8?B?" . base64_encode($SUBJECT) . "?=";
 mail($TOEMAIL, $subject, $message, $headers, "-f" . $FROMEMAIL);
 
 $otphash = password_hash($otpBaru, PASSWORD_DEFAULT);
-mysqli_query($koneksi, "UPDATE pasien SET otp = '$otphash' WHERE email = '$email'");
+mysqli_query($koneksi, "UPDATE pasien SET otp = '$otphash' WHERE email = '{$dataPasien['email']}'");
 
 echo "<script>
   alert('Kode berhasil terkirim, Silahkan cek Email Anda');
